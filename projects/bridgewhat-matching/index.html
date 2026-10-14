@@ -7,7 +7,7 @@
   <meta name="description" content="Bridgewhat Matching case study by Joana Norte." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --ink:#2f2e2e;
@@ -31,7 +31,7 @@
     .nav-links{display:flex;gap:.55rem}
     .nav-links a{opacity:.78;transition:opacity .2s ease,color .2s ease}
     .nav-links a:hover,.nav-links .active{opacity:1;color:var(--terracotta)}
-    .project-intro{margin:0;padding:86px 4.2vw 42px}
+    .project-intro{margin:0;padding:138px 4.2vw 42px}
     .back-link{
       display:inline-flex;align-items:center;gap:.45rem;margin-bottom:30px;color:var(--muted);
       text-decoration:none;font-size:.78rem;font-weight:600;
@@ -47,7 +47,7 @@
       content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 62%,rgba(255,255,255,.6),transparent 30%),
       linear-gradient(115deg,rgba(255,255,255,.36),transparent 45%);pointer-events:none;
     }
-    .project-meta{position:absolute;z-index:3;left:4.2vw;bottom:48px;display:flex;gap:54px;padding:18px 22px;background:rgba(247,240,232,.82);backdrop-filter:blur(8px)}
+    .project-meta{position:absolute;z-index:3;left:4.2vw;bottom:48px;display:flex;gap:54px;padding:0;background:transparent;backdrop-filter:none}
     .project-meta div+div{margin-top:0}
     .meta-label{display:block;margin-bottom:7px;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
     .meta-value{font-size:1rem;font-weight:600}
@@ -73,14 +73,24 @@
     .style-guide{background:var(--sand);padding:112px 7vw}
     .style-guide-inner{max-width:1170px;margin:0 auto}
     .section-heading{text-align:center;margin-bottom:58px;font-family:"Space Grotesk",sans-serif;font-size:1.35rem;letter-spacing:-.02em}
-    .guide-grid{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:50px}
+    .guide-grid{display:grid;grid-template-columns:.9fr 1.35fr;gap:70px}
     .guide-label{display:block;margin-bottom:18px;color:var(--terracotta);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-    .type-sample{font-size:1rem;font-weight:700;line-height:1.55}
-    .type-sample small{display:block;color:var(--muted);font-size:.8rem;font-weight:400}
-    .swatches{display:flex;gap:11px;flex-wrap:wrap}
-    .swatch{width:65px;height:65px;border-radius:12px;border:1px solid rgba(0,0,0,.06)}
-    .swatch:nth-child(1){background:#1267bc}.swatch:nth-child(2){background:#dff2ff}.swatch:nth-child(3){background:#f7f0e8}.swatch:nth-child(4){background:#2f2e2e}
-    .component-placeholder{height:88px;border:1px solid #ded7cf;border-radius:12px;background:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;color:#9b938c;font-size:.8rem}
+    .type-scale{display:grid;gap:18px}
+    .type-row{border-bottom:1px solid rgba(47,46,46,.13);padding-bottom:13px}
+    .type-row:last-child{border-bottom:0}
+    .type-row strong{display:block;color:var(--ink)}
+    .type-row small{display:block;margin-top:5px;color:var(--muted);font-size:.78rem}
+    .type-h1{font-family:Poppins,sans-serif;font-size:24px;font-weight:700;line-height:1.1}
+    .type-h2{font-family:Roboto,sans-serif;font-size:20px;font-weight:600;line-height:1.2}
+    .type-button{font-family:Roboto,sans-serif;font-size:16px;font-weight:700}
+    .type-body{font-family:Roboto,sans-serif;font-size:16px;font-weight:400}
+    .type-small{font-family:Roboto,sans-serif;font-size:14px;font-weight:400}
+    .type-caption{font-family:Roboto,sans-serif;font-size:12px;font-weight:400}
+    .colour-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px}
+    .colour-token{display:flex;align-items:center;gap:11px;min-width:0}
+    .colour-dot{width:30px;height:30px;flex:0 0 30px;border-radius:50%;border:1px solid rgba(0,0,0,.1)}
+    .colour-token strong{display:block;font-size:.85rem;line-height:1.15}
+    .colour-token small{display:block;margin-top:3px;color:var(--muted);font-family:Roboto,sans-serif;font-size:.74rem}
     .final{max-width:1170px;margin:0 auto;padding:118px 7vw 130px}
     .final h2{text-align:center;margin-bottom:56px;font-family:"Space Grotesk",sans-serif;font-size:1.55rem}
     .screens{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,60px);align-items:start}
@@ -162,15 +172,29 @@
         <div class="guide-grid">
           <div>
             <span class="guide-label">Typography</span>
-            <div class="type-sample">Headlines & interface type<small>Add the final type scale here.</small></div>
+            <div class="type-scale">
+              <div class="type-row"><strong class="type-h1">Headline 01</strong><small>Poppins · Bold · 24px</small></div>
+              <div class="type-row"><strong class="type-h2">Headline 02</strong><small>Roboto · Semibold · 20px</small></div>
+              <div class="type-row"><strong class="type-button">Button</strong><small>Roboto · Bold · 16px</small></div>
+              <div class="type-row"><strong class="type-body">Body Standard</strong><small>Roboto · Regular · 16px</small></div>
+              <div class="type-row"><strong class="type-small">Body Small</strong><small>Roboto · Regular · 14px</small></div>
+              <div class="type-row"><strong class="type-caption">Caption</strong><small>Roboto · Regular · 12px</small></div>
+            </div>
           </div>
           <div>
             <span class="guide-label">Colours</span>
-            <div class="swatches" aria-label="Placeholder colour palette"><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span></div>
-          </div>
-          <div>
-            <span class="guide-label">Components</span>
-            <div class="component-placeholder">Add component examples</div>
+            <div class="colour-grid" aria-label="Bridgewhat colour palette">
+              <div class="colour-token"><span class="colour-dot" style="background:#FFFFFF"></span><div><strong>White</strong><small>#FFFFFF</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#1C75BC"></span><div><strong>Blue</strong><small>#1C75BC</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#005598"></span><div><strong>Dark Blue</strong><small>#005598</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#8EA0AA"></span><div><strong>Gray</strong><small>#8EA0AA</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#546670"></span><div><strong>Dark Gray</strong><small>#546670</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#23263E"></span><div><strong>Black</strong><small>#23263E</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#E9F0F3"></span><div><strong>Light Gray</strong><small>#E9F0F3</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#B79033"></span><div><strong>Gold</strong><small>#B79033</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#67767F"></span><div><strong>Silver</strong><small>#67767F</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#9CAEBC"></span><div><strong>Platinum</strong><small>#9CAEBC</small></div></div>
+            </div>
           </div>
         </div>
       </div>
