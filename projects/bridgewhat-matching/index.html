@@ -107,9 +107,9 @@
       aspect-ratio:9/18.5;max-width:260px;margin:0 auto;border:10px solid #f4f3f1;border-radius:33px;background:linear-gradient(160deg,#eff9ff,#d5ecfc);
       box-shadow:0 18px 30px rgba(42,67,86,.12);display:block;transform:translate(var(--screen-x),var(--screen-y)) rotate(var(--screen-rotate));transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease;object-fit:cover;
     }
-    .screens:hover .screen-wrap:nth-child(3n + 2){--screen-y:-22px}
-    .screens:hover .screen-wrap:nth-child(3n){--screen-x:20px}
-    .screen-wrap:hover{--screen-y:-30px;--screen-rotate:-1deg}
+    .screen-wrap:nth-child(3n + 1):hover{--screen-x:-18px;--screen-y:-10px;--screen-rotate:-1deg}
+    .screen-wrap:nth-child(3n + 2):hover{--screen-y:-24px;--screen-rotate:-1deg}
+    .screen-wrap:nth-child(3n):hover{--screen-x:18px;--screen-y:-10px;--screen-rotate:1deg}
     .screen-wrap:hover .screen{box-shadow:0 28px 40px rgba(42,67,86,.2)}
     .screen small{display:block;margin-top:6px;color:#90a6b6;font-weight:500}
     .screen-caption{margin-top:16px;color:var(--ink);font-size:.84rem;font-weight:600}
