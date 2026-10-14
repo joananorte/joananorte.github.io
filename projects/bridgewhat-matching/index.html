@@ -18,6 +18,7 @@
       --line:#e9e5e1;
       --terracotta:#c9826a;
       --blue-wash:#e6f5ff;
+      --project-accent:#1C75BC;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -116,14 +117,14 @@
     .next-project{padding:54px 7vw;background:var(--ink);color:#fff;text-align:center}
     .next-project p{margin:0 0 18px;color:#d7d0ca}
     .next-project a{display:inline-block;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.3rem,2.5vw,2.25rem);font-weight:600;letter-spacing:-.055em;text-decoration:none;transition:color .25s ease,transform .25s ease}
-    .next-project a:hover{color:var(--terracotta);transform:translateX(8px)}
+    .next-project a:hover{color:var(--project-accent);transform:translateX(8px)}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
     @media(max-width:760px){
       .site-nav{padding:28px 24px 0;font-size:.73rem}.nav-links{gap:.32rem}
       .project-intro{padding:62px 24px 30px}.project-intro h1,.project-intro .lede{white-space:normal}.hero-panel{min-height:460px;padding:0}
       .project-meta{left:24px;bottom:24px;gap:28px;padding:15px 16px}.project-meta div+div{margin:0}.hero-art{height:100%}
-      .content,.visual-section,.process,.final{padding-left:24px;padding-right:24px}.colour-grid{grid-template-columns:repeat(2,86px);gap:20px 22px}.content{padding-top:76px;padding-bottom:76px}.two-col,.guide-grid,.process-grid{grid-template-columns:1fr;gap:34px}
-      .visual-section{padding-bottom:76px}.visual-placeholder{min-height:330px}.style-guide{padding:76px 24px}.guide-grid{gap:34px}.screens{gap:32px}.screen{max-width:210px}.final{padding-top:76px;padding-bottom:76px}
+      .content,.visual-section,.process,.final{padding-left:24px;padding-right:24px}.colour-grid{grid-template-columns:repeat(3,86px);gap:20px 16px}.content{padding-top:76px;padding-bottom:76px}.two-col,.guide-grid,.process-grid{grid-template-columns:1fr;gap:34px}
+      .visual-section{padding-bottom:76px}.visual-placeholder{min-height:330px}.style-guide{padding:76px 24px}.guide-grid{gap:34px}.screens{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}.screen{width:100%;max-width:210px}.final{padding-top:76px;padding-bottom:76px}
     }
   </style>
 </head>
