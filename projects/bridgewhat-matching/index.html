@@ -51,12 +51,16 @@
     .project-meta div+div{margin-top:0}
     .meta-label{display:block;margin-bottom:7px;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
     .meta-value{font-size:1rem;font-weight:600}
-    .hero-art{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center;filter:none}
+    .hero-art{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center;filter:none;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .hero-panel:hover .hero-art{transform:scale(1.025)}
     .content{max-width:1170px;margin:0 auto;padding:110px 7vw}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,10vw,155px)}
     h2{margin:0 0 18px;font-family:"Space Grotesk",sans-serif;font-size:1.35rem;font-weight:600;letter-spacing:-.02em}
     p{margin:0;color:var(--muted);font-size:1rem;line-height:1.68}
     .visual-section{max-width:1170px;margin:0 auto;padding:12px 7vw 118px}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in-view{opacity:1;transform:translateY(0)}
+    .reveal.delay-1{transition-delay:.1s}.reveal.delay-2{transition-delay:.2s}
     .visual-placeholder{
       min-height:535px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
       background:linear-gradient(135deg,#e6f5ff,#f9fcff 54%,#d9effd);border-radius:2px;
@@ -64,8 +68,10 @@
     .visual-placeholder::before,.visual-placeholder::after{
       content:"";position:absolute;border:1px solid rgba(48,105,137,.13);border-radius:26px;transform:rotate(-12deg);
     }
-    .visual-placeholder::before{width:270px;height:500px;background:linear-gradient(145deg,#fff,#d9eefd);box-shadow:0 28px 55px rgba(59,114,151,.16)}
-    .visual-placeholder::after{width:210px;height:390px;transform:translateX(210px) rotate(9deg);background:rgba(255,255,255,.65)}
+    .visual-placeholder::before{width:270px;height:500px;background:linear-gradient(145deg,#fff,#d9eefd);box-shadow:0 28px 55px rgba(59,114,151,.16);transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+    .visual-placeholder::after{width:210px;height:390px;transform:translateX(210px) rotate(9deg);background:rgba(255,255,255,.65);transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+    .visual-placeholder:hover::before{transform:translateX(-14px) rotate(-8deg)}
+    .visual-placeholder:hover::after{transform:translateX(225px) rotate(12deg)}
     .placeholder-copy{z-index:1;text-align:center;color:#5d7481;font-size:.87rem;font-weight:600}
     .placeholder-copy span{display:block;margin-top:7px;color:#8ba3b1;font-size:.74rem;font-weight:500}
     .process{max-width:1170px;margin:0 auto;padding:0 7vw 120px}
@@ -86,9 +92,11 @@
     .type-body{font-family:Roboto,sans-serif;font-size:16px;font-weight:400}
     .type-small{font-family:Roboto,sans-serif;font-size:14px;font-weight:400}
     .type-caption{font-family:Roboto,sans-serif;font-size:12px;font-weight:400}
-    .colour-grid{display:grid;grid-template-columns:repeat(4,86px);gap:26px 22px}
-    .colour-token{display:block;min-width:0}
-    .colour-dot{display:block;width:78px;aspect-ratio:1;height:auto;border-radius:12px;border:1px solid rgba(0,0,0,.1);margin-bottom:10px}
+    .colour-grid{display:grid;grid-template-columns:repeat(5,86px);gap:26px 18px}
+    .colour-token{display:block;min-width:0;transition:transform .25s ease}
+    .colour-token:hover{transform:translateY(-5px)}
+    .colour-dot{display:block;transition:transform .25s ease,box-shadow .25s ease;width:78px;aspect-ratio:1;height:auto;border-radius:12px;border:1px solid rgba(0,0,0,.1);margin-bottom:10px}
+    .colour-token:hover .colour-dot{transform:scale(1.05);box-shadow:0 10px 18px rgba(35,38,62,.15)}
     .colour-token strong{display:block;font-size:.84rem;line-height:1.15}
     .colour-token small{display:block;margin-top:4px;color:var(--muted);font-family:Roboto,sans-serif;font-size:.74rem}
     .final{max-width:1170px;margin:0 auto;padding:118px 7vw 130px}
@@ -97,14 +105,16 @@
     .screen-wrap{text-align:center}
     .screen{
       aspect-ratio:9/18.5;max-width:260px;margin:0 auto;border:10px solid #f4f3f1;border-radius:33px;background:linear-gradient(160deg,#eff9ff,#d5ecfc);
-      box-shadow:0 18px 30px rgba(42,67,86,.12);display:flex;align-items:center;justify-content:center;color:#5f7890;font-size:.78rem;font-weight:600;
+      box-shadow:0 18px 30px rgba(42,67,86,.12);display:flex;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease;align-items:center;justify-content:center;color:#5f7890;font-size:.78rem;font-weight:600;
     }
+    .screen-wrap:hover .screen{transform:translateY(-10px) rotate(-1deg);box-shadow:0 28px 40px rgba(42,67,86,.2)}
     .screen small{display:block;margin-top:6px;color:#90a6b6;font-weight:500}
     .screen-caption{margin-top:16px;color:var(--ink);font-size:.84rem;font-weight:600}
     .next-project{padding:54px 7vw;background:var(--ink);color:#fff;text-align:center}
     .next-project p{margin:0 0 18px;color:#d7d0ca}
-    .next-project a{font-family:"Space Grotesk",sans-serif;font-size:clamp(1.3rem,2.5vw,2.25rem);font-weight:600;letter-spacing:-.055em;text-decoration:none}
-    .next-project a:hover{color:var(--terracotta)}
+    .next-project a{display:inline-block;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.3rem,2.5vw,2.25rem);font-weight:600;letter-spacing:-.055em;text-decoration:none;transition:color .25s ease,transform .25s ease}
+    .next-project a:hover{color:var(--terracotta);transform:translateX(8px)}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
     @media(max-width:760px){
       .site-nav{padding:28px 24px 0;font-size:.73rem}.nav-links{gap:.32rem}
       .project-intro{padding:62px 24px 30px}.project-intro h1,.project-intro .lede{white-space:normal}.hero-panel{min-height:460px;padding:0}
@@ -214,5 +224,34 @@
     <p>Explore more work</p>
     <a href="../../#work">Back to projects →</a>
   </footer>
+
+  <script>
+    const revealTargets = [
+      '.project-intro > *',
+      '.project-meta',
+      '.content .two-col > div',
+      '.visual-placeholder',
+      '.process-grid',
+      '.style-guide-inner',
+      '.final h2',
+      '.screen-wrap',
+      '.next-project > *'
+    ];
+    const targets = document.querySelectorAll(revealTargets.join(','));
+    targets.forEach((element,index)=>{
+      element.classList.add('reveal');
+      if(index % 3 === 1) element.classList.add('delay-1');
+      if(index % 3 === 2) element.classList.add('delay-2');
+    });
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:.14});
+    targets.forEach(target=>observer.observe(target));
+  </script>
 </body>
 </html>
