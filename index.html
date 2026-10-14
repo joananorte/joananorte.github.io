@@ -11,28 +11,35 @@
   <style>
     :root{--ink:#2f2e2e;--paper:#f5f1ec;--muted:#76736f;--terracotta:#c9826a}
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
-    .home-hero{height:100vh;min-height:640px;padding:56px 4.2vw;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+    .home-hero{position:sticky;top:0;z-index:0;height:100vh;min-height:640px;padding:56px 4.2vw;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
     nav{display:flex;justify-content:space-between;align-items:center;text-transform:uppercase;font-size:16px;font-weight:700;letter-spacing:.06em}
-    nav a{color:inherit;text-decoration:none}.nav-links{word-spacing:.15em}
+    nav a{color:inherit;text-decoration:none}.nav-links{display:flex;align-items:center;gap:18px}.nav-links a{padding-bottom:5px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}.nav-links a:hover,.nav-links a.active{color:var(--terracotta);border-bottom-color:currentColor}
     .intro{max-width:780px;transform-origin:left center;transition:transform .08s linear}
     h1{font-family:Fraunces,serif;font-size:clamp(5rem,10vw,10rem);font-weight:600;line-height:.84;letter-spacing:-.065em;margin:0 0 46px}
     .intro p{color:var(--muted);font-size:clamp(17px,1.6vw,22px);line-height:1.45;max-width:650px;margin:0 0 20px}
-    .role{color:var(--terracotta);font-weight:700;font-size:18px;margin:0;transform-origin:left center;transition:transform .08s linear}
-    .project{height:100vh;min-height:680px;background:url("https://cdn.prod.website-files.com/6acead0e774cf5225c3ed847/6acf85c8dc5d67cf6b73d082_6acf79743a7df2ee0664124b_bridgewhat-matching-wide-cover.png") center/cover no-repeat;position:relative;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-    .project-copy{background:rgba(20,20,20,.79);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:9vw;transition:background .35s ease}
-    .project:hover .project-copy{background:rgba(5,5,5,.93)}
+    .role{color:var(--terracotta)!important;font-weight:700;font-size:18px;margin:0;transform-origin:left center;transition:transform .08s linear}
+    .project{z-index:1;height:100vh;min-height:680px;background:url("https://cdn.prod.website-files.com/6acead0e774cf5225c3ed847/6acf85c8dc5d67cf6b73d082_6acf79743a7df2ee0664124b_bridgewhat-matching-wide-cover.png") center/cover no-repeat;position:relative;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+    .project-copy{background:rgba(20,20,20,.79);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:9vw;transition:background-color .35s ease}
+    .project-copy:hover{background-color:rgba(5,5,5,.93)}
     .project-number{font-family:Fraunces,serif;font-size:88px;color:rgba(255,255,255,.52);line-height:1;margin:0 0 34px}
     .project h2{font-size:clamp(38px,4vw,62px);line-height:1.05;margin:0 0 28px;letter-spacing:-.045em}
     .project p{font-size:19px;line-height:1.5;color:rgba(255,255,255,.64);max-width:430px;margin:0 0 38px}
     .project-link{width:max-content;color:#fff;font-weight:700;font-size:18px;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.5);padding-bottom:7px;transition:color .2s,border-color .2s,transform .2s}
     .project-link:hover{color:var(--terracotta);border-color:var(--terracotta);transform:translateY(-3px)}
-    @media(max-width:700px){.home-hero{padding:32px 7vw;min-height:580px}nav{font-size:11px}.nav-links{font-size:0}.nav-links:after{content:"Work · About · Contact";font-size:11px}h1{font-size:22vw;margin-bottom:32px}.project{grid-template-columns:1fr;height:680px}.project-copy{padding:12vw}.project-number{font-size:70px}}
+    @media(max-width:700px){.home-hero{padding:32px 7vw;min-height:580px}nav{font-size:11px}.nav-links{gap:9px}.nav-links a{font-size:11px}h1{font-size:22vw;margin-bottom:32px}.project{grid-template-columns:1fr;height:680px}.project-copy{padding:12vw}.project-number{font-size:70px}}
   </style>
 </head>
 <body>
   <main>
     <section class="home-hero">
-      <nav><a href="./">Joana Norte</a><span class="nav-links">Work · About · Contact</span></nav>
+      <nav>
+        <a href="./">Joana Norte</a>
+        <div class="nav-links">
+          <a class="active" aria-current="page" href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="mailto:hello@joananorte.com">Contact</a>
+        </div>
+      </nav>
       <div class="intro" id="intro">
         <h1>Hello,<br>I’m Joana.</h1>
         <p>I’m a UI Designer with a UX mindset, passionate about creating thoughtful, useful and visually engaging digital experiences.</p>
