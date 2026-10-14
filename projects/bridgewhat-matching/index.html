@@ -69,13 +69,18 @@
     .visual-placeholder::before{content:"";position:absolute;width:58%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.52);filter:blur(34px)}
     .project-visual-screens{position:relative;z-index:1;width:min(620px,78%);height:520px}
     .project-visual-screen{
-      position:absolute;bottom:0;width:min(42%,230px);border:8px solid #f4f3f1;border-radius:28px;
-      box-shadow:0 24px 40px rgba(42,67,86,.18);transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease;
+      position:absolute;bottom:0;width:min(42%,230px);padding:8px;border:1px solid rgba(129,151,164,.5);border-radius:34px;
+      background:linear-gradient(145deg,#ffffff 8%,#dce7ec 58%,#f9fcfd);box-shadow:inset 2px 2px 3px rgba(255,255,255,.95),inset -3px -3px 6px rgba(99,126,143,.14),0 24px 40px rgba(42,67,86,.2);
+      transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease;
     }
+    .project-visual-screen img{display:block;width:100%;height:auto;border-radius:25px}
+    .project-visual-screen::before,.project-visual-screen::after{content:"";position:absolute;width:5px;background:linear-gradient(90deg,#bac9d1,#f7fbfd);box-shadow:1px 1px 2px rgba(42,67,86,.22)}
+    .project-visual-screen::before{left:-6px;top:24%;height:58px;border-radius:5px 0 0 5px;box-shadow:1px 19px 2px rgba(42,67,86,.17)}
+    .project-visual-screen::after{right:-6px;top:33%;height:36px;border-radius:0 5px 5px 0}
     .project-visual-screen:first-child{left:16%;transform:rotate(-10deg) translateY(8px)}
     .project-visual-screen:last-child{right:16%;transform:rotate(9deg) translateY(-18px)}
-    .visual-placeholder:hover .project-visual-screen:first-child{transform:rotate(-14deg) translate(-18px,-12px);box-shadow:0 32px 48px rgba(42,67,86,.24)}
-    .visual-placeholder:hover .project-visual-screen:last-child{transform:rotate(13deg) translate(20px,-30px);box-shadow:0 32px 48px rgba(42,67,86,.24)}
+    .visual-placeholder:hover .project-visual-screen:first-child{transform:rotate(-14deg) translate(-18px,-12px);box-shadow:inset 2px 2px 3px rgba(255,255,255,.95),inset -3px -3px 6px rgba(99,126,143,.14),0 32px 48px rgba(42,67,86,.27)}
+    .visual-placeholder:hover .project-visual-screen:last-child{transform:rotate(13deg) translate(20px,-30px);box-shadow:inset 2px 2px 3px rgba(255,255,255,.95),inset -3px -3px 6px rgba(99,126,143,.14),0 32px 48px rgba(42,67,86,.27)}
     .process{max-width:1170px;margin:0 auto;padding:0 7vw 120px}
     .process-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,10vw,155px);padding-top:34px;border-top:1px solid var(--line)}
     .style-guide{background:var(--blue-wash);padding:112px 7vw}
@@ -125,7 +130,7 @@
       .project-intro{padding:62px 24px 30px}.project-intro h1,.project-intro .lede{white-space:normal}.hero-panel{min-height:460px;padding:0}
       .project-meta{left:24px;bottom:24px;gap:28px;padding:15px 16px}.project-meta div+div{margin:0}.hero-art{height:100%}
       .content,.visual-section,.process,.final{padding-left:24px;padding-right:24px}.colour-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 16px}.colour-dot{width:100%;max-width:78px}.content{padding-top:76px;padding-bottom:76px}.two-col,.guide-grid,.process-grid{grid-template-columns:1fr;gap:34px}
-      .visual-section{padding-bottom:76px}.visual-placeholder{min-height:390px}.project-visual-screens{width:96%;height:350px}.project-visual-screen{width:min(44%,145px);border-width:5px;border-radius:18px}.project-visual-screen:first-child{left:12%}.project-visual-screen:last-child{right:12%}.style-guide{padding:76px 24px}.guide-grid{gap:34px}.screens{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}.screen{width:100%;max-width:210px}.final{padding-top:76px;padding-bottom:76px}
+      .visual-section{padding-bottom:76px}.visual-placeholder{min-height:390px}.project-visual-screens{width:96%;height:350px}.project-visual-screen{width:min(44%,145px);padding:5px;border-radius:22px}.project-visual-screen img{border-radius:17px}.project-visual-screen:first-child{left:12%}.project-visual-screen:last-child{right:12%}.style-guide{padding:76px 24px}.guide-grid{gap:34px}.screens{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}.screen{width:100%;max-width:210px}.final{padding-top:76px;padding-bottom:76px}
     }
   </style>
   <link href="https://api.fontshare.com/v2/css?f[]=ranade@400,500,600,700&display=swap" rel="stylesheet">
@@ -172,8 +177,8 @@
     <section class="visual-section">
       <div class="visual-placeholder" aria-label="Bridgewhat advisor browsing and geography filters screens">
         <div class="project-visual-screens">
-          <img class="project-visual-screen" src="../../assets/bridgewhat/advisors-list.jpg" alt="Bridgewhat advisor list screen" loading="lazy">
-          <img class="project-visual-screen" src="../../assets/bridgewhat/filters-geographies.jpg" alt="Bridgewhat geography filters screen" loading="lazy">
+          <div class="project-visual-screen"><img src="../../assets/bridgewhat/advisors-list.jpg" alt="Bridgewhat advisor list screen" loading="lazy"></div>
+          <div class="project-visual-screen"><img src="../../assets/bridgewhat/filters-geographies.jpg" alt="Bridgewhat geography filters screen" loading="lazy"></div>
         </div>
       </div>
     </section>
