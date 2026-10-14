@@ -7,35 +7,132 @@
   <meta name="description" content="Bridgewhat Matching case study by Joana Norte." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--ink:#303030;--muted:#737373;--paper:#fff;--wash:#eff8ff;--terracotta:#c9826a}
-    *{box-sizing:border-box} body{margin:0;color:var(--ink);background:var(--paper);font-family:"DM Sans",sans-serif}
-    nav{height:128px;padding:56px 4.2vw 0;display:flex;align-items:flex-start;justify-content:space-between;text-transform:uppercase;font-size:16px;font-weight:700;letter-spacing:.06em}
-    nav a{color:inherit;text-decoration:none}.nav-links{word-spacing:.15em}
-    .hero{padding:84px 9vw 0}.eyebrow{margin:0 0 23px;color:var(--muted);font-size:13px;font-weight:700}
-    h1{font-family:Fraunces,serif;font-size:clamp(54px,7vw,108px);font-weight:600;line-height:.96;letter-spacing:-.06em;margin:0 0 25px}
-    .lede{max-width:630px;color:var(--muted);font-size:20px;line-height:1.52;font-weight:500;margin:0 0 34px}
-    .meta{font-size:14px;line-height:1.8;font-weight:700;margin:0 0 43px}
-    .hero-image{width:100%;height:min(58vw,800px);min-height:460px;object-fit:cover;object-position:center;background:var(--wash);display:block}
-    .section{padding:110px 9vw}.grid{display:grid;grid-template-columns:1fr 1fr;gap:9vw}.section h2{font-size:17px;line-height:1.2;margin:0 0 19px;letter-spacing:-.02em}.section p{margin:0;color:var(--muted);line-height:1.7;font-size:16px}
-    .approach{background:#faf7f4;margin-top:20px}.approach .grid{row-gap:70px}
-    .footer{padding:42px 4.2vw;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;border-top:1px solid #ece8e4}.footer span:first-child{font-family:Fraunces,serif;color:var(--terracotta);font-size:18px}
-    @media(max-width:700px){nav{height:86px;padding:32px 7vw 0;font-size:11px}.nav-links{font-size:0}.nav-links:after{content:"Work · About · Contact";font-size:11px}.hero{padding:64px 7vw 0}h1{font-size:16vw}.lede{font-size:17px}.hero-image{height:72vw;min-height:300px}.section{padding:70px 7vw}.grid{grid-template-columns:1fr;gap:44px}.footer{padding:32px 7vw}}
+    :root{
+      --ink:#2f2e2e;
+      --muted:#77736f;
+      --paper:#fff;
+      --sand:#f7f0e8;
+      --sand-deep:#eaded2;
+      --line:#e9e5e1;
+      --terracotta:#c9826a;
+      --blue-wash:#e6f5ff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit}
+    .site-nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:56px 4.2vw 0;font-size:.96rem;font-weight:700;letter-spacing:.075em;text-transform:uppercase;
+    }
+    .site-nav a{text-decoration:none}
+    .nav-links{display:flex;gap:.55rem}
+    .nav-links a{opacity:.78;transition:opacity .2s ease,color .2s ease}
+    .nav-links a:hover,.nav-links .active{opacity:1;color:var(--terracotta)}
+    .project-intro{max-width:1320px;margin:0 auto;padding:86px 7vw 42px}
+    .back-link{
+      display:inline-flex;align-items:center;gap:.45rem;margin-bottom:30px;color:var(--muted);
+      text-decoration:none;font-size:.78rem;font-weight:600;
+    }
+    .back-link:hover{color:var(--terracotta)}
+    .eyebrow{margin:0 0 18px;color:var(--terracotta);font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    h1{max-width:850px;margin:0;font-size:clamp(3.3rem,7vw,7.4rem);line-height:.9;letter-spacing:-.07em;font-weight:600}
+    .lede{max-width:525px;margin:22px 0 0;color:var(--muted);font-size:clamp(1rem,1.7vw,1.25rem);line-height:1.55}
+    .hero-panel{
+      min-height:635px;position:relative;display:grid;grid-template-columns:minmax(175px,260px) 1fr;
+      align-items:end;gap:32px;padding:48px max(7vw,32px);background:var(--sand);overflow:hidden;
+    }
+    .hero-panel::before{
+      content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 62%,rgba(255,255,255,.6),transparent 30%),
+      linear-gradient(115deg,rgba(255,255,255,.36),transparent 45%);pointer-events:none;
+    }
+    .project-meta{position:relative;z-index:1;align-self:end;padding-bottom:22px}
+    .project-meta div+div{margin-top:23px}
+    .meta-label{display:block;margin-bottom:7px;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+    .meta-value{font-size:1rem;font-weight:600}
+    .hero-art{position:relative;z-index:1;width:min(100%,900px);height:520px;justify-self:end;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 24px 32px rgba(42,67,86,.12))}
+    .content{max-width:1170px;margin:0 auto;padding:110px 7vw}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,10vw,155px)}
+    h2{margin:0 0 18px;font-size:1.12rem;font-weight:700;letter-spacing:-.035em}
+    p{margin:0;color:var(--muted);font-size:1rem;line-height:1.68}
+    .visual-section{max-width:1170px;margin:0 auto;padding:12px 7vw 118px}
+    .visual-placeholder{
+      min-height:535px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+      background:linear-gradient(135deg,#e6f5ff,#f9fcff 54%,#d9effd);border-radius:2px;
+    }
+    .visual-placeholder::before,.visual-placeholder::after{
+      content:"";position:absolute;border:1px solid rgba(48,105,137,.13);border-radius:26px;transform:rotate(-12deg);
+    }
+    .visual-placeholder::before{width:270px;height:500px;background:linear-gradient(145deg,#fff,#d9eefd);box-shadow:0 28px 55px rgba(59,114,151,.16)}
+    .visual-placeholder::after{width:210px;height:390px;transform:translateX(210px) rotate(9deg);background:rgba(255,255,255,.65)}
+    .placeholder-copy{z-index:1;text-align:center;color:#5d7481;font-size:.87rem;font-weight:600}
+    .placeholder-copy span{display:block;margin-top:7px;color:#8ba3b1;font-size:.74rem;font-weight:500}
+    .process{max-width:1170px;margin:0 auto;padding:0 7vw 120px}
+    .process-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,10vw,155px);padding-top:34px;border-top:1px solid var(--line)}
+    .style-guide{background:var(--sand);padding:112px 7vw}
+    .style-guide-inner{max-width:1170px;margin:0 auto}
+    .section-heading{text-align:center;margin-bottom:58px;font-size:1.35rem}
+    .guide-grid{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:50px}
+    .guide-label{display:block;margin-bottom:18px;color:var(--terracotta);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .type-sample{font-size:1rem;font-weight:700;line-height:1.55}
+    .type-sample small{display:block;color:var(--muted);font-size:.8rem;font-weight:400}
+    .swatches{display:flex;gap:11px;flex-wrap:wrap}
+    .swatch{width:65px;height:65px;border-radius:12px;border:1px solid rgba(0,0,0,.06)}
+    .swatch:nth-child(1){background:#1267bc}.swatch:nth-child(2){background:#dff2ff}.swatch:nth-child(3){background:#f7f0e8}.swatch:nth-child(4){background:#2f2e2e}
+    .component-placeholder{height:88px;border:1px solid #ded7cf;border-radius:12px;background:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;color:#9b938c;font-size:.8rem}
+    .final{max-width:1170px;margin:0 auto;padding:118px 7vw 130px}
+    .final h2{text-align:center;margin-bottom:56px;font-size:1.35rem}
+    .screens{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,60px);align-items:start}
+    .screen-wrap{text-align:center}
+    .screen{
+      aspect-ratio:9/18.5;max-width:260px;margin:0 auto;border:10px solid #f4f3f1;border-radius:33px;background:linear-gradient(160deg,#eff9ff,#d5ecfc);
+      box-shadow:0 18px 30px rgba(42,67,86,.12);display:flex;align-items:center;justify-content:center;color:#5f7890;font-size:.78rem;font-weight:600;
+    }
+    .screen small{display:block;margin-top:6px;color:#90a6b6;font-weight:500}
+    .screen-caption{margin-top:16px;color:var(--ink);font-size:.84rem;font-weight:600}
+    .next-project{padding:84px 7vw;background:var(--ink);color:#fff;text-align:center}
+    .next-project p{margin:0 0 18px;color:#d7d0ca}
+    .next-project a{font-size:clamp(2rem,4vw,4rem);font-weight:600;letter-spacing:-.055em;text-decoration:none}
+    .next-project a:hover{color:var(--terracotta)}
+    @media(max-width:760px){
+      .site-nav{padding:28px 24px 0;font-size:.73rem}.nav-links{gap:.32rem}
+      .project-intro{padding:62px 24px 30px}.hero-panel{min-height:auto;grid-template-columns:1fr;padding:35px 24px 0;gap:20px}
+      .project-meta{display:flex;gap:40px;padding:0}.project-meta div+div{margin:0}.hero-art{height:360px;justify-self:center}
+      .content,.visual-section,.process,.final{padding-left:24px;padding-right:24px}.content{padding-top:76px;padding-bottom:76px}.two-col,.guide-grid,.process-grid{grid-template-columns:1fr;gap:34px}
+      .visual-section{padding-bottom:76px}.visual-placeholder{min-height:330px}.style-guide{padding:76px 24px}.guide-grid{gap:34px}.screens{gap:32px}.screen{max-width:210px}.final{padding-top:76px;padding-bottom:76px}
+    }
   </style>
 </head>
 <body>
-  <nav><a href="../../">Joana Norte</a><span class="nav-links">Work · About · Contact</span></nav>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="../../">Joana Norte</a>
+    <div class="nav-links">
+      <a class="active" aria-current="page" href="../../#work">Work</a>
+      <a href="../../#about">About</a>
+      <a href="../../#contact">Contact</a>
+    </div>
+  </nav>
+
   <main>
-    <section class="hero">
+    <section class="project-intro">
+      <a class="back-link" href="../../#work">← Back to projects</a>
       <p class="eyebrow">Mobile app</p>
       <h1>Bridgewhat Matching</h1>
       <p class="lede">Helping companies find the right growth Advisors through tailored matching.</p>
-      <p class="meta">Role<br>UI/UX Designer<br><br>Year<br>2025</p>
-      <img class="hero-image" src="https://cdn.prod.website-files.com/6acead0e774cf5225c3ed847/6acf85c8dc5d67cf6b73d082_6acf79743a7df2ee0664124b_bridgewhat-matching-wide-cover.png" alt="Bridgewhat Matching app interface shown across three mobile devices">
     </section>
-    <section class="section">
-      <div class="grid">
+
+    <section class="hero-panel" aria-label="Bridgewhat Matching project overview">
+      <div class="project-meta">
+        <div><span class="meta-label">Role</span><span class="meta-value">UI/UX Designer</span></div>
+        <div><span class="meta-label">Year</span><span class="meta-value">2025</span></div>
+      </div>
+      <img class="hero-art" src="https://cdn.prod.website-files.com/6acead0e774cf5225c3ed847/6acf85c8dc5d67cf6b73d082_6acf79743a7df2ee0664124b_bridgewhat-matching-wide-cover.png" alt="Bridgewhat Matching mobile app mockups">
+    </section>
+
+    <section class="content">
+      <div class="two-col">
         <div>
           <h2>The problem</h2>
           <p>The matching process considers multiple dimensions—from geography and sector to functional expertise, use cases and growth themes. The experience needed to make this breadth feel clear and manageable, while helping users understand why an Advisor was being recommended.</p>
@@ -46,19 +143,53 @@
         </div>
       </div>
     </section>
-    <section class="section approach">
-      <div class="grid">
-        <div>
-          <h2>Design approach</h2>
-          <p>I began with wireframes to establish the app’s structure, navigation and core flows. From there, I developed high-fidelity mockups for browsing matches, reviewing Advisor profiles and refining preferences.</p>
-        </div>
-        <div>
-          <h2>Outcome</h2>
-          <p>The final designs provide a focused, mobile-first matching experience that helps companies discover relevant Advisors and compare recommendations with confidence.</p>
+
+    <section class="visual-section">
+      <div class="visual-placeholder" aria-label="Placeholder for Bridgewhat product visual">
+        <div class="placeholder-copy">Project visual placeholder<span>Add a mockup, flow or product detail here</span></div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="process-grid">
+        <h2>Design approach</h2>
+        <p>I began with wireframes to establish the app’s structure, navigation and core flows. From there, I developed high-fidelity mockups for browsing matches, reviewing Advisor profiles and refining preferences.</p>
+      </div>
+    </section>
+
+    <section class="style-guide">
+      <div class="style-guide-inner">
+        <h2 class="section-heading">Design system</h2>
+        <div class="guide-grid">
+          <div>
+            <span class="guide-label">Typography</span>
+            <div class="type-sample">Headlines & interface type<small>Add the final type scale here.</small></div>
+          </div>
+          <div>
+            <span class="guide-label">Colours</span>
+            <div class="swatches" aria-label="Placeholder colour palette"><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span><span class="swatch"></span></div>
+          </div>
+          <div>
+            <span class="guide-label">Components</span>
+            <div class="component-placeholder">Add component examples</div>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="final">
+      <h2>Final design</h2>
+      <div class="screens">
+        <div class="screen-wrap"><div class="screen">Add screen 01<small>Homepage</small></div><p class="screen-caption">Homepage</p></div>
+        <div class="screen-wrap"><div class="screen">Add screen 02<small>Advisor matching</small></div><p class="screen-caption">Advisor matching</p></div>
+        <div class="screen-wrap"><div class="screen">Add screen 03<small>Advisor profile</small></div><p class="screen-caption">Advisor profile</p></div>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><span>JN</span><span>Joana Norte — UI/UX Designer</span></footer>
+
+  <footer class="next-project">
+    <p>Explore more work</p>
+    <a href="../../#work">Back to projects →</a>
+  </footer>
 </body>
 </html>
