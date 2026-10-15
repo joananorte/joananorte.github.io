@@ -1,28 +1,295 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Crazy marIA — Joana Norte</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Fira+Code:wght@500;600&family=Inter:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#191126;--ink-2:#5e596d;--plum:#1b102f;--slate:#5e5a70;--lilac:#c5bbcf;--fog:#f5f5f8;--violet:#7023b5;--purple:#9851cd;--pink:#eb53f2;--blueviolet:#b54cdd;--accent:#eb53f2;--line:rgba(27,16,47,.13)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}.site-nav{display:flex;justify-content:space-between;align-items:center;padding:56px 4.2vw 0;text-transform:uppercase;font-size:16px;font-weight:700;letter-spacing:.045em}.site-nav a{color:inherit;text-decoration:none;padding-bottom:5px;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}.site-nav .brand{font-family:"Bree Serif",serif;font-size:18px;font-weight:400;letter-spacing:.02em;text-transform:none}.nav-links{display:flex;gap:18px}.nav-links a:hover,.nav-links .active{color:var(--violet);border-color:currentColor}.case-intro{max-width:1200px;margin:0 auto;padding:142px 42px 60px}.eyebrow{font-size:13px;color:var(--violet);font-weight:700;margin:0 0 18px}.case-intro h1{font-family:"Bree Serif",serif;font-weight:400;font-size:clamp(52px,7vw,104px);line-height:.96;letter-spacing:-.035em;margin:0 0 20px}.case-intro .summary{max-width:575px;font-size:18px;line-height:1.6;color:var(--ink-2);margin:0}.hero-panel{position:relative;min-height:640px;background:linear-gradient(125deg,var(--plum),#331552 45%,#6620a3);overflow:hidden}.hero-panel:before,.hero-panel:after{content:"";position:absolute;border-radius:999px;filter:blur(4px);opacity:.95}.hero-panel:before{width:48vw;height:48vw;background:radial-gradient(circle at 35% 35%,#f060f4 0 7%,#a04bd0 30%,transparent 67%);right:-9vw;top:-13vw}.hero-panel:after{width:38vw;height:38vw;background:radial-gradient(circle,#7730bd 0 16%,transparent 66%);left:-12vw;bottom:-15vw}.terminal{position:absolute;width:min(70vw,930px);height:min(58vw,490px);max-height:76%;left:50%;top:53%;transform:translate(-50%,-50%) rotate(-3deg);padding:28px;background:rgba(19,10,35,.76);border:1px solid rgba(255,255,255,.38);border-radius:22px;box-shadow:0 40px 90px rgba(7,0,15,.52);backdrop-filter:blur(12px);color:white;overflow:hidden}.terminal-bar{display:flex;gap:8px;margin-bottom:46px}.terminal-bar i{width:11px;height:11px;border-radius:50%;background:var(--pink)}.terminal-bar i:nth-child(2){background:#ad67db}.terminal-bar i:nth-child(3){background:#8a82a3}.terminal-copy{font-family:"Fira Code",monospace;font-weight:500;font-size:clamp(16px,2vw,27px);line-height:1.7}.terminal-copy strong{color:var(--pink);font-weight:600}.terminal-card{position:absolute;right:6%;bottom:7%;width:38%;padding:22px;border-radius:16px;background:linear-gradient(135deg,rgba(235,83,242,.96),rgba(112,35,181,.91));font-family:"Fira Code",monospace;font-size:13px;line-height:1.55;box-shadow:0 15px 40px rgba(0,0,0,.25)}.metadata{position:absolute;left:4.2vw;bottom:38px;display:flex;gap:54px;color:white;z-index:2}.metadata small{display:block;text-transform:uppercase;font-size:11px;letter-spacing:.09em;opacity:.68;margin-bottom:6px}.metadata b{font-size:14px}.section{max-width:1080px;margin:0 auto;padding:130px 42px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,11vw,170px)}.section h2{font-family:"Bree Serif",serif;font-weight:400;font-size:38px;letter-spacing:-.02em;margin:0 0 16px}.section p{font-size:15px;line-height:1.78;color:var(--ink-2);margin:0}.visual-section{background:var(--fog);padding:120px 0}.visual-inner{max-width:1080px;margin:0 auto;padding:0 42px}.visual-heading{text-align:center;margin-bottom:48px}.visual-heading h2{font-family:"Bree Serif",serif;font-weight:400;font-size:38px;margin:0 0 10px}.visual-heading p{color:var(--ink-2);font-size:15px}.screen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.placeholder-screen{aspect-ratio:16/10;border-radius:16px;padding:20px;background:#201235;box-shadow:0 20px 40px rgba(27,16,47,.15);position:relative;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease}.placeholder-screen:hover{transform:translateY(-10px);box-shadow:0 30px 50px rgba(27,16,47,.25)}.placeholder-screen:before{content:"";height:9px;width:55%;background:rgba(255,255,255,.25);border-radius:99px;display:block}.placeholder-screen:after{content:"";position:absolute;width:75%;height:55%;left:13%;bottom:11%;border:1px solid rgba(255,255,255,.25);border-radius:10px;background:linear-gradient(135deg,rgba(231,83,242,.9),rgba(112,35,181,.3))}.placeholder-screen:nth-child(2){background:#4d1b79}.placeholder-screen:nth-child(3){background:#8d48c7}.placeholder-label{position:absolute;z-index:1;bottom:17%;left:20%;font-family:"Fira Code",monospace;color:white;font-size:11px}.system{background:linear-gradient(130deg,#f7f2fa,#f5f1f8);padding:124px 0}.system-inner{max-width:1080px;margin:0 auto;padding:0 42px}.system-title{text-align:center;font-family:"Bree Serif",serif;font-size:38px;font-weight:400;margin:0 0 65px}.system-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:70px}.system h3{font-family:"Bree Serif",serif;font-size:25px;font-weight:400;color:var(--violet);margin:0 0 28px}.type-row{padding:0 0 15px}.type-row b{display:block;color:var(--ink)}.type-row small{font-family:Inter,sans-serif;font-size:12px;color:var(--ink-2)}.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.swatch{min-width:0}.swatch i{width:100%;display:block;aspect-ratio:1;border-radius:22px;background:var(--c)}.swatch span{display:block;font-size:11px;color:var(--ink-2);margin-top:8px;white-space:nowrap}.process{padding-bottom:160px}.process-list{margin-top:54px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.process-card{border-top:1px solid var(--line);padding-top:22px}.process-card span{font-family:"Fira Code",monospace;color:var(--violet);font-size:13px}.process-card h3{font-family:"Bree Serif",serif;font-size:27px;font-weight:400;margin:13px 0 10px}.process-card p{font-size:14px}.next-project{padding:95px 42px;text-align:center;background:var(--plum);color:#fff}.next-project p{font-size:13px;margin:0 0 16px;opacity:.7}.next-project a{font-family:"Bree Serif",serif;font-size:clamp(23px,3vw,38px);color:#fff;text-decoration:none;transition:color .25s}.next-project a:hover{color:var(--pink)}.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}.reveal.show{opacity:1;transform:none}
-@media(max-width:700px){.site-nav{padding:34px 24px 0;font-size:13px}.site-nav .brand{font-size:17px}.nav-links{gap:11px}.case-intro{padding:106px 24px 48px}.case-intro h1{font-size:54px}.case-intro .summary{font-size:16px}.hero-panel{min-height:500px}.terminal{width:91vw;height:325px;padding:20px;border-radius:16px;top:48%}.terminal-bar{margin-bottom:25px}.terminal-copy{font-size:14px}.terminal-card{width:53%;font-size:9px;padding:12px}.metadata{left:24px;bottom:24px;gap:30px}.section{padding:90px 24px}.two-col{grid-template-columns:1fr;gap:36px}.section h2,.visual-heading h2,.system-title{font-size:31px}.visual-section,.system{padding:80px 0}.visual-inner,.system-inner{padding:0 24px}.screen-grid{grid-template-columns:1fr;gap:13px}.placeholder-screen{aspect-ratio:16/9}.system-grid{grid-template-columns:1fr;gap:45px}.swatches{grid-template-columns:repeat(4,1fr);gap:10px}.swatch i{border-radius:15px}.swatch span{font-size:9px}.process{padding-bottom:100px}.process-list{grid-template-columns:1fr;gap:30px;margin-top:36px}.next-project{padding:75px 24px}}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crazy marIA — Joana Norte</title>
+  <meta name="description" content="Crazy marIA case study by Joana Norte." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@700&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#2f2e2e;
+      --muted:#77736f;
+      --paper:#fff;
+      --sand:#f7f0e8;
+      --sand-deep:#eaded2;
+      --line:#e9e5e1;
+      --terracotta:#c9826a;
+      --blue-wash:#e6f5ff;
+      --project-accent:#EB53F2;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Manrope",sans-serif}
+    a{color:inherit}
+    .site-nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:56px 4.2vw 0;font-size:16px;font-weight:700;letter-spacing:normal;text-transform:uppercase;
+    }
+    .site-nav a{text-decoration:none}
+    .site-nav .brand{font-family:"Bree Serif",serif;font-size:18px;font-weight:400}
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .nav-links a{padding-bottom:5px;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+    .nav-links a:hover,.nav-links .active{color:var(--project-accent);border-bottom-color:currentColor}
+    .project-intro{margin:0;padding:138px 4.2vw 42px}
+    .back-link{
+      display:inline-flex;align-items:center;gap:.45rem;margin-bottom:30px;color:var(--muted);
+      text-decoration:none;font-size:.78rem;font-weight:600;
+    }
+    .back-link:hover{color:var(--project-accent)}
+    .eyebrow{margin:0 0 18px;color:var(--project-accent);font-family:"Manrope",sans-serif;font-size:.82rem;font-weight:700;letter-spacing:normal;text-transform:uppercase}
+    h1{max-width:none;white-space:nowrap;margin:0;font-family:"Bree Serif",serif;font-size:clamp(2.8rem,5.7vw,5.8rem);line-height:.95;letter-spacing:normal;font-weight:600}
+    .lede{max-width:none;white-space:nowrap;margin:18px 0 0;color:var(--muted);font-size:clamp(.9rem,1.15vw,1.05rem);line-height:1.45}
+    .hero-panel{
+      min-height:635px;position:relative;display:block;padding:0;background:var(--sand);overflow:hidden;
+    }
+    .hero-panel::before{
+      content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 62%,rgba(255,255,255,.6),transparent 30%),
+      linear-gradient(115deg,rgba(255,255,255,.36),transparent 45%);pointer-events:none;
+    }
+    .project-meta{position:absolute;z-index:3;left:4.2vw;bottom:48px;display:flex;gap:54px;padding:0;background:transparent;backdrop-filter:none}
+    .project-meta div+div{margin-top:0}
+    .meta-label{display:block;margin-bottom:7px;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:normal;font-weight:700}
+    .meta-value{font-size:1rem;font-weight:600}
+    .hero-art{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center;filter:none;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .hero-panel:hover .hero-art{transform:scale(1.025)}
+    .content{max-width:1170px;margin:0 auto;padding:110px 7vw}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,10vw,155px)}
+    h2{margin:0 0 18px;font-family:"Bree Serif",serif;font-size:1.35rem;font-weight:600;letter-spacing:normal}
+    p{margin:0;color:var(--muted);font-size:1rem;line-height:1.68}
+    .visual-section{max-width:1170px;margin:0 auto;padding:12px 7vw 118px}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in-view{opacity:1;transform:translateY(0)}
+    .reveal.delay-1{transition-delay:.1s}.reveal.delay-2{transition-delay:.2s}
+    .visual-placeholder{
+      min-height:610px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+      background:linear-gradient(135deg,#e6f5ff,#f9fcff 54%,#d9effd);border-radius:2px;
+    }
+    .visual-placeholder::before{content:"";position:absolute;width:58%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.52);filter:blur(34px)}
+    .project-visual-screens{position:relative;z-index:1;width:min(620px,78%);height:520px}
+    .project-visual-screen{
+      position:absolute;top:50%;bottom:auto;width:min(42%,230px);padding:12px;border:1px solid rgba(174,194,205,.8);border-radius:38px;
+      background:linear-gradient(128deg,#fbfeff 4%,#e7f0f4 37%,#ffffff 68%,#cddce4 100%);
+      box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 12px 20px rgba(147,178,196,.18),0 24px 55px rgba(42,87,118,.15);
+      transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease;
+    }
+    .project-visual-screen img{display:block;width:100%;height:auto;border-radius:27px;box-shadow:inset 0 0 0 1px rgba(135,162,177,.24)}
+    .phone-notch{position:absolute;z-index:2;top:12px;left:50%;width:39%;height:19px;transform:translateX(-50%);border:0;border-radius:0 0 13px 13px;background:linear-gradient(180deg,#e1eef4 0%,#f9fcfd 82%);box-shadow:0 3px 6px rgba(86,123,145,.1)}
+    .phone-notch::before{content:"";position:absolute;top:6px;left:24%;width:4px;height:4px;border-radius:50%;background:#a3b9c6;box-shadow:0 0 0 1px rgba(255,255,255,.75)}
+    .phone-notch::after{content:"";position:absolute;top:7px;left:55%;width:29%;height:3px;border-radius:3px;background:#b4c5cf}
+    .project-visual-screen::before,.project-visual-screen::after{content:"";position:absolute;width:5px;background:linear-gradient(90deg,#aebfc9,#f9fcfd);box-shadow:1px 1px 2px rgba(42,67,86,.2)}
+    .project-visual-screen::before{left:-6px;top:24%;height:61px;border-radius:5px 0 0 5px;box-shadow:1px 20px 2px rgba(42,67,86,.16)}
+    .project-visual-screen::after{right:-6px;top:34%;height:39px;border-radius:0 5px 5px 0}
+    .project-visual-screen:first-child{left:16%;transform:translateY(-50%) rotate(-10deg) translateY(8px)}
+    .project-visual-screen:last-child{right:16%;transform:translateY(-50%) rotate(9deg) translateY(-18px)}
+    .visual-placeholder:hover .project-visual-screen:first-child{transform:translateY(-50%) rotate(-14deg) translate(-18px,-12px);box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 14px 24px rgba(147,178,196,.2),0 28px 58px rgba(42,87,118,.19)}
+    .visual-placeholder:hover .project-visual-screen:last-child{transform:translateY(-50%) rotate(13deg) translate(20px,-30px);box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 14px 24px rgba(147,178,196,.2),0 28px 58px rgba(42,87,118,.19)}
+    .process{max-width:1170px;margin:0 auto;padding:0 7vw 120px}
+    .process-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,10vw,155px);padding-top:34px;border-top:1px solid var(--line)}
+    .style-guide{background:var(--blue-wash);padding:112px 7vw}
+    .style-guide-inner{max-width:1170px;margin:0 auto}
+    .section-heading{text-align:center;margin-bottom:58px;font-family:"Bree Serif",serif;font-size:1.35rem;letter-spacing:normal}
+    .guide-grid{display:grid;grid-template-columns:.9fr 1.35fr;gap:70px}
+    .guide-label{display:block;margin-bottom:18px;color:var(--project-accent);font-family:"Bree Serif",serif;font-size:.72rem;font-weight:700;letter-spacing:normal;text-transform:uppercase}
+    .type-scale{display:grid;gap:18px}
+    .type-row{border-bottom:1px solid rgba(47,46,46,.13);padding-bottom:13px}
+    .type-row:last-child{border-bottom:0}
+    .type-row strong{display:block;color:var(--ink)}
+    .type-row small{display:block;margin-top:5px;color:var(--muted);font-size:.78rem}
+    .type-h1{font-family:Poppins,sans-serif;font-size:24px;font-weight:700;line-height:1.1}
+    .type-h2{font-family:Roboto,sans-serif;font-size:20px;font-weight:600;line-height:1.2}
+    .type-button{font-family:Roboto,sans-serif;font-size:16px;font-weight:700}
+    .type-body{font-family:Roboto,sans-serif;font-size:16px;font-weight:400}
+    .type-small{font-family:Roboto,sans-serif;font-size:14px;font-weight:400}
+    .type-caption{font-family:Roboto,sans-serif;font-size:12px;font-weight:400}
+    .colour-grid{display:grid;grid-template-columns:repeat(5,86px);gap:26px 18px}
+    .colour-token{display:block;min-width:0;transition:transform .25s ease}
+    .colour-token:hover{transform:translateY(-5px)}
+    .colour-dot{display:block;transition:transform .25s ease,box-shadow .25s ease;width:78px;aspect-ratio:1;height:auto;border-radius:12px;border:1px solid rgba(0,0,0,.1);margin-bottom:10px}
+    .colour-token:hover .colour-dot{transform:scale(1.05);box-shadow:0 10px 18px rgba(35,38,62,.15)}
+    .colour-token strong{display:block;font-size:.84rem;line-height:1.15}
+    .colour-token small{display:block;margin-top:4px;color:var(--muted);font-family:Roboto,sans-serif;font-size:.74rem}
+    .final{max-width:1170px;margin:0 auto;padding:118px 7vw 130px}
+    .final h2{text-align:center;margin-bottom:56px;font-family:"Bree Serif",serif;font-size:1.55rem}
+    .screens{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,60px);align-items:start}
+    .screen-wrap{text-align:center;--screen-x:0px;--screen-y:0px;--screen-rotate:0deg}
+    .final-phone{
+      position:relative;width:min(100%,260px);margin:0 auto;padding:10px;border:1px solid rgba(174,194,205,.8);border-radius:36px;
+      background:linear-gradient(128deg,#fbfeff 4%,#e7f0f4 37%,#ffffff 68%,#cddce4 100%);
+      box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 12px 20px rgba(147,178,196,.16),0 22px 48px rgba(42,87,118,.14);
+      transform:translate(var(--screen-x),var(--screen-y)) rotate(var(--screen-rotate));transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease;
+    }
+    .final-phone .screen{width:100%;height:auto;max-width:none;margin:0;border:0;border-radius:25px;background:linear-gradient(160deg,#eff9ff,#d5ecfc);display:block}
+    .final-phone::before,.final-phone::after{content:"";position:absolute;width:4px;background:linear-gradient(90deg,#aebfc9,#f9fcfd);box-shadow:1px 1px 2px rgba(42,67,86,.18)}
+    .final-phone::before{left:-5px;top:25%;height:56px;border-radius:5px 0 0 5px;box-shadow:1px 19px 2px rgba(42,67,86,.14)}
+    .final-phone::after{right:-5px;top:34%;height:37px;border-radius:0 5px 5px 0}
+    .final-phone .phone-notch{top:10px;width:39%;height:17px;border-radius:0 0 12px 12px}
+    .final-phone .phone-notch::before{top:5px}.final-phone .phone-notch::after{top:6px}
+    .screen-wrap:nth-child(3n + 1):hover{--screen-x:-18px;--screen-y:-10px;--screen-rotate:-1deg}
+    .screen-wrap:nth-child(3n + 2):hover{--screen-y:-24px;--screen-rotate:-1deg}
+    .screen-wrap:nth-child(3n):hover{--screen-x:18px;--screen-y:-10px;--screen-rotate:1deg}
+    .screen-wrap:hover .final-phone{box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 14px 24px rgba(147,178,196,.19),0 28px 55px rgba(42,87,118,.19)}
+    .screen-caption{margin-top:16px;color:var(--ink);font-size:.84rem;font-weight:600}
+    .next-project{padding:54px 7vw;background:var(--ink);color:#fff;text-align:center}
+    .next-project p{margin:0 0 18px;color:#d7d0ca}
+    .next-project a{display:inline-block;font-family:"Bree Serif",serif;font-size:clamp(1rem,1.5vw,1.35rem);font-weight:700;letter-spacing:normal;text-decoration:none;transition:color .25s ease,transform .25s ease}
+    .next-project a:hover{color:var(--project-accent);transform:translateX(8px)}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+    @media(max-width:760px){
+      .site-nav{padding:28px 24px 0;font-size:.73rem}.nav-links{gap:.32rem}
+      .project-intro{padding:62px 24px 30px}.project-intro h1,.project-intro .lede{white-space:normal}.hero-panel{min-height:460px;padding:0}
+      .project-meta{left:24px;bottom:24px;gap:28px;padding:15px 16px}.project-meta div+div{margin:0}.hero-art{height:100%}
+      .content,.visual-section,.process,.final{padding-left:24px;padding-right:24px}.colour-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 16px}.colour-dot{width:100%;max-width:78px}.content{padding-top:76px;padding-bottom:76px}.two-col,.guide-grid,.process-grid{grid-template-columns:1fr;gap:34px}
+      .visual-section{padding-bottom:76px}.visual-placeholder{min-height:390px}.project-visual-screens{width:100%;height:350px;display:flex;align-items:center;justify-content:center;transform:translateY(4px)}.project-visual-screen{position:relative;left:auto!important;right:auto!important;top:auto;bottom:auto;width:min(42%,145px);padding:7px;border-radius:25px}.project-visual-screen img{border-radius:18px}.project-visual-screen:first-child{margin-right:-22px;transform:rotate(-10deg) translateY(8px)}.project-visual-screen:last-child{margin-left:-22px;transform:rotate(9deg) translateY(-18px)}.phone-notch{top:7px;height:12px;border-radius:0 0 8px 8px}.phone-notch::before{top:4px;width:3px;height:3px}.phone-notch::after{top:4px;height:2px}.project-visual-screen:first-child{left:12%}.project-visual-screen:last-child{right:12%}.style-guide{padding:76px 24px}.guide-grid{gap:34px}.screens{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}.final-phone{width:100%;max-width:210px;padding:7px;border-radius:27px}.final-phone .screen{border-radius:19px}.final-phone .phone-notch{top:7px;height:12px;border-radius:0 0 8px 8px}.final-phone .phone-notch::before{top:4px;width:3px;height:3px}.final-phone .phone-notch::after{top:4px;height:2px}.final{padding-top:76px;padding-bottom:76px}
+    }
+  
+/* Crazy marIA overrides — shared case-study layout */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Inter:wght@400;500&display=swap');
+:root{--project-accent:#EB53F2;--blue-wash:#F7F0FA}.eyebrow,.guide-label{color:var(--project-accent)}.crazy-hero{background:radial-gradient(circle at 78% 18%,#eb53f2 0 1%,transparent 23%),radial-gradient(circle at 18% 78%,#7023b5 0 2%,transparent 28%),linear-gradient(125deg,#1B102F,#3B165D 55%,#7828B2)!important;min-height:clamp(470px,58vw,730px)}.crazy-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 58% 47%,transparent 0 13%,rgba(255,255,255,.13) 13.2% 13.7%,transparent 14% 24%,rgba(255,255,255,.08) 24.2% 24.6%,transparent 25%);opacity:.8}.crazy-terminal{position:absolute;left:50%;top:48%;width:min(62vw,770px);padding:28px 32px;transform:translate(-50%,-50%) rotate(-3deg);border:1px solid rgba(255,255,255,.38);border-radius:20px;background:rgba(18,8,35,.65);box-shadow:0 35px 90px rgba(0,0,0,.4);backdrop-filter:blur(13px);font-family:'Fira Code',monospace;color:#fff;font-size:clamp(15px,2vw,27px);line-height:1.65;z-index:1}.crazy-terminal b{color:#EB53F2}.crazy-terminal span{display:inline-block;margin-top:28px;border:1px solid rgba(235,83,242,.7);padding:9px 13px;color:#f6b0fa;font-size:12px}.crazy-dots{display:flex;gap:7px;margin-bottom:34px}.crazy-dots i{width:10px;height:10px;border-radius:50%;background:#EB53F2}.crazy-dots i:nth-child(2){background:#9851CD}.crazy-dots i:nth-child(3){background:#C5BBCF}.project-meta{z-index:2}.guide-grid .type-scale{font-family:Inter,sans-serif}.type-h1,.type-h2,.type-button{font-family:'Fira Code',monospace!important}.type-h1{font-size:24px!important}.type-h2{font-size:20px!important}.type-button{font-size:16px!important}.colour-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.style-guide{background:var(--blue-wash)}@media(max-width:760px){.crazy-hero{min-height:470px}.crazy-terminal{width:82vw;padding:20px;top:45%;font-size:15px}.crazy-terminal span{margin-top:15px;font-size:10px}.colour-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav class="site-nav"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a class="active" href="../../#work">Work</a><a href="../../#about">About</a><a href="../../#contact">Contact</a></div></nav>
-<main>
-<section class="case-intro"><p class="eyebrow">Virtual escape training</p><h1>Crazy marIA</h1><p class="summary">An interactive virtual escape training designed to help teams build practical awareness and confidence around Artificial Intelligence.</p></section>
-<section class="hero-panel" aria-label="Crazy marIA project visual placeholder"><div class="terminal"><div class="terminal-bar"><i></i><i></i><i></i></div><div class="terminal-copy"><strong>system:</strong> You have entered the training.<br><br><span>Learn, play and unlock the potential of AI.</span></div><div class="terminal-card">MISSION 01<br><br>Can your team solve the challenge before time runs out?</div></div><div class="metadata"><div><small>Role</small><b>UX/UI Designer & Front-end developer</b></div><div><small>Scope</small><b>Wireframes · Design · HTML/CSS/JS</b></div></div></section>
-<section class="section reveal"><div class="two-col"><div><h2>The problem</h2><p>AI is transforming the workplace quickly, but it can be difficult for teams to know where to begin. The training needed to make the subject less abstract, more approachable and genuinely engaging for employees.</p></div><div><h2>Project vision</h2><p>Crazy marIA turns AI learning into an interactive challenge. Through an escape-room format, participants explore concepts, make decisions and collaborate while building a more confident relationship with Artificial Intelligence.</p></div></div></section>
-<section class="visual-section"><div class="visual-inner reveal"><div class="visual-heading"><h2>Project visual</h2><p>Placeholder frames ready for the game screens and interface flows.</p></div><div class="screen-grid"><div class="placeholder-screen"><span class="placeholder-label">Welcome screen</span></div><div class="placeholder-screen"><span class="placeholder-label">Challenge room</span></div><div class="placeholder-screen"><span class="placeholder-label">AI mission</span></div></div></div></section>
-<section class="system"><div class="system-inner reveal"><h2 class="system-title">Design system</h2><div class="system-grid"><div><h3>Typography</h3><div class="type-row"><b>Headline 01</b><small>Fira Code Semibold, 52px desktop · 40px mobile</small></div><div class="type-row"><b>Headline 02</b><small>Fira Code Semibold, 26px desktop · 22px mobile</small></div><div class="type-row"><b>Subheadline</b><small>Fira Code Medium, 16px</small></div><div class="type-row"><b>Body Standard</b><small>Inter Regular, 16px</small></div><div class="type-row"><b>Body Small</b><small>Inter Regular, 14px</small></div><div class="type-row"><b>Button</b><small>Fira Code Semibold, 18px desktop · 16px mobile</small></div></div><div><h3>Colours</h3><div class="swatches"><div class="swatch"><i style="--c:#1B102F"></i><span>Deep plum<br>#1B102F</span></div><div class="swatch"><i style="--c:#5E5A70"></i><span>Slate<br>#5E5A70</span></div><div class="swatch"><i style="--c:#C5BBCF"></i><span>Lilac<br>#C5BBCF</span></div><div class="swatch"><i style="--c:#F5F5F8"></i><span>Cloud<br>#F5F5F8</span></div><div class="swatch"><i style="--c:#7023B5"></i><span>Violet<br>#7023B5</span></div><div class="swatch"><i style="--c:#9851CD"></i><span>Purple<br>#9851CD</span></div><div class="swatch"><i style="--c:#EB53F2"></i><span>Pink<br>#EB53F2</span></div><div class="swatch"><i style="--c:#B54CDD"></i><span>Orchid<br>#B54CDD</span></div></div></div></div></div></section>
-<section class="section process reveal"><h2>From concept to experience</h2><div class="process-list"><article class="process-card"><span>01</span><h3>Wireframes</h3><p>Mapped out the training flow, game mechanics and key decisions before refining the visual direction.</p></article><article class="process-card"><span>02</span><h3>Interface design</h3><p>Built a clear, game-led interface that balances playful discovery with accessible learning.</p></article><article class="process-card"><span>03</span><h3>Front-end build</h3><p>Translated the complete experience into responsive HTML, CSS and JavaScript.</p></article></div></section>
-</main>
-<footer class="next-project"><p>Want to see another project?</p><a href="../../#work">Back to projects →</a></footer>
-<script>const observer=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));</script>
-</body></html>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="../../">Joana Norte</a>
+    <div class="nav-links">
+      <a class="active" aria-current="page" href="../../#work">Work</a>
+      <a href="../../#about">About</a>
+      <a href="../../#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="project-intro">
+      <p class="eyebrow">Virtual escape training</p>
+      <h1>Crazy marIA</h1>
+      <p class="lede">An interactive virtual escape training designed to help teams build practical awareness and confidence around Artificial Intelligence.</p>
+    </section>
+
+    <section class="hero-panel crazy-hero" aria-label="Crazy marIA project visual placeholder">
+      <div class="project-meta">
+        <div><span class="meta-label">Role</span><span class="meta-value">UX/UI Designer &amp; Front-end developer</span></div>
+        <div><span class="meta-label">Scope</span><span class="meta-value">Wireframes · Design · HTML/CSS/JS</span></div>
+      </div>
+      <div class="crazy-terminal" aria-hidden="true">
+        <div class="crazy-dots"><i></i><i></i><i></i></div>
+        <p><b>system:</b> Training unlocked.</p>
+        <p>Learn. Play. Explore AI.</p>
+        <span>MISSION 01</span>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="two-col">
+        <div>
+          <h2>The problem</h2>
+          <p>Artificial Intelligence is transforming the workplace quickly, but many teams do not know where to start. The experience needed to make AI learning more approachable, engaging and practical for every participant.</p>
+        </div>
+        <div>
+          <h2>Project vision</h2>
+          <p>Crazy marIA is a virtual escape training that turns AI learning into an interactive challenge. Teams explore concepts, make decisions and collaborate while building a more confident relationship with Artificial Intelligence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-section">
+      <div class="visual-placeholder" aria-label="Crazy marIA advisor browsing and geography filters screens">
+        <div class="project-visual-screens">
+          <div class="project-visual-screen"><span class="phone-notch" aria-hidden="true"></span><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221200%22%20viewBox%3D%220%200%20900%201200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231b102f%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%237023b5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23eb53f2%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22900%22%20height%3D%221200%22%20fill%3D%22url(%23g)%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2280%22%20width%3D%22770%22%20height%3D%221040%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.42%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22110%22%20y%3D%22180%22%20fill%3D%22white%22%20font-family%3D%22monospace%22%20font-size%3D%2242%22%3ECRAZY%20marIA%3C%2Ftext%3E%3Ctext%20x%3D%22110%22%20y%3D%22255%22%20fill%3D%22%23f3a5f8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%3EPROJECT%20VISUAL%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22610%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.4%22%20stroke-width%3D%228%22%2F%3E%3Cpath%20d%3D%22M370%20610h160M450%20530v160%22%20stroke%3D%22white%22%20stroke-width%3D%228%22%2F%3E%3C%2Fsvg%3E" alt="Crazy marIA advisor list screen" loading="lazy"></div>
+          <div class="project-visual-screen"><span class="phone-notch" aria-hidden="true"></span><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221200%22%20viewBox%3D%220%200%20900%201200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231b102f%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%237023b5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23eb53f2%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22900%22%20height%3D%221200%22%20fill%3D%22url(%23g)%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2280%22%20width%3D%22770%22%20height%3D%221040%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.42%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22110%22%20y%3D%22180%22%20fill%3D%22white%22%20font-family%3D%22monospace%22%20font-size%3D%2242%22%3ECRAZY%20marIA%3C%2Ftext%3E%3Ctext%20x%3D%22110%22%20y%3D%22255%22%20fill%3D%22%23f3a5f8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%3EPROJECT%20VISUAL%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22610%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.4%22%20stroke-width%3D%228%22%2F%3E%3Cpath%20d%3D%22M370%20610h160M450%20530v160%22%20stroke%3D%22white%22%20stroke-width%3D%228%22%2F%3E%3C%2Fsvg%3E" alt="Crazy marIA geography filters screen" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="process-grid">
+        <h2>Design approach</h2>
+        <p>I began with wireframes to map the training flow, challenges and learning moments. From there, I designed the complete visual experience and built it in HTML, CSS and JavaScript.</p>
+      </div>
+    </section>
+
+    <section class="style-guide">
+      <div class="style-guide-inner">
+        <h2 class="section-heading">Design system</h2>
+        <div class="guide-grid">
+          <div>
+            <span class="guide-label">Typography</span>
+            <div class="type-scale">
+              <div class="type-row"><strong class="type-h1">Headline 01</strong><small>Fira Code · Semibold · 52px desktop · 40px mobile</small></div>
+              <div class="type-row"><strong class="type-h2">Headline 02</strong><small>Fira Code · Semibold · 26px desktop · 22px mobile</small></div>
+              <div class="type-row"><strong class="type-button">Button</strong><small>Fira Code · Semibold · 18px desktop · 16px mobile</small></div>
+              <div class="type-row"><strong class="type-body">Body Standard</strong><small>Inter · Regular · 16px</small></div>
+              <div class="type-row"><strong class="type-small">Body Small</strong><small>Inter · Regular · 14px</small></div>
+              <div class="type-row"><strong class="type-caption">Caption</strong><small>Inter · Regular · 12px</small></div>
+            </div>
+          </div>
+          <div>
+            <span class="guide-label">Colours</span>
+            <div class="colour-grid" aria-label="Crazy marIA colour palette">
+              <div class="colour-token"><span class="colour-dot" style="background:#FFFFFF"></span><div><strong>White</strong><small>#FFFFFF</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#EB53F2"></span><div><strong>Pink</strong><small>#EB53F2</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#7023B5"></span><div><strong>Violet</strong><small>#7023B5</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#5E5A70"></span><div><strong>Slate</strong><small>#5E5A70</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#5E5A70"></span><div><strong>Slate</strong><small>#5E5A70</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#1B102F"></span><div><strong>Deep Plum</strong><small>#1B102F</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#F5F5F8"></span><div><strong>Cloud</strong><small>#F5F5F8</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#9851CD"></span><div><strong>Purple</strong><small>#9851CD</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#C5BBCF"></span><div><strong>Lilac</strong><small>#C5BBCF</small></div></div>
+              <div class="colour-token"><span class="colour-dot" style="background:#B54CDD"></span><div><strong>Orchid</strong><small>#B54CDD</small></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <h2>Final design</h2>
+      <div class="screens">
+        <div class="screen-wrap"><div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221200%22%20viewBox%3D%220%200%20900%201200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231b102f%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%237023b5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23eb53f2%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22900%22%20height%3D%221200%22%20fill%3D%22url(%23g)%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2280%22%20width%3D%22770%22%20height%3D%221040%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.42%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22110%22%20y%3D%22180%22%20fill%3D%22white%22%20font-family%3D%22monospace%22%20font-size%3D%2242%22%3ECRAZY%20marIA%3C%2Ftext%3E%3Ctext%20x%3D%22110%22%20y%3D%22255%22%20fill%3D%22%23f3a5f8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%3EPROJECT%20VISUAL%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22610%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.4%22%20stroke-width%3D%228%22%2F%3E%3Cpath%20d%3D%22M370%20610h160M450%20530v160%22%20stroke%3D%22white%22%20stroke-width%3D%228%22%2F%3E%3C%2Fsvg%3E" alt="Crazy marIA login screen" loading="lazy"></div><p class="screen-caption">Login</p></div>
+        <div class="screen-wrap"><div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221200%22%20viewBox%3D%220%200%20900%201200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231b102f%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%237023b5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23eb53f2%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22900%22%20height%3D%221200%22%20fill%3D%22url(%23g)%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2280%22%20width%3D%22770%22%20height%3D%221040%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.42%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22110%22%20y%3D%22180%22%20fill%3D%22white%22%20font-family%3D%22monospace%22%20font-size%3D%2242%22%3ECRAZY%20marIA%3C%2Ftext%3E%3Ctext%20x%3D%22110%22%20y%3D%22255%22%20fill%3D%22%23f3a5f8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%3EPROJECT%20VISUAL%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22610%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.4%22%20stroke-width%3D%228%22%2F%3E%3Cpath%20d%3D%22M370%20610h160M450%20530v160%22%20stroke%3D%22white%22%20stroke-width%3D%228%22%2F%3E%3C%2Fsvg%3E" alt="Crazy marIA advisor matches screen" loading="lazy"></div><p class="screen-caption">Advisor matches</p></div>
+        <div class="screen-wrap"><div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221200%22%20viewBox%3D%220%200%20900%201200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231b102f%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%237023b5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23eb53f2%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22900%22%20height%3D%221200%22%20fill%3D%22url(%23g)%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2280%22%20width%3D%22770%22%20height%3D%221040%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.42%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22110%22%20y%3D%22180%22%20fill%3D%22white%22%20font-family%3D%22monospace%22%20font-size%3D%2242%22%3ECRAZY%20marIA%3C%2Ftext%3E%3Ctext%20x%3D%22110%22%20y%3D%22255%22%20fill%3D%22%23f3a5f8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%3EPROJECT%20VISUAL%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22610%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.4%22%20stroke-width%3D%228%22%2F%3E%3Cpath%20d%3D%22M370%20610h160M450%20530v160%22%20stroke%3D%22white%22%20stroke-width%3D%228%22%2F%3E%3C%2Fsvg%3E" alt="Crazy marIA company preferences screen" loading="lazy"></div><p class="screen-caption">Company preferences</p></div>
+        <div class="screen-wrap"><div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221200%22%20viewBox%3D%220%200%20900%201200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231b102f%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%237023b5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23eb53f2%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22900%22%20height%3D%221200%22%20fill%3D%22url(%23g)%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2280%22%20width%3D%22770%22%20height%3D%221040%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.42%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22110%22%20y%3D%22180%22%20fill%3D%22white%22%20font-family%3D%22monospace%22%20font-size%3D%2242%22%3ECRAZY%20marIA%3C%2Ftext%3E%3Ctext%20x%3D%22110%22%20y%3D%22255%22%20fill%3D%22%23f3a5f8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%3EPROJECT%20VISUAL%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22610%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.4%22%20stroke-width%3D%228%22%2F%3E%3Cpath%20d%3D%22M370%20610h160M450%20530v160%22%20stroke%3D%22white%22%20stroke-width%3D%228%22%2F%3E%3C%2Fsvg%3E" alt="Crazy marIA company user search screen" loading="lazy"></div><p class="screen-caption">Search company users</p></div>
+        <div class="screen-wrap"><div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221200%22%20viewBox%3D%220%200%20900%201200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231b102f%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%237023b5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23eb53f2%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22900%22%20height%3D%221200%22%20fill%3D%22url(%23g)%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2280%22%20width%3D%22770%22%20height%3D%221040%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.42%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22110%22%20y%3D%22180%22%20fill%3D%22white%22%20font-family%3D%22monospace%22%20font-size%3D%2242%22%3ECRAZY%20marIA%3C%2Ftext%3E%3Ctext%20x%3D%22110%22%20y%3D%22255%22%20fill%3D%22%23f3a5f8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%3EPROJECT%20VISUAL%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22610%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.4%22%20stroke-width%3D%228%22%2F%3E%3Cpath%20d%3D%22M370%20610h160M450%20530v160%22%20stroke%3D%22white%22%20stroke-width%3D%228%22%2F%3E%3C%2Fsvg%3E" alt="Crazy marIA company user profile screen" loading="lazy"></div><p class="screen-caption">Company profile</p></div>
+        <div class="screen-wrap"><div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22900%22%20height%3D%221200%22%20viewBox%3D%220%200%20900%201200%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%231b102f%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%237023b5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23eb53f2%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22900%22%20height%3D%221200%22%20fill%3D%22url(%23g)%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2280%22%20width%3D%22770%22%20height%3D%221040%22%20rx%3D%2240%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.42%22%20stroke-width%3D%224%22%2F%3E%3Ctext%20x%3D%22110%22%20y%3D%22180%22%20fill%3D%22white%22%20font-family%3D%22monospace%22%20font-size%3D%2242%22%3ECRAZY%20marIA%3C%2Ftext%3E%3Ctext%20x%3D%22110%22%20y%3D%22255%22%20fill%3D%22%23f3a5f8%22%20font-family%3D%22monospace%22%20font-size%3D%2224%22%3EPROJECT%20VISUAL%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22610%22%20r%3D%22170%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-opacity%3D%22.4%22%20stroke-width%3D%228%22%2F%3E%3Cpath%20d%3D%22M370%20610h160M450%20530v160%22%20stroke%3D%22white%22%20stroke-width%3D%228%22%2F%3E%3C%2Fsvg%3E" alt="Crazy marIA advisor profile screen" loading="lazy"></div><p class="screen-caption">Advisor profile</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="next-project">
+    <p>Explore more work</p>
+    <a href="../../#work">Back to projects →</a>
+  </footer>
+
+  <script>
+    const revealTargets = [
+      '.project-intro > *',
+      '.project-meta',
+      '.content .two-col > div',
+      '.visual-placeholder',
+      '.process-grid',
+      '.style-guide-inner',
+      '.final h2',
+      '.screen-wrap',
+      '.next-project > *'
+    ];
+    const targets = document.querySelectorAll(revealTargets.join(','));
+    targets.forEach((element,index)=>{
+      element.classList.add('reveal');
+      if(index % 3 === 1) element.classList.add('delay-1');
+      if(index % 3 === 2) element.classList.add('delay-2');
+    });
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:.14});
+    targets.forEach(target=>observer.observe(target));
+  </script>
+</body>
+</html>
+
