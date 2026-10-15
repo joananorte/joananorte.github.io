@@ -69,7 +69,7 @@
     .visual-placeholder::before{content:"";position:absolute;width:58%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.52);filter:blur(34px)}
     .project-visual-screens{position:relative;z-index:1;width:min(620px,78%);height:520px}
     .project-visual-screen{
-      position:absolute;bottom:0;width:min(42%,230px);padding:12px;border:1px solid rgba(174,194,205,.8);border-radius:38px;
+      position:absolute;top:50%;bottom:auto;width:min(42%,230px);padding:12px;border:1px solid rgba(174,194,205,.8);border-radius:38px;
       background:linear-gradient(128deg,#fbfeff 4%,#e7f0f4 37%,#ffffff 68%,#cddce4 100%);
       box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 12px 20px rgba(147,178,196,.18),0 24px 55px rgba(42,87,118,.15);
       transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .4s ease;
@@ -81,10 +81,10 @@
     .project-visual-screen::before,.project-visual-screen::after{content:"";position:absolute;width:5px;background:linear-gradient(90deg,#aebfc9,#f9fcfd);box-shadow:1px 1px 2px rgba(42,67,86,.2)}
     .project-visual-screen::before{left:-6px;top:24%;height:61px;border-radius:5px 0 0 5px;box-shadow:1px 20px 2px rgba(42,67,86,.16)}
     .project-visual-screen::after{right:-6px;top:34%;height:39px;border-radius:0 5px 5px 0}
-    .project-visual-screen:first-child{left:16%;transform:rotate(-10deg) translateY(8px)}
-    .project-visual-screen:last-child{right:16%;transform:rotate(9deg) translateY(-18px)}
-    .visual-placeholder:hover .project-visual-screen:first-child{transform:rotate(-14deg) translate(-18px,-12px);box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 14px 24px rgba(147,178,196,.2),0 28px 58px rgba(42,87,118,.19)}
-    .visual-placeholder:hover .project-visual-screen:last-child{transform:rotate(13deg) translate(20px,-30px);box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 14px 24px rgba(147,178,196,.2),0 28px 58px rgba(42,87,118,.19)}
+    .project-visual-screen:first-child{left:16%;transform:translateY(-50%) rotate(-10deg) translateY(8px)}
+    .project-visual-screen:last-child{right:16%;transform:translateY(-50%) rotate(9deg) translateY(-18px)}
+    .visual-placeholder:hover .project-visual-screen:first-child{transform:translateY(-50%) rotate(-14deg) translate(-18px,-12px);box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 14px 24px rgba(147,178,196,.2),0 28px 58px rgba(42,87,118,.19)}
+    .visual-placeholder:hover .project-visual-screen:last-child{transform:translateY(-50%) rotate(13deg) translate(20px,-30px);box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 14px 24px rgba(147,178,196,.2),0 28px 58px rgba(42,87,118,.19)}
     .process{max-width:1170px;margin:0 auto;padding:0 7vw 120px}
     .process-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,10vw,155px);padding-top:34px;border-top:1px solid var(--line)}
     .style-guide{background:var(--blue-wash);padding:112px 7vw}
@@ -141,7 +141,7 @@
       .project-intro{padding:62px 24px 30px}.project-intro h1,.project-intro .lede{white-space:normal}.hero-panel{min-height:460px;padding:0}
       .project-meta{left:24px;bottom:24px;gap:28px;padding:15px 16px}.project-meta div+div{margin:0}.hero-art{height:100%}
       .content,.visual-section,.process,.final{padding-left:24px;padding-right:24px}.colour-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 16px}.colour-dot{width:100%;max-width:78px}.content{padding-top:76px;padding-bottom:76px}.two-col,.guide-grid,.process-grid{grid-template-columns:1fr;gap:34px}
-      .visual-section{padding-bottom:76px}.visual-placeholder{min-height:390px}.project-visual-screens{width:100%;height:350px;display:flex;align-items:center;justify-content:center;transform:translateY(4px)}.project-visual-screen{position:relative;left:auto!important;right:auto!important;bottom:auto;width:min(42%,145px);padding:7px;border-radius:25px}.project-visual-screen img{border-radius:18px}.project-visual-screen:first-child{margin-right:-22px;transform:rotate(-10deg) translateY(8px)}.project-visual-screen:last-child{margin-left:-22px;transform:rotate(9deg) translateY(-18px)}.phone-notch{top:7px;height:12px;border-radius:0 0 8px 8px}.phone-notch::before{top:4px;width:3px;height:3px}.phone-notch::after{top:4px;height:2px}.project-visual-screen:first-child{left:12%}.project-visual-screen:last-child{right:12%}.style-guide{padding:76px 24px}.guide-grid{gap:34px}.screens{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}.final-phone{width:100%;max-width:210px;padding:7px;border-radius:27px}.final-phone .screen{border-radius:19px}.final-phone .phone-notch{top:7px;height:12px;border-radius:0 0 8px 8px}.final-phone .phone-notch::before{top:4px;width:3px;height:3px}.final-phone .phone-notch::after{top:4px;height:2px}.final{padding-top:76px;padding-bottom:76px}
+      .visual-section{padding-bottom:76px}.visual-placeholder{min-height:390px}.project-visual-screens{width:100%;height:350px;display:flex;align-items:center;justify-content:center;transform:translateY(4px)}.project-visual-screen{position:relative;left:auto!important;right:auto!important;top:auto;bottom:auto;width:min(42%,145px);padding:7px;border-radius:25px}.project-visual-screen img{border-radius:18px}.project-visual-screen:first-child{margin-right:-22px;transform:rotate(-10deg) translateY(8px)}.project-visual-screen:last-child{margin-left:-22px;transform:rotate(9deg) translateY(-18px)}.phone-notch{top:7px;height:12px;border-radius:0 0 8px 8px}.phone-notch::before{top:4px;width:3px;height:3px}.phone-notch::after{top:4px;height:2px}.project-visual-screen:first-child{left:12%}.project-visual-screen:last-child{right:12%}.style-guide{padding:76px 24px}.guide-grid{gap:34px}.screens{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}.final-phone{width:100%;max-width:210px;padding:7px;border-radius:27px}.final-phone .screen{border-radius:19px}.final-phone .phone-notch{top:7px;height:12px;border-radius:0 0 8px 8px}.final-phone .phone-notch::before{top:4px;width:3px;height:3px}.final-phone .phone-notch::after{top:4px;height:2px}.final{padding-top:76px;padding-bottom:76px}
     }
   </style>
   <link href="https://api.fontshare.com/v2/css?f[]=ranade@400,500,600,700&display=swap" rel="stylesheet">
