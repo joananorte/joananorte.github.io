@@ -56,6 +56,11 @@
     .intro h1{font-family:"Fraunces",serif;font-weight:800;letter-spacing:3px}
     nav .brand{font-family:"Fraunces",serif;font-weight:800;letter-spacing:3px}
   </style>
+  <style>
+    .home-hero{background:var(--hero-bg,var(--paper));color:var(--hero-ink,var(--ink));transition:background-color .08s linear,color .08s linear}
+    .home-hero .intro p:not(.role){color:var(--hero-muted,var(--muted))}
+    .home-hero h1,.home-hero nav,.home-hero nav a{color:inherit}
+  </style>
 </head>
 <body>
   <main>
@@ -109,9 +114,9 @@
       const t=Math.min(p/.78,1);
       intro.style.transform='scale('+ (1-p*.1) +')';
       role.style.transform='scale('+ (1-p*.07) +')';
-      hero.style.setProperty('--hero-bg','rgb('+mix(245,8,t)+','+mix(241,8,t)+','+mix(236,8,t)+')');
-      hero.style.setProperty('--hero-ink','rgb('+mix(47,48,t)+','+mix(46,47,t)+','+mix(46,47,t)+')');
-      hero.style.setProperty('--hero-muted','rgb('+mix(118,92,t)+','+mix(115,90,t)+','+mix(111,87,t)+')');
+      hero.style.setProperty('--hero-bg','rgb('+mix(245,0,t)+','+mix(241,0,t)+','+mix(236,0,t)+')');
+      hero.style.setProperty('--hero-ink','rgb('+mix(47,255,t)+','+mix(46,255,t)+','+mix(46,255,t)+')');
+      hero.style.setProperty('--hero-muted','rgb('+mix(118,205,t)+','+mix(115,205,t)+','+mix(111,205,t)+')');
     },{passive:true});
   </script>
 <!-- deployment trigger: 2026-10-14T16:44:04.944Z -->
