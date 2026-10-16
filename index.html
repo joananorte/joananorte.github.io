@@ -137,6 +137,87 @@
   <style id="project-number-size">
     .project .project-number{font-size:70px!important}
   </style>
+  <style id="mobile-slide-navigation">
+    @media (max-width:700px){
+      body.nav-open{overflow:hidden}
+      nav{position:relative;z-index:60}
+      nav .nav-toggle{
+        position:relative;
+        z-index:62;
+        width:42px;
+        height:42px;
+        padding:0;
+        border:0;
+        border-radius:50%;
+        background:var(--ink,#202020);
+        color:var(--paper,#f5f1ec);
+        display:inline-grid;
+        place-items:center;
+        cursor:pointer;
+        box-shadow:0 8px 22px rgba(0,0,0,.14);
+      }
+      nav .nav-toggle-lines,
+      nav .nav-toggle-lines::before,
+      nav .nav-toggle-lines::after{
+        display:block;
+        width:17px;
+        height:1.5px;
+        background:currentColor;
+        transition:transform .25s ease,opacity .2s ease;
+      }
+      nav .nav-toggle-lines{position:relative}
+      nav .nav-toggle-lines::before,
+      nav .nav-toggle-lines::after{content:"";position:absolute;left:0}
+      nav .nav-toggle-lines::before{top:-6px}
+      nav .nav-toggle-lines::after{top:6px}
+      body.nav-open nav .nav-toggle-lines{background:transparent}
+      body.nav-open nav .nav-toggle-lines::before{transform:translateY(6px) rotate(45deg)}
+      body.nav-open nav .nav-toggle-lines::after{transform:translateY(-6px) rotate(-45deg)}
+      nav .nav-links{
+        position:fixed!important;
+        z-index:61;
+        top:0;
+        right:0;
+        bottom:0;
+        width:min(76vw,320px);
+        margin:0!important;
+        padding:112px 30px 42px!important;
+        display:flex!important;
+        flex-direction:column;
+        align-items:flex-end;
+        gap:24px!important;
+        background:#e7dcd3;
+        color:#202020!important;
+        border-radius:28px 0 0 28px;
+        box-shadow:-18px 0 48px rgba(0,0,0,.16);
+        transform:translateX(105%);
+        transition:transform .38s cubic-bezier(.22,.82,.24,1);
+      }
+      body.nav-open nav .nav-links{transform:translateX(0)}
+      nav .nav-links a{
+        color:inherit!important;
+        font-size:19px!important;
+        line-height:1.2;
+        padding:0 0 7px!important;
+      }
+      nav .nav-links a.active{border-bottom:2px solid currentColor!important}
+      .home-hero{justify-content:flex-start}
+      .home-hero .intro{margin-top:clamp(165px,24vh,230px)}
+      .home-hero::after{
+        content:"↓";
+        position:absolute;
+        left:50%;
+        bottom:8vh;
+        color:currentColor;
+        font-family:serif;
+        font-size:28px;
+        line-height:1;
+        transform:translateX(-50%);
+        animation:scroll-cue 1.6s ease-in-out infinite;
+      }
+      @keyframes scroll-cue{50%{transform:translate(-50%,8px);opacity:.5}}
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -213,5 +294,31 @@
     })();
   </script>
 <!-- deployment trigger: 2026-10-14T16:44:04.944Z -->
+  <script id="mobile-slide-navigation-script">
+    (() => {
+      document.querySelectorAll('nav').forEach(nav => {
+        const links = nav.querySelector('.nav-links');
+        if (!links || nav.querySelector('.nav-toggle')) return;
+        const button = document.createElement('button');
+        button.className = 'nav-toggle';
+        button.type = 'button';
+        button.setAttribute('aria-label', 'Open menu');
+        button.setAttribute('aria-expanded', 'false');
+        button.innerHTML = '<span class="nav-toggle-lines" aria-hidden="true"></span>';
+        nav.append(button);
+        const close = () => {
+          document.body.classList.remove('nav-open');
+          button.setAttribute('aria-expanded', 'false');
+          button.setAttribute('aria-label', 'Open menu');
+        };
+        button.addEventListener('click', () => {
+          const isOpen = document.body.classList.toggle('nav-open');
+          button.setAttribute('aria-expanded', String(isOpen));
+          button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+        links.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+      });
+    })();
+  </script>
 </body>
 </html>
