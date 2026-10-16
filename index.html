@@ -134,6 +134,43 @@
       .project-layered.project-crazy::after{display:none}
     }
   </style>
+  <style id="mobile-project-scroll-layer">
+    @media (max-width:700px){
+      .project.project-layered{
+        position:relative;
+        isolation:isolate;
+        overflow:visible!important;
+        background-image:none!important;
+        background-color:transparent!important;
+      }
+      .project-layered .project-visual{
+        position:absolute;
+        inset:0;
+        z-index:0;
+        display:block;
+        background-position:center bottom;
+        background-repeat:no-repeat;
+        background-size:100% auto;
+        pointer-events:none;
+      }
+      .project-layered .project-copy{
+        position:relative;
+        z-index:1;
+      }
+      .project-layered.mobile-project-active{
+        z-index:2;
+      }
+      .project-layered.mobile-project-active .project-visual{
+        position:fixed;
+        inset:auto 0 0;
+        width:100vw;
+        height:100vw;
+        max-height:100svh;
+        background-position:center bottom;
+        background-size:100% auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -206,6 +243,34 @@
         project.prepend(visual);
         project.classList.add('project-layered');
       });
+    })();
+  </script>
+  <script id="mobile-project-scroll-layer-script">
+    (() => {
+      const media = matchMedia('(max-width:700px)');
+      if (!media.matches) return;
+      const projects = [...document.querySelectorAll('.project-layered')];
+      const updateActiveProject = () => {
+        const targetY = innerHeight * .68;
+        let active = projects[0];
+        let nearest = Infinity;
+        projects.forEach(project => {
+          const bounds = project.getBoundingClientRect();
+          const distance = bounds.top <= targetY && bounds.bottom >= targetY
+            ? 0
+            : Math.min(Math.abs(bounds.top - targetY), Math.abs(bounds.bottom - targetY));
+          if (distance < nearest) {
+            nearest = distance;
+            active = project;
+          }
+        });
+        projects.forEach(project =>
+          project.classList.toggle('mobile-project-active', project === active)
+        );
+      };
+      addEventListener('scroll', updateActiveProject, {passive:true});
+      addEventListener('resize', updateActiveProject);
+      updateActiveProject();
     })();
   </script>
 <!-- deployment trigger: 2026-10-14T16:44:04.944Z -->
