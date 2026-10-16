@@ -194,6 +194,7 @@
   </script>
   <script id="project-layer-structure-script">
     (() => {
+      if (!matchMedia('(min-width:701px)').matches) return;
       document.querySelectorAll('.project').forEach(project => {
         const styles = getComputedStyle(project);
         const visual = document.createElement('div');
