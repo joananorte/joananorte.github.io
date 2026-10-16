@@ -102,6 +102,38 @@
       }
     }
   </style>
+  <style id="project-layer-structure">
+    @media (min-width:701px){
+      .project.project-layered{
+        display:block;
+        position:relative;
+        height:100vh;
+        min-height:680px;
+        overflow:visible!important;
+        isolation:isolate;
+        background-image:none!important;
+        background-color:transparent!important;
+      }
+      .project-layered .project-visual{
+        position:absolute;
+        inset:0;
+        z-index:0;
+        background-position:right center;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+      }
+      .project-layered .project-copy{
+        position:relative;
+        z-index:1;
+        width:50%;
+        min-height:100vh;
+        padding-left:15vw;
+        padding-right:10vw;
+      }
+      .project-layered.project-crazy::after{display:none}
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -159,6 +191,22 @@
       hero.style.setProperty('--hero-ink','rgb('+mix(47,255,t)+','+mix(46,255,t)+','+mix(46,255,t)+')');
       hero.style.setProperty('--hero-muted','rgb('+mix(118,205,t)+','+mix(115,205,t)+','+mix(111,205,t)+')');
     },{passive:true});
+  </script>
+  <script id="project-layer-structure-script">
+    (() => {
+      document.querySelectorAll('.project').forEach(project => {
+        const styles = getComputedStyle(project);
+        const visual = document.createElement('div');
+        visual.className = 'project-visual';
+        visual.setAttribute('aria-hidden', 'true');
+        visual.style.backgroundImage = styles.backgroundImage;
+        visual.style.backgroundPosition = styles.backgroundPosition;
+        visual.style.backgroundRepeat = styles.backgroundRepeat;
+        visual.style.backgroundSize = styles.backgroundSize;
+        project.prepend(visual);
+        project.classList.add('project-layered');
+      });
+    })();
   </script>
 <!-- deployment trigger: 2026-10-14T16:44:04.944Z -->
 </body>
