@@ -134,72 +134,6 @@
       .project-layered.project-crazy::after{display:none}
     }
   </style>
-  <style id="mobile-project-scroll-layer">
-    @media (max-width:700px){
-      .project.project-layered{
-        position:relative;
-        isolation:isolate;
-        overflow:visible!important;
-        background-image:none!important;
-        background-color:transparent!important;
-      }
-      .project-layered .project-visual{
-        position:absolute;
-        inset:0;
-        z-index:0;
-        display:block;
-        background-position:center bottom;
-        background-repeat:no-repeat;
-        background-size:100% auto;
-        pointer-events:none;
-      }
-      .project-layered .project-copy{
-        position:relative;
-        z-index:1;
-      }
-      .project-layered.mobile-project-active{
-        z-index:2;
-      }
-      .project-layered.mobile-project-active .project-visual{
-        position:fixed;
-        inset:auto 0 0;
-        width:100vw;
-        height:100vw;
-        max-height:100svh;
-        background-position:center bottom;
-        background-size:100% auto;
-      }
-    }
-  </style>
-  <style id="mobile-project-viewport-layout">
-    @media (max-width:700px){
-      .project.project-layered{
-        display:block;
-        width:100%;
-        height:100svh!important;
-        min-height:100svh!important;
-        max-height:none!important;
-        aspect-ratio:auto!important;
-      }
-      .project-layered .project-visual{
-        inset:auto 0 0;
-        width:100%;
-        height:100vw;
-        background-position:center bottom;
-        background-size:100% auto;
-      }
-      .project-layered .project-copy{
-        box-sizing:border-box;
-        width:100%;
-        height:62svh;
-        min-height:62svh;
-        padding:10vw 9vw;
-        justify-content:center;
-        background:rgba(20,20,20,.82);
-      }
-      .project-layered.project-crazy::after{display:none}
-    }
-  </style>
 </head>
 <body>
   <main>
@@ -272,25 +206,6 @@
         project.prepend(visual);
         project.classList.add('project-layered');
       });
-    })();
-  </script>
-  <script id="mobile-project-scroll-layer-script">
-    (() => {
-      const media = matchMedia('(max-width:700px)');
-      if (!media.matches) return;
-      const projects = [...document.querySelectorAll('.project-layered')];
-      const updateActiveProject = () => {
-        const active = projects.find(project => {
-          const bounds = project.getBoundingClientRect();
-          return bounds.top <= 0 && bounds.bottom > 0;
-        });
-        projects.forEach(project =>
-          project.classList.toggle('mobile-project-active', project === active)
-        );
-      };
-      addEventListener('scroll', updateActiveProject, {passive:true});
-      addEventListener('resize', updateActiveProject);
-      updateActiveProject();
     })();
   </script>
 <!-- deployment trigger: 2026-10-14T16:44:04.944Z -->
