@@ -218,6 +218,23 @@
       @keyframes scroll-cue{50%{transform:translate(-50%,8px);opacity:.5}}
     }
   </style>
+  <style id="mobile-hero-text-motion">
+    @media (max-width:700px) and (prefers-reduced-motion:no-preference){
+      .home-hero nav,
+      .home-hero .intro > *{
+        opacity:0;
+        animation:mobile-hero-reveal .7s cubic-bezier(.22,.82,.24,1) forwards;
+      }
+      .home-hero nav{animation-delay:.05s}
+      .home-hero .intro h1{animation-delay:.16s}
+      .home-hero .intro p:not(.role){animation-delay:.28s}
+      .home-hero .intro .role{animation-delay:.4s}
+      @keyframes mobile-hero-reveal{
+        from{opacity:0;transform:translateY(18px)}
+        to{opacity:1;transform:translateY(0)}
+      }
+    }
+  </style>
 </head>
 <body>
   <main>
