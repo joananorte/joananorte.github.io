@@ -280,18 +280,9 @@
       if (!media.matches) return;
       const projects = [...document.querySelectorAll('.project-layered')];
       const updateActiveProject = () => {
-        const targetY = innerHeight * .68;
-        let active = projects[0];
-        let nearest = Infinity;
-        projects.forEach(project => {
+        const active = projects.find(project => {
           const bounds = project.getBoundingClientRect();
-          const distance = bounds.top <= targetY && bounds.bottom >= targetY
-            ? 0
-            : Math.min(Math.abs(bounds.top - targetY), Math.abs(bounds.bottom - targetY));
-          if (distance < nearest) {
-            nearest = distance;
-            active = project;
-          }
+          return bounds.top <= 0 && bounds.bottom > 0;
         });
         projects.forEach(project =>
           project.classList.toggle('mobile-project-active', project === active)
