@@ -94,6 +94,32 @@
       .project-copy{width:50%;min-height:100vh;padding-left:15vw;padding-right:10vw;box-shadow:none}
     }
   </style>
+  <style id="mobile-fixed-project-visuals">
+    @media (max-width:700px){
+      .project{
+        isolation:isolate;
+        overflow:visible;
+      }
+      .project::before{
+        content:"";
+        position:fixed;
+        inset:0;
+        z-index:0;
+        display:block;
+        background:inherit;
+        background-attachment:scroll!important;
+        background-position:center bottom!important;
+        background-repeat:no-repeat!important;
+        background-size:cover!important;
+        opacity:0;
+        pointer-events:none;
+        transition:opacity .18s linear;
+      }
+      .project.mobile-image-active::before{opacity:1}
+      .project-copy{position:relative;z-index:1}
+      .project.project-crazy::after{z-index:0}
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -151,6 +177,26 @@
       hero.style.setProperty('--hero-ink','rgb('+mix(47,255,t)+','+mix(46,255,t)+','+mix(46,255,t)+')');
       hero.style.setProperty('--hero-muted','rgb('+mix(118,205,t)+','+mix(115,205,t)+','+mix(111,205,t)+')');
     },{passive:true});
+  </script>
+  <script id="mobile-fixed-project-visuals-script">
+    (() => {
+      const media = matchMedia('(max-width:700px)');
+      if (!media.matches) return;
+      const projects = [...document.querySelectorAll('.project')];
+      const setActive = entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        projects.forEach(project =>
+          project.classList.toggle('mobile-image-active', project === visible.target)
+        );
+      };
+      const observer = new IntersectionObserver(setActive, {
+        threshold: [.25, .45, .65, .85]
+      });
+      projects.forEach(project => observer.observe(project));
+    })();
   </script>
 <!-- deployment trigger: 2026-10-14T16:44:04.944Z -->
 </body>
