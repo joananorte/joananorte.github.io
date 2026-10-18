@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carglass QIV Online — Joana Norte</title>
+  <meta name="description" content="Carglass QIV Online case study by Joana Norte." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../project-template.css">
+  <style>
+    :root{--ink:#242424;--muted:#6f6f6f;--paper:#fbfbfb;--line:#dedede;--red:#e30613;--yellow:#ffc400;--pale:#f1f1f1;--light:#c7c7c7;--medium:#737373;--dark:#3e3e3e}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Nunito Sans",sans-serif}
+    .site-nav{display:flex;align-items:center;justify-content:space-between;padding:48px 7vw 0;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .site-nav a{color:inherit;text-decoration:none}.brand{font-family:Fraunces,serif;font-size:18px;font-weight:700;letter-spacing:.13em}.nav-links{display:flex;gap:20px}.nav-links a{padding-bottom:4px;border-bottom:1px solid transparent}.nav-links .active,.nav-links a:hover{color:var(--red);border-color:currentColor}
+    .project-intro{max-width:1120px;margin:0 auto;padding:112px 7vw 64px}.eyebrow{margin:0 0 18px;color:var(--red);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.project-intro h1{margin:0;font-family:Fraunces,serif;font-size:clamp(52px,8vw,96px);line-height:.93;letter-spacing:-.035em}.lede{max-width:590px;margin:30px 0 0;color:var(--medium);font-size:20px;line-height:1.5}
+    .hero-panel{max-width:1120px;margin:0 auto 112px;padding:0 7vw;display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:end}.qiv-hero{min-height:500px;border:1px solid var(--line);background:linear-gradient(145deg,#f3f3f3,#dedede);position:relative;overflow:hidden}.qiv-hero::before{content:"";position:absolute;width:52%;aspect-ratio:1;border:2px solid rgba(255,255,255,.65);border-radius:50%;right:-10%;top:-17%}.qiv-hero::after{content:"QIV";position:absolute;right:9%;bottom:7%;font-size:clamp(72px,12vw,152px);font-weight:700;line-height:1;color:#c9c9c9;letter-spacing:-.1em}.qiv-placeholder{position:absolute;z-index:1;inset:15% 15% 14% 12%;border:1px solid #c7c7c7;background:#f8f8f8;box-shadow:0 18px 34px rgba(0,0,0,.09);padding:20px;color:#9b9b9b;font-family:"Nunito Sans",sans-serif}.qiv-placeholder .bar{width:34%;height:9px;border-radius:99px;background:#d6d6d6;margin-bottom:50px}.qiv-placeholder .line{height:12px;background:#e5e5e5;margin:14px 0}.qiv-placeholder .line.short{width:57%}.qiv-placeholder .button{width:40%;height:32px;margin-top:42px;background:#d0d0d0}.placeholder-label{position:absolute;z-index:2;left:24px;bottom:20px;margin:0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5d5d5d}
+    .project-meta{padding-bottom:14px}.project-meta div{padding:20px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px}.meta-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.meta-value{color:var(--medium);font-size:16px}.project-meta div:last-child{border-bottom:1px solid var(--line)}
+    .content,.process,.style-guide,.final{padding:104px 7vw}.content{background:#fff}.two-col,.process-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:9vw}.content h2,.process h2,.style-guide h2,.final h2{margin:0 0 20px;font-family:Fraunces,serif;font-size:32px;line-height:1.1}.content p,.process p{margin:0;color:var(--medium);font-size:17px;line-height:1.65}
+    .process{background:var(--pale)}.process-grid{grid-template-columns:minmax(210px,.65fr) 1.35fr}.style-guide{background:#fff}.style-guide-inner,.final-inner{max-width:1120px;margin:0 auto}.qiv-specs{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;margin-top:48px}.type-list,.colour-list{display:grid;gap:0;border-top:1px solid var(--line)}.type-row,.colour-row{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:16px 0;border-bottom:1px solid var(--line)}.type-row strong{font-family:"Nunito Sans",sans-serif}.type-row small,.colour-row small{color:var(--medium)}.colour-row{justify-content:flex-start}.swatch{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.1);flex:0 0 auto}.colour-row strong{font-size:14px}.colour-row small{margin-left:auto}
+    .final{background:var(--pale)}.final h2{text-align:center}.screen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}.screen-wrap{text-align:center}.browser-card{padding:12px;border:1px solid #d7d7d7;border-radius:12px;background:linear-gradient(135deg,#fff,#e7e7e7);box-shadow:0 16px 28px rgba(0,0,0,.09)}.browser-top{height:9px;width:24%;margin:0 auto 8px;border-radius:999px;background:#c4c4c4}.screen-placeholder{aspect-ratio:1.55;background:#e5e5e5;position:relative;overflow:hidden}.screen-placeholder::before{content:"";position:absolute;inset:18% 16%;border:1px solid #cecece;background:repeating-linear-gradient(0deg,#f2f2f2 0 11px,#e2e2e2 11px 13px)}.screen-placeholder::after{content:"Screen placeholder";position:absolute;inset:0;display:grid;place-items:center;color:#949494;font:700 12px "Nunito Sans",sans-serif;text-transform:uppercase;letter-spacing:.08em}.screen-caption{margin:24px 0 0;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .next-project{padding:58px 7vw;background:var(--ink);color:#fff;text-align:center}.next-project p{margin:0 0 16px;color:#cfcfcf}.next-project a{color:#fff;font-family:Fraunces,serif;font-size:20px;font-weight:700;text-decoration:none}.next-project a:hover{color:var(--yellow)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.in-view{opacity:1;transform:none}
+    @media(max-width:760px){.site-nav{padding:30px 7vw 0}.nav-links{display:none}.project-intro{padding:74px 7vw 44px}.project-intro h1{font-size:52px}.lede{font-size:17px;margin-top:22px}.hero-panel{display:block;margin-bottom:72px;padding:0}.qiv-hero{min-height:360px}.qiv-placeholder{inset:16% 12% 16% 10%}.project-meta{padding:22px 7vw 0}.content,.process,.style-guide,.final{padding:70px 7vw}.two-col,.process-grid,.qiv-specs{grid-template-columns:1fr;gap:42px}.content h2,.process h2,.style-guide h2,.final h2{font-size:28px}.screen-grid{grid-template-columns:1fr;gap:48px;margin-top:38px}.screen-wrap{max-width:92%;margin:0 auto}.nav-toggle{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:var(--ink);color:#fff}.nav-toggle::before{content:"";width:16px;height:2px;background:currentColor;box-shadow:0 -6px currentColor,0 6px currentColor}.site-nav{position:relative}.site-nav.nav-open .nav-links{position:absolute;display:flex;flex-direction:column;align-items:flex-start;gap:20px;right:0;top:-30px;width:min(78vw,310px);min-height:100vh;padding:112px 34px;background:#e5e5e5;box-shadow:-12px 0 30px rgba(0,0,0,.12)}.site-nav.nav-open .nav-toggle{position:relative;z-index:2}.site-nav.nav-open .nav-toggle::before{transform:rotate(45deg);box-shadow:none}.site-nav.nav-open .nav-toggle::after{content:"";position:absolute;width:16px;height:2px;background:#fff;transform:rotate(-45deg)}}
+    @media(min-width:761px){.nav-toggle{display:none}}
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="../../">Joana Norte</a>
+    <div class="nav-links">
+      <a class="active" aria-current="page" href="../../#work">Work</a>
+      <a href="../../#about">About</a>
+      <a href="../../#contact">Contact</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"></button>
+  </nav>
+  <main>
+    <section class="project-intro">
+      <p class="eyebrow">Digital platform</p>
+      <h1>Carglass<br>QIV Online</h1>
+      <p class="lede">An evolving digital platform that helps insurance mediation teams handle isolated glass-breakage requests with greater clarity.</p>
+    </section>
+    <section class="hero-panel" aria-label="Carglass QIV Online project overview">
+      <div class="qiv-hero" aria-label="QIV Online interface placeholder">
+        <div class="qiv-placeholder" aria-hidden="true"><div class="bar"></div><div class="line short"></div><div class="line"></div><div class="line"></div><div class="button"></div></div>
+        <p class="placeholder-label">Interface previews to come</p>
+      </div>
+      <div class="project-meta">
+        <div><span class="meta-label">Role</span><span class="meta-value">UI/UX Designer</span></div>
+        <div><span class="meta-label">Year</span><span class="meta-value">2025—2026</span></div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="two-col">
+        <div><h2>The challenge</h2><p>QIV Online supports a service that sits between insurance mediation, policy information and vehicle-glass repair. The experience needs to make each request easy to understand and straightforward to progress.</p></div>
+        <div><h2>Project vision</h2><p>Rather than a fixed handover, this is an ongoing product. Each new request becomes an opportunity to refine flows, introduce new screens and make the platform more useful for the people who rely on it.</p></div>
+      </div>
+    </section>
+    <section class="process">
+      <div class="process-grid">
+        <h2>Design approach</h2>
+        <p>I work iteratively with the client: clarifying each requirement, mapping the relevant journey and creating focused interface updates. This keeps the platform consistent while allowing it to evolve one practical need at a time.</p>
+      </div>
+    </section>
+    <section class="style-guide">
+      <div class="style-guide-inner">
+        <h2>Design system</h2>
+        <div class="qiv-specs">
+          <div class="type-list">
+            <div class="type-row"><strong style="font-size:20px">Headline 1</strong><small>Nunito Sans · Bold · 20px</small></div>
+            <div class="type-row"><strong style="font-size:18px">Headline 2</strong><small>Nunito Sans · Bold · 18px</small></div>
+            <div class="type-row"><strong>Body standard</strong><small>Nunito Sans · Regular · 16px</small></div>
+            <div class="type-row"><strong style="font-size:14px;font-weight:400">Body small</strong><small>Nunito Sans · Regular · 14px</small></div>
+            <div class="type-row"><strong>Button</strong><small>Nunito Sans · Bold · 16px</small></div>
+          </div>
+          <div class="colour-list">
+            <div class="colour-row"><span class="swatch" style="background:#e30613"></span><strong>Red</strong><small>Primary</small></div>
+            <div class="colour-row"><span class="swatch" style="background:#fbfbfb"></span><strong>Background</strong><small>Neutral</small></div>
+            <div class="colour-row"><span class="swatch" style="background:#fff"></span><strong>White</strong><small>Neutral</small></div>
+            <div class="colour-row"><span class="swatch" style="background:#f1f1f1"></span><strong>Pale gray</strong><small>Neutral</small></div>
+            <div class="colour-row"><span class="swatch" style="background:#737373"></span><strong>Medium gray</strong><small>Text</small></div>
+            <div class="colour-row"><span class="swatch" style="background:#ffc400"></span><strong>Yellow</strong><small>Accent</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="final">
+      <div class="final-inner">
+        <h2>Interface library</h2>
+        <div class="screen-grid">
+          <div class="screen-wrap"><div class="browser-card"><div class="browser-top"></div><div class="screen-placeholder"></div></div><p class="screen-caption">New flow placeholder</p></div>
+          <div class="screen-wrap"><div class="browser-card"><div class="browser-top"></div><div class="screen-placeholder"></div></div><p class="screen-caption">New screen placeholder</p></div>
+          <div class="screen-wrap"><div class="browser-card"><div class="browser-top"></div><div class="screen-placeholder"></div></div><p class="screen-caption">New feature placeholder</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="next-project"><p>Explore more work</p><a href="../../#work">Back to projects →</a></footer>
+  <script>
+    const nav=document.querySelector('.site-nav'),toggle=document.querySelector('.nav-toggle');
+    toggle.addEventListener('click',()=>{const open=nav.classList.toggle('nav-open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu')});
+    const targets=document.querySelectorAll('.project-intro > *, .hero-panel, .two-col > div, .process-grid, .style-guide-inner, .final-inner');
+    targets.forEach(el=>el.classList.add('reveal'));
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');observer.unobserve(entry.target)}}),{threshold:.12});
+    targets.forEach(target=>observer.observe(target));
+  </script>
+</body>
+</html>
