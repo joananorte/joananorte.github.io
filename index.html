@@ -347,6 +347,47 @@
     }
   }
 </style>
+
+<style id="bmw-mini-home-card">
+  .project.project-bmw-mini {
+    position: relative;
+    overflow: hidden;
+    background-image:
+      linear-gradient(110deg, rgba(5, 18, 34, .78), rgba(5, 18, 34, .16)),
+      radial-gradient(circle at 78% 28%, rgba(28, 105, 212, .4), transparent 26%),
+      linear-gradient(132deg, #e8eef4 0%, #c7d4e2 52%, #aab9c8 100%);
+  }
+  .project.project-bmw-mini::before {
+    content: "BMW  ·  MINI";
+    position: absolute;
+    z-index: 0;
+    right: 7vw;
+    top: 13%;
+    color: rgba(255,255,255,.92);
+    font-family: Arial, sans-serif;
+    font-size: clamp(20px, 3vw, 48px);
+    font-weight: 700;
+    letter-spacing: .14em;
+  }
+  .project.project-bmw-mini::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    right: 8vw;
+    bottom: 15%;
+    width: min(40vw, 610px);
+    height: min(16vw, 235px);
+    border-radius: 48% 48% 22% 22%;
+    transform: skewX(-12deg);
+    background: linear-gradient(110deg,#e8eef4 2%,#758597 28%,#fff 52%,#3b4c60 76%,#151d27);
+    box-shadow: 0 28px 0 rgba(11,20,30,.42), 0 28px 55px rgba(0,0,0,.2);
+  }
+  .project.project-bmw-mini .project-copy { position:relative; z-index:2; }
+  @media(max-width:700px) {
+    .project.project-bmw-mini::before { right:8vw; top:17%; font-size:29px; }
+    .project.project-bmw-mini::after { right:9vw; bottom:13%; width:77vw; height:29vw; }
+  }
+</style>
 </head>
 <body>
   <main>
@@ -406,6 +447,15 @@
         <h2>Manheim<br>Email Kits</h2>
         <p>Responsive email templates for auction, customer and commercial communications.</p>
         <a class="project-link" href="./projects/manheim-email-kits/">view project</a>
+      </div>
+    </section>
+  
+    <section class="project project-bmw-mini">
+      <div class="project-copy">
+        <p class="project-number">06</p>
+        <h2>BMW &amp; MINI<br>Landing Pages</h2>
+        <p>Landing-page mockups created as visual directions for future brand website experiences.</p>
+        <a class="project-link" href="./projects/bmw-mini-landing-pages/">view project</a>
       </div>
     </section>
   </main>
