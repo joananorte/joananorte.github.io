@@ -308,14 +308,7 @@
   </style>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Primary navigation">
-    <a class="brand" href="../../">Joana Norte</a>
-    <div class="nav-links">
-      <a class="active" aria-current="page" href="../../#work">Work</a>
-      <a href="../../#about">About</a>
-      <a href="../../#contact">Contact</a>
-    </div>
-  </nav>
+  <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a class="active" aria-current="page" href="../../#work">Work</a><a href="../../#about">About</a><a href="../../#contact">Contact</a></div></nav>
 
   <main>
     <section class="project-intro">
@@ -412,10 +405,7 @@
     </section>
   </main>
 
-  <footer class="next-project">
-    <p>Explore more work</p>
-    <a href="../../#work">Back to projects →</a>
-  </footer>
+  <footer class="footer-standard"><div class="footer-identity"><span>© Joana Norte</span><a href="https://www.linkedin.com/in/joana-norte" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><a class="footer-back" href="../../#work">Back to work →</a></footer>
 
   <script>
     const revealTargets = [
@@ -471,6 +461,19 @@
       });
     })();
   </script>
-</body>
+
+<style id="site-footer-standard">
+  .footer-standard{
+    display:flex!important;align-items:center!important;justify-content:space-between!important;gap:24px!important;
+    padding:40px 4.2vw!important;border-top:1px solid var(--line,#d9d6d1)!important;
+    color:var(--muted,#58606a)!important;font-size:.78rem!important;
+  }
+  .footer-standard .footer-identity{display:flex;align-items:center;gap:18px}
+  .footer-standard a{color:inherit!important;text-decoration:none!important}
+  .footer-standard a:hover{color:var(--accent,#1c69d4)!important}
+  @media(max-width:760px){
+    .footer-standard{padding:28px 24px!important;align-items:flex-start!important;flex-direction:column!important;gap:16px!important}
+  }
+</style></body>
 </html>
 

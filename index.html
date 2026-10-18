@@ -415,14 +415,7 @@
 <body>
   <main>
     <section class="home-hero">
-      <nav>
-        <a class="brand" href="./">Joana Norte</a>
-        <div class="nav-links">
-          <a class="active" aria-current="page" href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+      <nav aria-label="Primary navigation"><a class="brand" href="./">Joana Norte</a><div class="nav-links"><a class="active" aria-current="page" href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
       <div class="intro" id="intro">
         <h1>Hello,<br>I’m Joana.</h1>
         <p>I’m a UI Designer with a UX mindset, passionate about creating thoughtful, useful and visually engaging digital experiences.</p>
@@ -616,5 +609,18 @@
     .project.project-bmw-mini { background-image:url("./assets/bmw-mini/bmw-mini-narrow.jpg") !important; }
   }
 </style>
-</body>
+<footer class="footer-standard footer-home"><div class="footer-identity"><span>© Joana Norte</span><a href="https://www.linkedin.com/in/joana-norte" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></footer>
+<style id="site-footer-standard">
+  .footer-standard{
+    display:flex!important;align-items:center!important;justify-content:space-between!important;gap:24px!important;
+    padding:40px 4.2vw!important;border-top:1px solid var(--line,#d9d6d1)!important;
+    color:var(--muted,#58606a)!important;font-size:.78rem!important;
+  }
+  .footer-standard .footer-identity{display:flex;align-items:center;gap:18px}
+  .footer-standard a{color:inherit!important;text-decoration:none!important}
+  .footer-standard a:hover{color:var(--accent,#1c69d4)!important}
+  @media(max-width:760px){
+    .footer-standard{padding:28px 24px!important;align-items:flex-start!important;flex-direction:column!important;gap:16px!important}
+  }
+</style></body>
 </html>
