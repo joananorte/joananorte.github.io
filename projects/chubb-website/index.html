@@ -364,8 +364,8 @@
     .chubb-mobile-device{
       position:relative;
       display:flex;
-      align-self:stretch;
-      height:auto;
+      align-self:start;
+      height:clamp(310px,37vw,430px);
       box-sizing:border-box;
       padding:9px;
       border:1px solid #d8cec7;
@@ -398,7 +398,7 @@
       .chubb-desktop-device::before{height:3px;margin-bottom:4px}
       .chubb-desktop-device::after{bottom:-15px;height:16px;border-radius:2px 2px 15px 15px}
       .chubb-desktop-device img{border-radius:5px}
-      .chubb-mobile-device{height:auto;padding:5px;border-radius:21px}
+      .chubb-mobile-device{height:clamp(200px,41vw,260px);padding:5px;border-radius:21px}
       .chubb-mobile-device::before{top:5px;height:9px;border-radius:0 0 7px 7px}
       .chubb-mobile-device img{border-radius:16px}
     }
