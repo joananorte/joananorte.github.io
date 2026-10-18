@@ -247,6 +247,20 @@
   <style id="desktop-menu-toggle-reset">
     .nav-toggle{display:none}
   </style>
+
+  <style id="carglass-project-card">
+    .project.project-carglass{
+      position:relative;overflow:hidden;
+      background-image:linear-gradient(112deg,rgba(24,24,24,.60),rgba(24,24,24,.10)),linear-gradient(132deg,#d8d8d8 0%,#f2f2f2 50%,#c5c5c5 100%);
+    }
+    .project.project-carglass::before{
+      content:"QIV";position:absolute;right:8vw;bottom:9vh;z-index:0;
+      color:rgba(85,85,85,.16);font-family:"Nunito Sans",sans-serif;font-size:clamp(120px,22vw,330px);font-weight:700;letter-spacing:-.12em;line-height:.8;
+    }
+    .project.project-carglass::after{content:"";position:absolute;right:10vw;top:16%;width:min(35vw,500px);aspect-ratio:1.4;border:1px solid rgba(255,255,255,.64);border-radius:3px;background:linear-gradient(145deg,rgba(255,255,255,.48),rgba(207,207,207,.22));box-shadow:0 22px 50px rgba(0,0,0,.11)}
+    .project.project-carglass .project-copy{position:relative;z-index:2}
+    @media(max-width:700px){.project.project-carglass::before{font-size:42vw;right:7vw;bottom:9%}.project.project-carglass::after{right:11vw;top:17%;width:64vw}}
+  </style>
 </head>
 <body>
   <main>
@@ -289,6 +303,15 @@
         <h2>Chubb<br>Website</h2>
         <p>A complete website redesign for a global insurance company.</p>
         <a class="project-link" href="./projects/chubb-website/">view project</a>
+      </div>
+    </section>
+
+    <section class="project project-carglass">
+      <div class="project-copy">
+        <p class="project-number">04</p>
+        <h2>Carglass<br>QIV Online</h2>
+        <p>An evolving digital platform for isolated glass-breakage requests.</p>
+        <a class="project-link" href="./projects/carglass-qiv-online/">view project</a>
       </div>
     </section>
   </main>
