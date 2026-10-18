@@ -331,7 +331,7 @@
     }
     .chubb-design-pair{
       display:grid;
-      grid-template-columns:minmax(0,1fr) clamp(122px,15vw,190px);
+      grid-template-columns:minmax(0,1fr) clamp(164px,20vw,230px);
       align-items:start;
       gap:clamp(20px,4vw,60px);
       max-width:1030px;
@@ -365,7 +365,9 @@
       position:relative;
       display:flex;
       align-self:start;
+      justify-self:start;
       height:clamp(310px,37vw,430px);
+      aspect-ratio:333 / 632;
       box-sizing:border-box;
       padding:9px;
       border:1px solid #d8cec7;
@@ -390,7 +392,7 @@
     @media(max-width:760px){
       .chubb-final .chubb-responsive-grid{gap:64px}
       .chubb-design-pair{
-        grid-template-columns:minmax(0,1fr) clamp(82px,25vw,118px);
+        grid-template-columns:minmax(0,1fr) clamp(94px,30vw,140px);
         gap:17px;
       }
       .chubb-design-pair:hover{transform:translateY(-4px)}
