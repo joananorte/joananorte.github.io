@@ -561,5 +561,27 @@
     background: none !important;
   }
 </style>
+
+<style id="bmw-mini-home-images">
+  .project.project-bmw-mini {
+    background-image: linear-gradient(110deg, rgba(14, 31, 48, .42), rgba(14, 31, 48, .06)), url("./assets/bmw-mini/bmw-mini-wide.jpg") !important;
+    background-position: center center !important;
+  }
+  .project.project-bmw-mini::before,
+  .project.project-bmw-mini::after { display:none !important; }
+
+  @media (min-width:1900px) {
+    .project.project-bmw-mini {
+      background-image: linear-gradient(110deg, rgba(14, 31, 48, .42), rgba(14, 31, 48, .06)), url("./assets/bmw-mini/bmw-mini-superwide.jpg") !important;
+    }
+  }
+  @media (max-width:700px) {
+    .project.project-bmw-mini {
+      background-image: linear-gradient(180deg, rgba(14, 31, 48, .30), rgba(14, 31, 48, .05)), url("./assets/bmw-mini/bmw-mini-narrow.jpg") !important;
+      background-position:center center !important;
+      background-attachment:scroll !important;
+    }
+  }
+</style>
 </body>
 </html>

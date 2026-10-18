@@ -113,6 +113,28 @@
       .desktop-frame-screen::-webkit-scrollbar-thumb{border-radius:10px;background:#94a0ac}
     }
   </style>
+
+  <style id="bmw-mini-hero-images">
+    .landing-art {
+      background: url("../../assets/bmw-mini/bmw-mini-wide.jpg") center center / cover no-repeat !important;
+    }
+    .landing-art::before,
+    .landing-art .brand-words,
+    .landing-art .browser,
+    .landing-art .phone { display:none !important; }
+
+    @media (min-width:1900px) {
+      .landing-art { background-image:url("../../assets/bmw-mini/bmw-mini-superwide.jpg") !important; }
+    }
+    @media (max-width:760px) {
+      .landing-art {
+        height:clamp(470px,122vw,670px) !important;
+        background-image:url("../../assets/bmw-mini/bmw-mini-narrow.jpg") !important;
+        background-position:center center !important;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <nav class="site-nav"><a class="brand" href="../../">JOANA NORTE</a><div class="nav-links"><a href="../../#work">Work</a><a href="../../#about">About</a><a href="../../#contact">Contact</a></div></nav>
