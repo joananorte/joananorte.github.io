@@ -274,6 +274,23 @@
     }
   </style>
   <link rel="stylesheet" href="../project-template.css">
+  <style id="chubb-product-screen">
+    .chubb-product-screen{
+      padding:0 clamp(24px,4.2vw,72px) 96px;
+      background:#fbf4ef;
+    }
+    .chubb-product-screen img{
+      display:block;
+      width:100%;
+      max-width:1600px;
+      margin:0 auto;
+      box-shadow:0 18px 42px rgba(77,55,40,.12);
+    }
+    @media(max-width:760px){
+      .chubb-product-screen{padding:0 7vw 64px}
+      .chubb-product-screen img{box-shadow:0 12px 28px rgba(77,55,40,.12)}
+    }
+  </style>
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary navigation">
@@ -314,6 +331,10 @@
           <p>Chubb Website is a mobile experience designed to help companies identify and connect with experienced Advisors aligned with their growth needs. It brings search, filtering and a dedicated matching dashboard into one focused journey.</p>
         </div>
       </div>
+    </section>
+
+    <section class="chubb-product-screen" aria-label="Chubb product page design">
+      <img src="../assets/chubb-produto.jpg" alt="Chubb Seguro Hospitalar e Plano Saúde PLUS product page">
     </section>
 
     <section class="visual-section chubb-visual-section">
