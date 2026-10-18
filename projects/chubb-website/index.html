@@ -275,20 +275,52 @@
   </style>
   <link rel="stylesheet" href="../project-template.css">
   <style id="chubb-product-screen">
-    .chubb-product-screen{
-      padding:0 clamp(24px,4.2vw,72px) 96px;
-      background:#fbf4ef;
+    /* Product view: same centred laptop treatment as the Crazy marIA login visual */
+    .chubb-product-laptop-section .visual-placeholder{
+      min-height:610px;
+      background:linear-gradient(135deg,#fbf4ef,#fffaf7 54%,#f3e9e2);
     }
-    .chubb-product-screen img{
-      display:block;
-      width:100%;
-      max-width:1600px;
-      margin:0 auto;
-      box-shadow:0 18px 42px rgba(77,55,40,.12);
+    .chubb-product-laptop-section .visual-placeholder::before{background:rgba(255,255,255,.62)}
+    .chubb-product-laptop{
+      position:relative;
+      width:min(61vw,700px);
+      filter:drop-shadow(0 31px 38px rgba(77,55,40,.22));
+      transform:perspective(1400px) rotateX(4deg);
+      transition:transform .5s ease;
+    }
+    .chubb-product-laptop:hover{transform:perspective(1400px) rotateX(1deg) translateY(-9px)}
+    .chubb-product-laptop-screen{
+      position:relative;
+      padding:14px 14px 18px;
+      border-radius:25px 25px 12px 12px;
+      background:linear-gradient(135deg,#fff,#dfd7d1 46%,#fffdfa);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.88);
+    }
+    .chubb-product-laptop-screen::before{
+      content:"";display:block;width:18%;height:6px;border-radius:99px;
+      background:#bdb5b0;margin:0 auto 8px;
+    }
+    .chubb-product-laptop-screen img{
+      display:block;width:100%;aspect-ratio:1.55;object-fit:cover;
+      border-radius:11px;background:#fff;
+    }
+    .chubb-product-laptop-base{
+      position:relative;width:112%;height:26px;margin-left:-6%;
+      border-radius:3px 3px 24px 24px;
+      background:linear-gradient(#faf7f4,#cfc6c0);
+      box-shadow:0 8px 13px rgba(77,55,40,.22);
+    }
+    .chubb-product-laptop-base::after{
+      content:"";position:absolute;left:42%;top:0;width:16%;height:6px;
+      border-radius:0 0 8px 8px;background:#b8afa9;
     }
     @media(max-width:760px){
-      .chubb-product-screen{padding:0 7vw 64px}
-      .chubb-product-screen img{box-shadow:0 12px 28px rgba(77,55,40,.12)}
+      .chubb-product-laptop-section .visual-placeholder{min-height:390px}
+      .chubb-product-laptop{width:72vw}
+      .chubb-product-laptop-screen{padding:8px 8px 11px;border-radius:15px 15px 8px 8px}
+      .chubb-product-laptop-screen::before{height:3px;margin-bottom:5px}
+      .chubb-product-laptop-base{height:15px}
+      .chubb-product-laptop-base::after{height:4px}
     }
   </style>
 </head>
@@ -333,8 +365,15 @@
       </div>
     </section>
 
-    <section class="chubb-product-screen" aria-label="Chubb product page design">
-      <img src="../assets/chubb-produto.jpg" alt="Chubb Seguro Hospitalar e Plano Saúde PLUS product page">
+    <section class="visual-section chubb-product-laptop-section">
+      <div class="visual-placeholder" aria-label="Chubb product page design">
+        <div class="chubb-product-laptop">
+          <div class="chubb-product-laptop-screen">
+            <img src="../assets/chubb-produto.jpg" alt="Chubb Seguro Hospitalar e Plano Saúde PLUS product page">
+          </div>
+          <div class="chubb-product-laptop-base"></div>
+        </div>
+      </div>
     </section>
 
     <section class="visual-section chubb-visual-section">
