@@ -583,5 +583,38 @@
     }
   }
 </style>
+
+<style id="home-visual-image-sync">
+  /* The desktop animation owns .project-visual, so it must use the same source imagery. */
+  .project.project-carglass,
+  .project.project-carglass .project-visual {
+    background-image:url("./assets/carglass/carglass-wide.jpg") !important;
+    background-position:center center !important;
+  }
+  .project.project-manheim,
+  .project.project-manheim .project-visual {
+    background-image:url("./assets/manheim/manheim-wide.jpg") !important;
+    background-position:center center !important;
+  }
+  .project.project-bmw-mini,
+  .project.project-bmw-mini .project-visual {
+    background-image:url("./assets/bmw-mini/bmw-mini-wide.jpg") !important;
+    background-position:center center !important;
+  }
+
+  @media (min-width:1900px) {
+    .project.project-carglass,
+    .project.project-carglass .project-visual { background-image:url("./assets/carglass/carglass-superwide.jpg") !important; }
+    .project.project-manheim,
+    .project.project-manheim .project-visual { background-image:url("./assets/manheim/manheim-superwide.jpg") !important; }
+    .project.project-bmw-mini,
+    .project.project-bmw-mini .project-visual { background-image:url("./assets/bmw-mini/bmw-mini-superwide.jpg") !important; }
+  }
+  @media (max-width:700px) {
+    .project.project-carglass { background-image:url("./assets/carglass/carglass-narrow.jpg") !important; }
+    .project.project-manheim { background-image:url("./assets/manheim/manheim-narrow.jpg") !important; }
+    .project.project-bmw-mini { background-image:url("./assets/bmw-mini/bmw-mini-narrow.jpg") !important; }
+  }
+</style>
 </body>
 </html>
