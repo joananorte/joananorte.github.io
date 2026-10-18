@@ -40,7 +40,9 @@
     .desktop-frame-bar span{width:5px;height:5px;border-radius:50%;background:#aeb7c0}
     .desktop-frame-screen{position:relative;max-height:clamp(220px,25vw,390px);overflow:hidden;background:#fff;transition:max-height 2.8s cubic-bezier(.22,.82,.24,1)}
     .desktop-frame-screen img{width:100%;height:auto;display:block}
-    .final-page-card:hover .desktop-frame-screen{max-height:900px}
+    .final-page-card:hover .desktop-frame-screen{max-height:min(900px,76vh);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#94a0ac transparent}
+    .final-page-card:hover .desktop-frame-screen::-webkit-scrollbar{width:7px}
+    .final-page-card:hover .desktop-frame-screen::-webkit-scrollbar-thumb{border-radius:10px;background:#94a0ac}
     @media(max-width:760px){.final-page-grid{grid-template-columns:1fr;gap:52px}.desktop-frame{padding:9px 9px 0;border-radius:12px 12px 3px 3px}.desktop-frame-bar{height:15px}.final-page-card h3{font-size:.9rem}.final-page-card:hover .desktop-frame-screen{max-height:clamp(220px,72vw,390px)}}
   </style>
 </head>
