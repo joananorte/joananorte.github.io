@@ -98,6 +98,21 @@
     .desktop-frame::after{display:none}
     @media(max-width:760px){.desktop-frame{margin-bottom:0}}
   </style>
+
+  <style id="bmw-mini-mobile-preview-scroll">
+    @media(max-width:760px){
+      .desktop-frame-screen{
+        max-height:min(72vh,560px);
+        overflow-y:auto;
+        overscroll-behavior:contain;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:thin;
+        scrollbar-color:#94a0ac transparent;
+      }
+      .desktop-frame-screen::-webkit-scrollbar{width:6px}
+      .desktop-frame-screen::-webkit-scrollbar-thumb{border-radius:10px;background:#94a0ac}
+    }
+  </style>
 </head>
 <body>
   <nav class="site-nav"><a class="brand" href="../../">JOANA NORTE</a><div class="nav-links"><a href="../../#work">Work</a><a href="../../#about">About</a><a href="../../#contact">Contact</a></div></nav>
