@@ -388,6 +388,29 @@
     .project.project-bmw-mini::after { right:9vw; bottom:13%; width:77vw; height:29vw; }
   }
 </style>
+
+<style id="manheim-home-images">
+  .project.project-manheim {
+    background-image: linear-gradient(110deg, rgba(0, 40, 68, .55), rgba(0, 72, 115, .12)), url("./assets/manheim/manheim-wide.jpg") !important;
+    background-position: center center !important;
+  }
+  .project.project-manheim::before,
+  .project.project-manheim::after { display: none !important; }
+
+  @media (min-width: 1900px) {
+    .project.project-manheim {
+      background-image: linear-gradient(110deg, rgba(0, 40, 68, .55), rgba(0, 72, 115, .12)), url("./assets/manheim/manheim-superwide.jpg") !important;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .project.project-manheim {
+      background-image: linear-gradient(180deg, rgba(0, 40, 68, .28), rgba(0, 72, 115, .08)), url("./assets/manheim/manheim-narrow.jpg") !important;
+      background-position: center bottom !important;
+      background-attachment: scroll !important;
+    }
+  }
+</style>
 </head>
 <body>
   <main>
