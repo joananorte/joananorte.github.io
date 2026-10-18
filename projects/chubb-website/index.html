@@ -330,20 +330,19 @@
       gap:clamp(70px,10vw,128px);
     }
     .chubb-design-pair{
+      --screen-x:0px;--screen-y:0px;--screen-rotate:0deg;
       display:grid;
-      grid-template-columns:minmax(0,1fr) clamp(164px,20vw,230px);
+      grid-template-columns:minmax(0,1fr) minmax(0,260px);
       align-items:start;
       gap:clamp(20px,4vw,60px);
       max-width:1030px;
-      margin:0 auto;
       width:100%;
+      margin:0 auto;
       transition:transform .35s ease;
     }
-    .chubb-design-pair:hover{transform:translateY(-8px)}
+    .chubb-design-pair:hover{transform:translateY(-8px);--screen-y:-10px}
     .chubb-desktop-device{
-      position:relative;
-      align-self:start;
-      padding:13px 13px 18px;
+      position:relative;align-self:start;padding:13px 13px 18px;
       border-radius:23px 23px 11px 11px;
       background:linear-gradient(135deg,#fff,#ded5cf 48%,#fffdfa);
       box-shadow:inset 0 0 0 1px rgba(255,255,255,.86),0 25px 42px rgba(77,55,40,.2);
@@ -361,48 +360,49 @@
       border-radius:3px 3px 24px 24px;background:linear-gradient(#faf7f4,#cdc3bd);
       box-shadow:0 8px 13px rgba(77,55,40,.2);
     }
-    .chubb-mobile-device{
-      position:relative;
-      display:flex;
-      align-self:start;
-      justify-self:start;
-      height:clamp(310px,37vw,430px);
-      aspect-ratio:333 / 632;
-      box-sizing:border-box;
-      padding:9px;
-      border:1px solid #d8cec7;
-      border-radius:31px;
-      background:linear-gradient(128deg,#fff 4%,#e1d9d3 45%,#fff 78%);
-      box-shadow:inset 3px 3px 4px rgba(255,255,255,.96),inset -3px -4px 7px rgba(77,55,40,.13),0 22px 37px rgba(77,55,40,.18);
+    /* Same phone component used in Bridgewhat */
+    .chubb-final .final-phone{
+      position:relative;width:min(100%,260px);margin:0 auto;padding:10px;
+      border:1px solid rgba(174,194,205,.8);border-radius:36px;
+      background:linear-gradient(128deg,#fbfeff 4%,#e7f0f4 37%,#ffffff 68%,#cddce4 100%);
+      box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 12px 20px rgba(147,178,196,.16),0 22px 48px rgba(42,87,118,.14);
+      transform:translate(var(--screen-x),var(--screen-y)) rotate(var(--screen-rotate));
+      transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease;
     }
-    .chubb-mobile-device::before{
-      content:"";position:absolute;z-index:1;top:9px;left:50%;width:40%;height:15px;
-      transform:translateX(-50%);border-radius:0 0 11px 11px;background:#ece5e0;
+    .chubb-final .final-phone .screen{
+      width:100%;height:auto;max-width:none;margin:0;border:0;border-radius:25px;
+      background:linear-gradient(160deg,#eff9ff,#d5ecfc);display:block;
     }
-    .chubb-mobile-device img{
-      display:block;flex:1 1 auto;width:100%;height:auto;min-height:0;object-fit:cover;object-position:top;
-      border-radius:23px;background:#fff;
+    .chubb-final .final-phone::before,.chubb-final .final-phone::after{
+      content:"";position:absolute;width:4px;background:linear-gradient(90deg,#aebfc9,#f9fcfd);
+      box-shadow:1px 1px 2px rgba(42,67,86,.18);
     }
+    .chubb-final .final-phone::before{
+      left:-5px;top:25%;height:56px;border-radius:5px 0 0 5px;
+      box-shadow:1px 19px 2px rgba(42,67,86,.14);
+    }
+    .chubb-final .final-phone::after{right:-5px;top:34%;height:37px;border-radius:0 5px 5px 0}
+    .chubb-final .final-phone .phone-notch{top:10px;width:39%;height:17px;border-radius:0 0 12px 12px}
+    .chubb-final .final-phone .phone-notch::before{top:5px}
+    .chubb-final .final-phone .phone-notch::after{top:6px}
     .chubb-design-pair figcaption{
-      grid-column:1/-1;
-      margin-top:8px;
+      grid-column:1/-1;margin-top:8px;text-align:center;
       font-family:Lato,sans-serif;font-size:13px;font-weight:700;
-      letter-spacing:.02em;color:#4d4743;text-transform:uppercase;text-align:center;
+      letter-spacing:.02em;color:#4d4743;text-transform:uppercase;
     }
     @media(max-width:760px){
       .chubb-final .chubb-responsive-grid{gap:64px}
-      .chubb-design-pair{
-        grid-template-columns:minmax(0,1fr) clamp(94px,30vw,140px);
-        gap:17px;
-      }
+      .chubb-design-pair{grid-template-columns:minmax(0,1fr) minmax(0,135px);gap:17px}
       .chubb-design-pair:hover{transform:translateY(-4px)}
       .chubb-desktop-device{padding:7px 7px 10px;border-radius:14px 14px 7px 7px}
       .chubb-desktop-device::before{height:3px;margin-bottom:4px}
       .chubb-desktop-device::after{bottom:-15px;height:16px;border-radius:2px 2px 15px 15px}
       .chubb-desktop-device img{border-radius:5px}
-      .chubb-mobile-device{height:clamp(200px,41vw,260px);padding:5px;border-radius:21px}
-      .chubb-mobile-device::before{top:5px;height:9px;border-radius:0 0 7px 7px}
-      .chubb-mobile-device img{border-radius:16px}
+      .chubb-final .final-phone{width:100%;max-width:210px;padding:7px;border-radius:27px}
+      .chubb-final .final-phone .screen{border-radius:19px}
+      .chubb-final .final-phone .phone-notch{top:7px;height:12px;border-radius:0 0 8px 8px}
+      .chubb-final .final-phone .phone-notch::before{top:4px;width:3px;height:3px}
+      .chubb-final .final-phone .phone-notch::after{top:4px;height:2px}
     }
   </style>
 </head>
@@ -491,17 +491,17 @@
       <div class="chubb-responsive-grid">
         <figure class="chubb-design-pair">
           <div class="chubb-desktop-device"><img src="../assets/chubb-products-desktop.jpg" alt="Chubb products page on desktop" loading="lazy"></div>
-          <div class="chubb-mobile-device"><img src="../assets/chubb-products-mobile.jpg" alt="Chubb products page on mobile" loading="lazy"></div>
+          <div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img src="../assets/chubb-products-mobile.jpg" alt="Chubb products page on mobile" loading="lazy"></div>
           <figcaption>Products</figcaption>
         </figure>
         <figure class="chubb-design-pair">
           <div class="chubb-desktop-device"><img src="../assets/chubb-faq-desktop.jpg" alt="Chubb frequently asked questions page on desktop" loading="lazy"></div>
-          <div class="chubb-mobile-device"><img src="../assets/chubb-faq-mobile.jpg" alt="Chubb frequently asked questions page on mobile" loading="lazy"></div>
+          <div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img src="../assets/chubb-faq-mobile.jpg" alt="Chubb frequently asked questions page on mobile" loading="lazy"></div>
           <figcaption>Frequently asked questions</figcaption>
         </figure>
         <figure class="chubb-design-pair">
           <div class="chubb-desktop-device"><img src="../assets/chubb-blog-desktop.jpg" alt="Chubb blog page on desktop" loading="lazy"></div>
-          <div class="chubb-mobile-device"><img src="../assets/chubb-blog-mobile.jpg" alt="Chubb blog page on mobile" loading="lazy"></div>
+          <div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img src="../assets/chubb-blog-mobile.jpg" alt="Chubb blog page on mobile" loading="lazy"></div>
           <figcaption>Blog</figcaption>
         </figure>
       </div>
