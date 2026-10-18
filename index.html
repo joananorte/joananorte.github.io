@@ -539,5 +539,27 @@
       });
     })();
   </script>
+
+<style id="carglass-manheim-legacy-overlay-reset">
+  /* Remove legacy decorative panels from the interactive visual layer. */
+  .project.project-carglass::before,
+  .project.project-carglass::after,
+  .project.project-manheim::before,
+  .project.project-manheim::after,
+  .project.project-carglass .project-visual::before,
+  .project.project-carglass .project-visual::after,
+  .project.project-manheim .project-visual::before,
+  .project.project-manheim .project-visual::after,
+  .project.project-carglass .project-copy::before,
+  .project.project-carglass .project-copy::after,
+  .project.project-manheim .project-copy::before,
+  .project.project-manheim .project-copy::after {
+    content: none !important;
+    display: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+  }
+</style>
 </body>
 </html>
