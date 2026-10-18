@@ -362,7 +362,7 @@
     }
     /* Same phone component used in Bridgewhat */
     .chubb-final .final-phone{
-      position:relative;width:min(100%,260px);margin:0 auto;padding:10px;
+      position:relative;display:flex;flex-direction:column;justify-self:start;box-sizing:border-box;width:auto;height:clamp(310px,37vw,430px);aspect-ratio:333 / 632;margin:0;padding:10px;
       border:1px solid rgba(174,194,205,.8);border-radius:36px;
       background:linear-gradient(128deg,#fbfeff 4%,#e7f0f4 37%,#ffffff 68%,#cddce4 100%);
       box-shadow:inset 3px 3px 4px rgba(255,255,255,.98),inset -4px -5px 8px rgba(89,122,142,.2),-5px 12px 20px rgba(147,178,196,.16),0 22px 48px rgba(42,87,118,.14);
@@ -370,8 +370,8 @@
       transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease;
     }
     .chubb-final .final-phone .screen{
-      width:100%;height:auto;max-width:none;margin:0;border:0;border-radius:25px;
-      background:linear-gradient(160deg,#eff9ff,#d5ecfc);display:block;
+      flex:1 1 auto;width:100%;height:auto;min-height:0;max-width:none;margin:0;border:0;border-radius:25px;
+      background:linear-gradient(160deg,#eff9ff,#d5ecfc);display:block;object-fit:cover;object-position:top;
     }
     .chubb-final .final-phone::before,.chubb-final .final-phone::after{
       content:"";position:absolute;width:4px;background:linear-gradient(90deg,#aebfc9,#f9fcfd);
@@ -392,13 +392,13 @@
     }
     @media(max-width:760px){
       .chubb-final .chubb-responsive-grid{gap:64px}
-      .chubb-design-pair{grid-template-columns:minmax(0,1fr) minmax(0,135px);gap:17px}
+      .chubb-design-pair{grid-template-columns:minmax(0,1fr) minmax(0,145px);gap:17px}
       .chubb-design-pair:hover{transform:translateY(-4px)}
       .chubb-desktop-device{padding:7px 7px 10px;border-radius:14px 14px 7px 7px}
       .chubb-desktop-device::before{height:3px;margin-bottom:4px}
       .chubb-desktop-device::after{bottom:-15px;height:16px;border-radius:2px 2px 15px 15px}
       .chubb-desktop-device img{border-radius:5px}
-      .chubb-final .final-phone{width:100%;max-width:210px;padding:7px;border-radius:27px}
+      .chubb-final .final-phone{width:auto;height:clamp(200px,41vw,260px);padding:7px;border-radius:27px}
       .chubb-final .final-phone .screen{border-radius:19px}
       .chubb-final .final-phone .phone-notch{top:7px;height:12px;border-radius:0 0 8px 8px}
       .chubb-final .final-phone .phone-notch::before{top:4px;width:3px;height:3px}
