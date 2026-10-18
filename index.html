@@ -324,6 +324,29 @@
     }
   }
 </style>
+
+<style id="carglass-home-images">
+  .project.project-carglass {
+    background-image: linear-gradient(110deg, rgba(32, 12, 12, .47), rgba(32, 12, 12, .08)), url("./assets/carglass/carglass-wide.jpg") !important;
+    background-position: center center !important;
+  }
+  .project.project-carglass::before,
+  .project.project-carglass::after { display: none !important; }
+
+  @media (min-width: 1900px) {
+    .project.project-carglass {
+      background-image: linear-gradient(110deg, rgba(32, 12, 12, .47), rgba(32, 12, 12, .08)), url("./assets/carglass/carglass-superwide.jpg") !important;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .project.project-carglass {
+      background-image: linear-gradient(180deg, rgba(32, 12, 12, .28), rgba(32, 12, 12, .08)), url("./assets/carglass/carglass-narrow.jpg") !important;
+      background-position: center bottom !important;
+      background-attachment: scroll !important;
+    }
+  }
+</style>
 </head>
 <body>
   <main>
