@@ -92,6 +92,12 @@
       .final-page-card:hover .desktop-frame{transform:translateY(-4px)}
     }
   </style>
+
+  <style id="bmw-mini-remove-device-base">
+    .desktop-frame{margin-bottom:0}
+    .desktop-frame::after{display:none}
+    @media(max-width:760px){.desktop-frame{margin-bottom:0}}
+  </style>
 </head>
 <body>
   <nav class="site-nav"><a class="brand" href="../../">JOANA NORTE</a><div class="nav-links"><a href="../../#work">Work</a><a href="../../#about">About</a><a href="../../#contact">Contact</a></div></nav>
