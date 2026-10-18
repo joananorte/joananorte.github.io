@@ -323,6 +323,48 @@
       .chubb-product-laptop-base::after{height:4px}
     }
   </style>
+  <style id="chubb-final-responsive">
+    .chubb-final .chubb-responsive-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:clamp(42px,7vw,86px) clamp(26px,5vw,72px);
+    }
+    .chubb-design-pair{
+      display:grid;
+      grid-template-columns:minmax(0,1.72fr) minmax(92px,.58fr);
+      align-items:end;
+      gap:clamp(10px,1.5vw,20px);
+      margin:0;
+      transition:transform .35s ease;
+    }
+    .chubb-design-pair:hover{transform:translate(-5px,-8px)}
+    .chubb-desktop-frame,.chubb-mobile-frame{
+      overflow:hidden;
+      border:1px solid #e3d8d1;
+      background:#fff;
+      box-shadow:0 16px 30px rgba(77,55,40,.12);
+    }
+    .chubb-desktop-frame{padding:7px;border-radius:12px}
+    .chubb-mobile-frame{padding:5px;border-radius:10px}
+    .chubb-desktop-frame img,.chubb-mobile-frame img{display:block;width:100%;height:auto}
+    .chubb-desktop-frame img{border-radius:7px}
+    .chubb-mobile-frame img{border-radius:6px}
+    .chubb-design-pair figcaption{
+      grid-column:1/-1;
+      margin-top:2px;
+      font-family:Lato,sans-serif;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.02em;
+      color:#4d4743;
+      text-transform:uppercase;
+    }
+    @media(max-width:760px){
+      .chubb-final .chubb-responsive-grid{grid-template-columns:1fr;gap:44px}
+      .chubb-design-pair{grid-template-columns:minmax(0,1.68fr) minmax(86px,.58fr);gap:12px}
+      .chubb-design-pair:hover{transform:translateY(-4px)}
+    }
+  </style>
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary navigation">
@@ -404,7 +446,26 @@
             <span class="guide-label">Colours</span>
             <div class="colour-grid" aria-label="Chubb colour palette"><div class="colour-token"><span class="colour-dot" style="background:#171A92"></span><div><strong>Dark Blue</strong><small>#171A92</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#7023B5"></span><div><strong>Purple</strong><small>#7023B5</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#E31B23"></span><div><strong>Red</strong><small>#E31B23</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#73C900"></span><div><strong>Green</strong><small>#73C900</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#08B6C9"></span><div><strong>Turquoise</strong><small>#08B6C9</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#FF6500"></span><div><strong>Orange</strong><small>#FF6500</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#FFB819"></span><div><strong>Yellow</strong><small>#FFB819</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#EB008B"></span><div><strong>Magenta</strong><small>#EB008B</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#B7B7B7"></span><div><strong>Light Gray</strong><small>#B7B7B7</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#000000"></span><div><strong>Black</strong><small>#000000</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#D6D6D6"></span><div><strong>Sky Gray</strong><small>#D6D6D6</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#4C4F54"></span><div><strong>Dark Gray</strong><small>#4C4F54</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#F4F4F4"></span><div><strong>Pale Gray</strong><small>#F4F4F4</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#FFFFFF"></span><div><strong>White</strong><small>#FFFFFF</small></div></div></div></div></div></div></section>
 
-    <section class="final chubb-final"><h2>Final design</h2><div class="screens"><div class="screen-wrap"><div class="chubb-screen"><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22760%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23fbf6f2%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%2255%22%20width%3D%221040%22%20height%3D%22650%22%20rx%3D%2216%22%20fill%3D%22white%22%20stroke%3D%22%23dfd4cc%22%2F%3E%3Cpath%20d%3D%22M80%20145h1040%22%20stroke%3D%22%2308b6c9%22%20stroke-width%3D%2216%22%2F%3E%3Ctext%20x%3D%22140%22%20y%3D%22250%22%20fill%3D%22%23171a92%22%20font-family%3D%22Georgia%22%20font-size%3D%2270%22%3EHomepage%3C%2Ftext%3E%3Crect%20x%3D%22140%22%20y%3D%22310%22%20width%3D%22350%22%20height%3D%22210%22%20fill%3D%22%2308b6c9%22%2F%3E%3Crect%20x%3D%22530%22%20y%3D%22310%22%20width%3D%22500%22%20height%3D%2270%22%20fill%3D%22%23eee9e4%22%2F%3E%3Crect%20x%3D%22530%22%20y%3D%22415%22%20width%3D%22420%22%20height%3D%2235%22%20fill%3D%22%23eee9e4%22%2F%3E%3Crect%20x%3D%22140%22%20y%3D%22570%22%20width%3D%22850%22%20height%3D%2240%22%20fill%3D%22%23ff6500%22%2F%3E%3C%2Fsvg%3E" alt="Chubb Homepage placeholder" loading="lazy"></div><p class="screen-caption">Homepage</p></div><div class="screen-wrap"><div class="chubb-screen"><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22760%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23fbf6f2%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%2255%22%20width%3D%221040%22%20height%3D%22650%22%20rx%3D%2216%22%20fill%3D%22white%22%20stroke%3D%22%23dfd4cc%22%2F%3E%3Cpath%20d%3D%22M80%20145h1040%22%20stroke%3D%22%2308b6c9%22%20stroke-width%3D%2216%22%2F%3E%3Ctext%20x%3D%22140%22%20y%3D%22250%22%20fill%3D%22%23171a92%22%20font-family%3D%22Georgia%22%20font-size%3D%2270%22%3EProducts%3C%2Ftext%3E%3Crect%20x%3D%22140%22%20y%3D%22310%22%20width%3D%22350%22%20height%3D%22210%22%20fill%3D%22%2308b6c9%22%2F%3E%3Crect%20x%3D%22530%22%20y%3D%22310%22%20width%3D%22500%22%20height%3D%2270%22%20fill%3D%22%23eee9e4%22%2F%3E%3Crect%20x%3D%22530%22%20y%3D%22415%22%20width%3D%22420%22%20height%3D%2235%22%20fill%3D%22%23eee9e4%22%2F%3E%3Crect%20x%3D%22140%22%20y%3D%22570%22%20width%3D%22850%22%20height%3D%2240%22%20fill%3D%22%23ff6500%22%2F%3E%3C%2Fsvg%3E" alt="Chubb Products placeholder" loading="lazy"></div><p class="screen-caption">Products</p></div><div class="screen-wrap"><div class="chubb-screen"><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22760%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23fbf6f2%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%2255%22%20width%3D%221040%22%20height%3D%22650%22%20rx%3D%2216%22%20fill%3D%22white%22%20stroke%3D%22%23dfd4cc%22%2F%3E%3Cpath%20d%3D%22M80%20145h1040%22%20stroke%3D%22%2308b6c9%22%20stroke-width%3D%2216%22%2F%3E%3Ctext%20x%3D%22140%22%20y%3D%22250%22%20fill%3D%22%23171a92%22%20font-family%3D%22Georgia%22%20font-size%3D%2270%22%3ECoverage%3C%2Ftext%3E%3Crect%20x%3D%22140%22%20y%3D%22310%22%20width%3D%22350%22%20height%3D%22210%22%20fill%3D%22%2308b6c9%22%2F%3E%3Crect%20x%3D%22530%22%20y%3D%22310%22%20width%3D%22500%22%20height%3D%2270%22%20fill%3D%22%23eee9e4%22%2F%3E%3Crect%20x%3D%22530%22%20y%3D%22415%22%20width%3D%22420%22%20height%3D%2235%22%20fill%3D%22%23eee9e4%22%2F%3E%3Crect%20x%3D%22140%22%20y%3D%22570%22%20width%3D%22850%22%20height%3D%2240%22%20fill%3D%22%23ff6500%22%2F%3E%3C%2Fsvg%3E" alt="Chubb Coverage placeholder" loading="lazy"></div><p class="screen-caption">Coverage</p></div><div class="screen-wrap"><div class="chubb-screen"><img class="screen" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22760%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23fbf6f2%22%2F%3E%3Crect%20x%3D%2280%22%20y%3D%2255%22%20width%3D%221040%22%20height%3D%22650%22%20rx%3D%2216%22%20fill%3D%22white%22%20stroke%3D%22%23dfd4cc%22%2F%3E%3Cpath%20d%3D%22M80%20145h1040%22%20stroke%3D%22%2308b6c9%22%20stroke-width%3D%2216%22%2F%3E%3Ctext%20x%3D%22140%22%20y%3D%22250%22%20fill%3D%22%23171a92%22%20font-family%3D%22Georgia%22%20font-size%3D%2270%22%3EContact%3C%2Ftext%3E%3Crect%20x%3D%22140%22%20y%3D%22310%22%20width%3D%22350%22%20height%3D%22210%22%20fill%3D%22%2308b6c9%22%2F%3E%3Crect%20x%3D%22530%22%20y%3D%22310%22%20width%3D%22500%22%20height%3D%2270%22%20fill%3D%22%23eee9e4%22%2F%3E%3Crect%20x%3D%22530%22%20y%3D%22415%22%20width%3D%22420%22%20height%3D%2235%22%20fill%3D%22%23eee9e4%22%2F%3E%3Crect%20x%3D%22140%22%20y%3D%22570%22%20width%3D%22850%22%20height%3D%2240%22%20fill%3D%22%23ff6500%22%2F%3E%3C%2Fsvg%3E" alt="Chubb Contact placeholder" loading="lazy"></div><p class="screen-caption">Contact</p></div></div></section>
+    <section class="final chubb-final">
+      <h2>Final design</h2>
+      <div class="chubb-responsive-grid">
+        <figure class="chubb-design-pair">
+          <div class="chubb-desktop-frame"><img src="../assets/chubb-products-desktop.jpg" alt="Chubb products page on desktop" loading="lazy"></div>
+          <div class="chubb-mobile-frame"><img src="../assets/chubb-products-mobile.jpg" alt="Chubb products page on mobile" loading="lazy"></div>
+          <figcaption>Products</figcaption>
+        </figure>
+        <figure class="chubb-design-pair">
+          <div class="chubb-desktop-frame"><img src="../assets/chubb-faq-desktop.jpg" alt="Chubb frequently asked questions page on desktop" loading="lazy"></div>
+          <div class="chubb-mobile-frame"><img src="../assets/chubb-faq-mobile.jpg" alt="Chubb frequently asked questions page on mobile" loading="lazy"></div>
+          <figcaption>Frequently asked questions</figcaption>
+        </figure>
+        <figure class="chubb-design-pair">
+          <div class="chubb-desktop-frame"><img src="../assets/chubb-blog-desktop.jpg" alt="Chubb blog page on desktop" loading="lazy"></div>
+          <div class="chubb-mobile-frame"><img src="../assets/chubb-blog-mobile.jpg" alt="Chubb blog page on mobile" loading="lazy"></div>
+          <figcaption>Blog</figcaption>
+        </figure>
+      </div>
+    </section>
   </main>
 
   <footer class="next-project">
