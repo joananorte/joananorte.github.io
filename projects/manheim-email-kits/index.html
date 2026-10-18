@@ -388,6 +388,30 @@
   .manheim-email-mobile::before{height:46px!important;padding:10px 13px 0!important;font-size:10px!important}
   .manheim-email-mobile img{height:390px!important;border-radius:0!important}
 }
+</style><style id="manheim-interactions-and-approach-crop">
+/* Mobile e-mails are clean previews: no separate mail chrome */
+.manheim-email-mobile::before{display:none!important}
+.manheim-email-mobile{padding:0!important}
+.manheim-email-mobile img{height:390px!important}
+
+/* Show the welcome email through the vehicle and its yellow CTA */
+.manheim-tablet-screen{height:600px!important;display:block!important;overflow:hidden!important}
+.manheim-tablet-screen img{display:block!important;width:100%!important;height:auto!important;object-fit:initial!important;object-position:top!important}
+
+/* Gentle layered movement for the final email previews */
+.manheim-email-desktop,.manheim-email-mobile{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease!important}
+.manheim-email-set:hover .manheim-email-desktop{transform:translate(-10px,-10px)!important;box-shadow:0 28px 48px rgba(0,63,107,.22)!important}
+.manheim-email-set:hover .manheim-email-mobile{transform:translate(10px,-18px)!important;box-shadow:0 28px 48px rgba(0,63,107,.23)!important}
+.manheim-email-set:nth-child(2):hover .manheim-email-desktop{transform:translate(10px,-10px)!important}
+.manheim-email-set:nth-child(2):hover .manheim-email-mobile{transform:translate(-10px,-18px)!important}
+@media(max-width:760px){
+  .manheim-tablet-screen{height:440px!important}
+  .manheim-email-mobile{padding:0!important}
+  .manheim-email-mobile img{height:390px!important}
+  .manheim-email-set:hover .manheim-email-desktop{transform:translateY(-8px)!important}
+  .manheim-email-set:hover .manheim-email-mobile{transform:translateY(-12px)!important}
+}
+@media(prefers-reduced-motion:reduce){.manheim-email-desktop,.manheim-email-mobile{transition:none!important}.manheim-email-set:hover .manheim-email-desktop,.manheim-email-set:hover .manheim-email-mobile{transform:none!important}}
 </style></footer>
 <style>.qiv-approach-visual{background:#fff1f2!important}.qiv-approach-visual::before{background:rgba(255,255,255,.72)!important}.qiv-devices{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:clamp(24px,5vw,72px);width:min(82%,940px)}.qiv-desktop{width:min(68%,670px);padding:9px;border:1px solid rgba(200,200,200,.9);border-radius:14px;background:linear-gradient(135deg,#fff,#e5e5e5);box-shadow:0 24px 42px rgba(97,36,39,.14)}.qiv-desktop img{display:block;width:100%;border-radius:7px}.qiv-mobile{width:min(23%,230px);padding:7px;border:1px solid rgba(200,200,200,.9);border-radius:30px;background:linear-gradient(135deg,#fff,#e5e5e5);box-shadow:0 24px 42px rgba(97,36,39,.14)}.qiv-mobile img{display:block;width:100%;border-radius:23px}.colour-grid{grid-template-columns:repeat(5,86px)!important}@media(max-width:760px){.qiv-approach-visual{min-height:430px!important}.qiv-devices{width:86%;gap:22px;align-items:center}.qiv-desktop{width:68%;padding:6px;border-radius:10px}.qiv-desktop img{border-radius:5px}.qiv-mobile{width:25%;padding:5px;border-radius:20px}.qiv-mobile img{border-radius:15px}.colour-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}</style><script>const t=document.querySelectorAll('.project-intro>* ,.hero-panel,.two-col>div,.visual-placeholder,.process-grid,.style-guide-inner,.final h2,.screen-wrap,.next-project>*');t.forEach(e=>e.classList.add('reveal'));const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');o.unobserve(e.target)}}),{threshold:.14});t.forEach(e=>o.observe(e));</script></body></html>
 
