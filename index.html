@@ -261,7 +261,28 @@
     .project.project-carglass .project-copy{position:relative;z-index:2}
     @media(max-width:700px){.project.project-carglass::before{font-size:42vw;right:7vw;bottom:9%}.project.project-carglass::after{right:11vw;top:17%;width:64vw}}
   </style>
-<style id="manheim-home-card">.project-manheim{position:relative;overflow:hidden;background-image:linear-gradient(112deg,rgba(0,40,68,.72),rgba(0,72,115,.18)),linear-gradient(132deg,#e5f2f8 0%,#fff 50%,#d4e6f0 100%)}.project-manheim::before{content:"EMAIL";position:absolute;right:6vw;bottom:8vh;z-index:0;color:rgba(0,63,107,.14);font-family:Calibri,Arial,sans-serif;font-size:clamp(100px,20vw,300px);font-weight:700;letter-spacing:-.08em;line-height:.8}.project-manheim::after{content:"";position:absolute;right:10vw;top:16%;width:min(35vw,500px);aspect-ratio:1.4;border:1px solid rgba(255,255,255,.75);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.64),rgba(190,218,232,.35));box-shadow:0 22px 50px rgba(0,63,107,.15)}.project-manheim .project-copy{position:relative;z-index:2}@media(max-width:700px){.project-manheim::before{font-size:34vw;right:7vw;bottom:9%}.project-manheim::after{right:11vw;top:17%;width:64vw}}</style></head>
+<style id="manheim-home-card">.project-manheim{position:relative;overflow:hidden;background-image:linear-gradient(112deg,rgba(0,40,68,.72),rgba(0,72,115,.18)),linear-gradient(132deg,#e5f2f8 0%,#fff 50%,#d4e6f0 100%)}.project-manheim::before{content:"EMAIL";position:absolute;right:6vw;bottom:8vh;z-index:0;color:rgba(0,63,107,.14);font-family:Calibri,Arial,sans-serif;font-size:clamp(100px,20vw,300px);font-weight:700;letter-spacing:-.08em;line-height:.8}.project-manheim::after{content:"";position:absolute;right:10vw;top:16%;width:min(35vw,500px);aspect-ratio:1.4;border:1px solid rgba(255,255,255,.75);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.64),rgba(190,218,232,.35));box-shadow:0 22px 50px rgba(0,63,107,.15)}.project-manheim .project-copy{position:relative;z-index:2}@media(max-width:700px){.project-manheim::before{font-size:34vw;right:7vw;bottom:9%}.project-manheim::after{right:11vw;top:17%;width:64vw}}</style>
+<style id="bridgewhat-home-images">
+  .project.project-bridgewhat {
+    background-image: url("./assets/bridgewhat/bridgewhat-wide.jpg") !important;
+    background-position: center center !important;
+  }
+
+  @media (min-width: 1900px) {
+    .project.project-bridgewhat {
+      background-image: url("./assets/bridgewhat/bridgewhat-superwide.jpg") !important;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .project.project-bridgewhat {
+      background-image: url("./assets/bridgewhat/bridgewhat-narrow.jpg") !important;
+      background-position: center bottom !important;
+      background-attachment: scroll !important;
+    }
+  }
+</style>
+</head>
 <body>
   <main>
     <section class="home-hero">
@@ -279,7 +300,7 @@
         <p class="role" id="role">UI/UX designer</p>
       </div>
     </section>
-    <section class="project" id="work">
+    <section class="project project-bridgewhat" id="work">
       <div class="project-copy">
         <p class="project-number">01</p>
         <h2>Bridgewhat<br>Matching</h2>
