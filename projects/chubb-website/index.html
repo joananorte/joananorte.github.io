@@ -332,7 +332,7 @@
     .chubb-design-pair{
       display:grid;
       grid-template-columns:minmax(0,1fr) clamp(154px,19vw,250px);
-      align-items:end;
+      align-items:stretch;
       gap:clamp(20px,4vw,60px);
       max-width:1030px;
       margin:0 auto;
@@ -342,6 +342,9 @@
     .chubb-design-pair:hover{transform:translateY(-8px)}
     .chubb-desktop-device{
       position:relative;
+      display:flex;
+      flex-direction:column;
+      height:clamp(360px,35vw,470px);
       padding:13px 13px 18px;
       border-radius:23px 23px 11px 11px;
       background:linear-gradient(135deg,#fff,#ded5cf 48%,#fffdfa);
@@ -352,7 +355,7 @@
       border-radius:99px;background:#bbb1ab;
     }
     .chubb-desktop-device img{
-      display:block;width:100%;aspect-ratio:1.78;object-fit:cover;
+      display:block;width:100%;height:100%;min-height:0;object-fit:cover;
       border-radius:10px;background:#fff;
     }
     .chubb-desktop-device::after{
@@ -362,6 +365,8 @@
     }
     .chubb-mobile-device{
       position:relative;
+      display:flex;
+      height:clamp(360px,35vw,470px);
       padding:9px;
       border:1px solid #d8cec7;
       border-radius:31px;
@@ -373,14 +378,14 @@
       transform:translateX(-50%);border-radius:0 0 11px 11px;background:#ece5e0;
     }
     .chubb-mobile-device img{
-      display:block;width:100%;aspect-ratio:9/18.7;object-fit:cover;object-position:top;
+      display:block;width:100%;height:100%;min-height:0;object-fit:cover;object-position:top;
       border-radius:23px;background:#fff;
     }
     .chubb-design-pair figcaption{
       grid-column:1/-1;
       margin-top:8px;
       font-family:Lato,sans-serif;font-size:13px;font-weight:700;
-      letter-spacing:.02em;color:#4d4743;text-transform:uppercase;
+      letter-spacing:.02em;color:#4d4743;text-transform:uppercase;text-align:center;
     }
     @media(max-width:760px){
       .chubb-final .chubb-responsive-grid{gap:64px}
@@ -389,11 +394,11 @@
         gap:17px;
       }
       .chubb-design-pair:hover{transform:translateY(-4px)}
-      .chubb-desktop-device{padding:7px 7px 10px;border-radius:14px 14px 7px 7px}
+      .chubb-desktop-device{height:clamp(210px,47vw,310px);padding:7px 7px 10px;border-radius:14px 14px 7px 7px}
       .chubb-desktop-device::before{height:3px;margin-bottom:4px}
       .chubb-desktop-device::after{bottom:-15px;height:16px;border-radius:2px 2px 15px 15px}
       .chubb-desktop-device img{border-radius:5px}
-      .chubb-mobile-device{padding:5px;border-radius:21px}
+      .chubb-mobile-device{height:clamp(210px,47vw,310px);padding:5px;border-radius:21px}
       .chubb-mobile-device::before{top:5px;height:9px;border-radius:0 0 7px 7px}
       .chubb-mobile-device img{border-radius:16px}
     }
