@@ -18,7 +18,35 @@
     .final{padding:96px 4.2vw}.reels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.reel{min-height:465px;position:relative;overflow:hidden;border-radius:16px;background:#171827;box-shadow:0 16px 35px rgba(19,16,39,.14)}.reel:nth-child(2){background:linear-gradient(150deg,#bee0ee,#617eae 52%,#161d3d)}.reel:nth-child(3){background:linear-gradient(150deg,#3b255c,#ed76bb)}.reel-head{position:absolute;inset:0 0 auto;padding:19px;display:flex;justify-content:space-between;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}.play{position:absolute;z-index:3;left:50%;top:50%;display:grid;place-items:center;width:62px;height:62px;border:1px solid rgba(255,255,255,.8);border-radius:50%;transform:translate(-50%,-50%);color:#fff;font-size:18px;background:rgba(12,11,28,.26);backdrop-filter:blur(6px)}.reel-face{position:absolute;left:20%;bottom:0;width:60%;height:72%;border-radius:45% 45% 0 0;background:radial-gradient(circle at 52% 33%,#f3cfb3 0 11%,#b06e75 31%,#39234e 68%)}.reel:nth-child(2) .reel-face{left:14%;width:72%;background:radial-gradient(circle at 52% 29%,#d69a6f 0 9%,#733e49 29%,#122347 66%)}.reel:nth-child(3) .reel-face{left:28%;width:48%;background:radial-gradient(circle at 50% 30%,#f4d7bb 0 10%,#bd777c 32%,#512255 68%)}.lower-third{position:absolute;z-index:2;left:14px;right:14px;bottom:16px;padding:13px;border-left:3px solid var(--pink);background:rgba(18,17,30,.66);color:#fff;font-size:.78rem}.reel:hover{transform:translateY(-8px);transition:transform .35s ease}.footer-standard{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:40px 4.2vw;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}.footer-identity{display:flex;align-items:center;gap:18px}.footer-standard a{color:inherit;text-decoration:none}.footer-standard a:hover{color:var(--violet)}
     @media(max-width:760px){.site-nav{padding:28px 24px 0;font-size:.73rem}.nav-links{gap:.32rem}.project-intro{padding:52px 24px 38px}.project-intro h1{font-size:3.35rem}.hero{min-height:620px}.hero-label{left:24px;top:30px}.hero-copy{left:24px;right:24px;bottom:34px}.avatar-stage{right:-21vw;width:125vw;height:72%;opacity:.9}.orb.one{width:62vw;height:62vw;right:7%}.orb.two{width:36vw;height:36vw;right:51%}.avatar{width:58vw;height:77vw;right:24%}.caption-card{right:18%;width:43%;bottom:6%;padding:13px}.meta{padding:28px 24px;flex-direction:column;gap:16px}.content{padding:72px 24px}.intro-grid,.workflow-grid,.reels{grid-template-columns:1fr;gap:28px}.process,.final{padding:72px 24px}.reel{min-height:420px}.footer-standard{padding:28px 24px;align-items:flex-start;flex-direction:column;gap:16px}}
   </style>
-</head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style id="project-template-alignment">
+  /* Shared portfolio template: typography, navigation and section rhythm. */
+  body{font-family:"Manrope",sans-serif!important}
+  .site-nav{padding:56px 4.2vw 0!important;font-size:16px!important;font-weight:700!important;letter-spacing:normal!important;text-transform:uppercase!important}
+  .site-nav .brand{font-family:"Fraunces",serif!important;font-size:18px!important;font-weight:400!important;letter-spacing:normal!important}
+  .nav-links{align-items:center!important;gap:18px!important}
+  .project-intro{margin:0!important;padding:138px 4.2vw 42px!important}
+  .back-link{display:inline-flex!important;align-items:center!important;gap:.45rem!important;margin-bottom:30px!important;font-size:.78rem!important;font-weight:600!important}
+  .eyebrow{font-family:"Manrope",sans-serif!important;font-size:.82rem!important;font-weight:700!important;letter-spacing:normal!important}
+  .project-intro h1{font-family:"Fraunces",serif!important;font-size:clamp(2.8rem,5.7vw,5.8rem)!important;line-height:.95!important;letter-spacing:normal!important;font-weight:600!important}
+  .lede{font-size:clamp(.9rem,1.15vw,1.05rem)!important;line-height:1.45!important}
+  .hero{min-height:635px!important}
+  .meta{padding:0!important;border:0!important;position:absolute!important;z-index:4!important;left:4.2vw!important;bottom:48px!important;gap:54px!important;color:#fff!important}
+  .meta-label{color:rgba(255,255,255,.7)!important;letter-spacing:normal!important}
+  .meta-value{color:#fff!important;font-size:1rem!important;font-weight:600!important}
+  .content{max-width:1170px!important;margin:0 auto!important;padding:110px 7vw!important}
+  .content h2,.process h2,.final h2{font-family:"Fraunces",serif!important;font-size:1.35rem!important;font-weight:600!important;letter-spacing:normal!important;line-height:1.2!important}
+  .content p,.step p{font-size:1rem!important;line-height:1.68!important}
+  .process{padding:110px 7vw!important;background:#f7f0e8!important}
+  .process h2,.final h2{margin-bottom:34px!important}
+  .workflow-grid{gap:0!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .step{padding:28px 30px!important;border-top:1px solid var(--line)!important}
+  .step h3{font-family:"Fraunces",serif!important;font-size:1.35rem!important;font-weight:600!important}
+  .final{max-width:1170px!important;margin:0 auto!important;padding:110px 7vw!important}
+  .final>.eyebrow{margin-bottom:18px!important}
+  .footer-standard{font-family:"Manrope",sans-serif!important}
+  @media(max-width:760px){.site-nav{padding:28px 24px 0!important;font-size:.73rem!important}.nav-links{gap:.32rem!important}.project-intro{padding:96px 24px 42px!important}.content,.process,.final{padding:72px 24px!important}.meta{position:relative!important;left:auto!important;bottom:auto!important;padding:28px 24px!important;background:#211b40!important;gap:16px!important}.workflow-grid{grid-template-columns:1fr!important}.step{padding:26px 0!important}}
+</style></head>
 <body>
   <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a href="../../#work">Work</a></div></nav>
   <main>
