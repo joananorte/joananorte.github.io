@@ -323,31 +323,32 @@
       box-shadow:0 8px 13px rgba(77,55,40,.2)!important;
     }
     .crazy-laptop-base::after{background:#b8afa9!important}
+
+    /* Small final-design desktops keep the same warm finish, without a fake laptop base. */
     .final-desktop{
-      padding:13px 13px 18px!important;
-      border:0!important;
-      border-radius:23px 23px 11px 11px!important;
+      padding:9px!important;
+      border:1px solid rgba(222,213,207,.72)!important;
+      border-radius:14px!important;
       background:linear-gradient(135deg,#fff,#ded5cf 48%,#fffdfa)!important;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.86),0 25px 42px rgba(77,55,40,.2)!important;
-      overflow:visible!important;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.78),0 17px 31px rgba(77,55,40,.12)!important;
+      overflow:hidden!important;
     }
-    .final-desktop::before{width:18%!important;height:6px!important;margin:0 auto 8px!important;background:#bbb1ab!important}
-    .final-desktop::after{
-      content:"";position:absolute;left:-6%;bottom:-23px;width:112%;height:25px;
-      border-radius:3px 3px 24px 24px;background:linear-gradient(#faf7f4,#cdc3bd);
-      box-shadow:0 8px 13px rgba(77,55,40,.2);
+    .final-desktop::before{
+      width:30%!important;height:4px!important;margin:0 auto 6px!important;
+      background:#bbb1ab!important;
     }
-    .final-desktop img{border-radius:10px!important}
-    .screen-wrap:hover .final-desktop{box-shadow:inset 0 0 0 1px rgba(255,255,255,.86),0 28px 42px rgba(77,55,40,.25)!important}
+    .final-desktop::after{content:none!important}
+    .final-desktop img{border-radius:8px!important}
+    .screen-wrap:hover .final-desktop{box-shadow:inset 0 0 0 1px rgba(255,255,255,.78),0 20px 34px rgba(77,55,40,.17)!important}
+
     @media(max-width:760px){
       .crazy-laptop-screen{padding:8px 8px 11px!important;border-radius:15px 15px 8px 8px!important}
       .crazy-laptop-screen::before{height:3px!important;margin-bottom:5px!important}
       .crazy-laptop-screen img{border-radius:5px!important}
       .crazy-laptop-base{height:15px!important}
       .crazy-laptop-base::after{height:4px!important}
-      .final-desktop{padding:7px 7px 10px!important;border-radius:14px 14px 7px 7px!important}
+      .final-desktop{padding:7px!important;border-radius:12px!important}
       .final-desktop::before{height:3px!important;margin-bottom:4px!important}
-      .final-desktop::after{bottom:-15px;height:16px;border-radius:2px 2px 15px 15px}
       .final-desktop img{border-radius:5px!important}
     }
   </style>
