@@ -1,0 +1,58 @@
+/* Shared case-study shell: structure and responsive hero rhythm */
+@media (max-width:760px){
+  .site-nav{
+    padding:32px 7vw 0!important;
+  }
+
+  .project-intro{
+    padding:62px 7vw 54px!important;
+  }
+
+  .hero-panel{
+    display:flex!important;
+    flex-direction:column!important;
+    min-height:0!important;
+    padding:0!important;
+    background:transparent!important;
+    overflow:visible!important;
+  }
+
+  .hero-panel::before{
+    display:none!important;
+  }
+
+  .hero-panel picture{
+    order:1;
+    display:block!important;
+    width:100%!important;
+  }
+
+  .hero-panel .hero-art{
+    position:static!important;
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
+
+  .hero-panel .project-meta{
+    order:2;
+    position:static!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    width:100%!important;
+    margin:0!important;
+    padding:25px 7vw 0!important;
+    gap:14px!important;
+    background:transparent!important;
+    color:var(--ink)!important;
+  }
+
+  .hero-panel .meta-label,
+  .hero-panel .meta-value{
+    color:var(--ink)!important;
+  }
+}
