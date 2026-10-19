@@ -374,6 +374,21 @@
     .hero-panel{background:#fff!important}
     .hero-panel .project-meta{background:transparent!important;box-shadow:none!important}
   }
+</style><style id="colour-swatch-grid-standard">
+  .colour-grid{
+    display:grid!important;
+    grid-template-columns:repeat(5,78px)!important;
+    column-gap:18px!important;
+    row-gap:26px!important;
+    align-items:start!important;
+  }
+  .colour-token{display:block!important;width:78px!important;min-width:0!important}
+  .colour-dot{width:78px!important;aspect-ratio:1!important;height:auto!important;margin:0 0 10px!important}
+  @media(max-width:760px){
+    .colour-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:20px 16px!important}
+    .colour-token{width:auto!important}
+    .colour-dot{width:100%!important;max-width:78px!important}
+  }
 </style></head>
 <body>
   <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a href="../../#work">Work</a></div></nav>
