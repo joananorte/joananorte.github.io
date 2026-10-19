@@ -119,21 +119,29 @@
     border: 0 !important;
     box-shadow: none !important;
   }
-  nav .nav-links a { display: inline-block !important; }
+  nav .nav-links a {
+    display: inline-block !important;
+    font-size: .72rem !important;
+    line-height: 1 !important;
+    letter-spacing: .04em !important;
+  }
 }
 </style>
 <style id="ai-video-mobile-hero-framing">
 @media (max-width: 760px) {
   .hero {
-    min-height: 535px !important;
-    background-size: auto 145% !important;
-    background-position: center 58% !important;
+    min-height: 560px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .hero::after {
+    background: linear-gradient(180deg, rgba(27,25,67,.12), rgba(27,25,67,.03)) !important;
   }
 }
 </style>
 </head>
 <body>
-  <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a href="../../#work">Work</a></div></nav>
+  <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a href="../../#work">Projects/a></div></nav>
   <main>
     <section class="project-intro"><a class="back-link" href="../../#work">← Back to work</a><p class="eyebrow">AI-enabled video</p><h1>AI Video<br>Production</h1><p class="lede">Explanatory video formats built with AI avatars, editorial structure and motion-led graphic overlays.</p></section>
     <section class="hero" aria-label="AI video production visual overview"><div class="avatar-stage" aria-hidden="true"><span class="orb one"></span><span class="orb two"></span><div class="avatar"></div></div><div class="meta meta-desktop"><div><span class="meta-label">Role</span><span class="meta-value">Creative direction · AI video production</span></div><div><span class="meta-label">Scope</span><span class="meta-value">Explainers · Internal communication · Social cutdowns</span></div></div></section>
