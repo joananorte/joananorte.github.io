@@ -137,18 +137,25 @@
 }
 </style>
 <style id="ai-video-mobile-hero-framing">
+.hero {
+  min-height: 0 !important;
+  height: auto !important;
+  background: none !important;
+}
+.hero::after { display: none !important; }
+.hero .avatar-stage { display: none !important; }
+.video-hero-media,
+.video-hero-media img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
 @media (max-width: 760px) {
   .hero {
-    height: auto !important;
+    aspect-ratio: auto !important;
     min-height: 0 !important;
-    aspect-ratio: 16 / 9 !important;
-    background-image: url("../../assets/ai-video/videos-wide.jpg") !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
   }
-  .hero::after {
-    background: linear-gradient(180deg, rgba(27,25,67,.07), rgba(27,25,67,.02)) !important;
-  }
+  .hero .meta-desktop { display: none !important; }
   .meta-mobile {
     min-height: 0 !important;
     background: #fff !important;
@@ -161,7 +168,13 @@
   <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a href="../../#work">Projects</a></div></nav>
   <main>
     <section class="project-intro"><a class="back-link" href="../../#work">← Back to work</a><p class="eyebrow">AI-enabled video</p><h1>AI Video<br>Production</h1><p class="lede">Explanatory video formats built with AI avatars, editorial structure and motion-led graphic overlays.</p></section>
-    <section class="hero" aria-label="AI video production visual overview"><div class="avatar-stage" aria-hidden="true"><span class="orb one"></span><span class="orb two"></span><div class="avatar"></div></div><div class="meta meta-desktop"><div><span class="meta-label">Role</span><span class="meta-value">Creative direction · AI video production</span></div><div><span class="meta-label">Scope</span><span class="meta-value">Explainers · Internal communication · Social cutdowns</span></div></div></section>
+    <section class="hero" aria-label="AI video production visual overview">
+      <picture class="video-hero-media">
+        <source media="(min-width: 1900px)" srcset="../../assets/ai-video/videos-superwide.jpg">
+        <img src="../../assets/ai-video/videos-wide.jpg" alt="AI-enabled video production shown on a laptop">
+      </picture>
+      <div class="meta meta-desktop"><div><span class="meta-label">Role</span><span class="meta-value">Creative direction · AI video production</span></div><div><span class="meta-label">Scope</span><span class="meta-value">Explainers · Internal communication · Social cutdowns</span></div></div>
+    </section>
     <div class="meta meta-mobile"><div><span class="meta-label">Role</span><span class="meta-value">Creative direction · AI video production</span></div><div><span class="meta-label">Scope</span><span class="meta-value">Explainers · Internal communication · Social cutdowns</span></div></div>
     <section class="content"><div class="intro-grid"><div><h2>From a message<br>to a watchable story.</h2></div><div><p>These productions turn complex information into clear, human-paced explanations. The format can combine a generic presenter or a consented digital twin with script development, editing, sound and a graphic layer tailored to the subject.</p><p>It is a practical format for customer education, employee communication, onboarding and launch moments—especially when content needs to evolve fast or live in multiple versions.</p></div></div></section>
     <section class="process"><h2>A flexible production setup.</h2><div class="workflow-grid"><article class="step"><b>01 — Narrative</b><h3>Script & pacing</h3><p>Shape the topic into a concise spoken story, with a clear structure for attention and retention.</p></article><article class="step"><b>02 — Presenter</b><h3>Avatar direction</h3><p>Select a generic avatar or a consented cloned presenter, then direct voice, expression and delivery.</p></article><article class="step"><b>03 — Finish</b><h3>Edit & graphics</h3><p>Bring the piece together through editorial rhythm, captions, brand details and motion graphics.</p></article></div></section>
