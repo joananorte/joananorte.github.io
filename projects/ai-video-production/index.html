@@ -102,9 +102,20 @@
   @media(max-width:760px){.hero{background-image:url("../../assets/ai-video/videos-narrow.jpg")!important;background-position:center center!important}}
 </style><style id="unified-mobile-navigation">
 @media (max-width: 760px) {
+  nav,
+  .site-nav {
+    display: flex !important;
+    align-items: center !important;
+  }
+  nav .brand,
+  nav .nav-links,
+  nav .nav-links a {
+    display: flex !important;
+    align-items: center !important;
+    line-height: 1 !important;
+  }
   nav .nav-toggle { display: none !important; }
   nav .nav-links {
-    display: flex !important;
     position: static !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -120,9 +131,7 @@
     box-shadow: none !important;
   }
   nav .nav-links a {
-    display: inline-block !important;
     font-size: .72rem !important;
-    line-height: 1 !important;
     letter-spacing: .04em !important;
   }
 }
@@ -130,14 +139,20 @@
 <style id="ai-video-mobile-hero-framing">
 @media (max-width: 760px) {
   .hero {
-    height: 390px !important;
-    min-height: 390px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9 !important;
     background-image: url("../../assets/ai-video/videos-wide.jpg") !important;
-    background-size: cover !important;
-    background-position: center center !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
   }
   .hero::after {
-    background: linear-gradient(180deg, rgba(27,25,67,.08), rgba(27,25,67,.02)) !important;
+    background: linear-gradient(180deg, rgba(27,25,67,.07), rgba(27,25,67,.02)) !important;
+  }
+  .meta-mobile {
+    min-height: 0 !important;
+    background: #fff !important;
+    padding: 24px !important;
   }
 }
 </style>
