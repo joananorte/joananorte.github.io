@@ -86,7 +86,16 @@
 </style><style id="ai-video-hero-meta-stack">
   .hero .meta-desktop{flex-direction:column!important;align-items:flex-start!important;gap:18px!important}
 </style><style id="ai-video-intro-gap">
-  .intro-grid{gap:clamp(42px,5vw,70px)!important}
+  .intro-grid{
+    grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr)!important;
+    align-items:start!important;
+    gap:clamp(36px,4vw,56px)!important;
+  }
+  .intro-grid>div{align-self:start!important}
+  .intro-grid>div>p:first-child{margin-top:0!important}
+  @media(max-width:760px){
+    .intro-grid{grid-template-columns:1fr!important}
+  }
 </style><style id="ai-video-premium-hero">
   .hero{
     background:linear-gradient(90deg,rgba(5,9,18,.28),rgba(5,9,18,.03) 62%,rgba(5,9,18,.08)),url("../../assets/ai-video/ai-video-hero-premium.jpg") center center/cover no-repeat!important;
