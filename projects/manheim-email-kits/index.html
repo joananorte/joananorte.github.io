@@ -762,5 +762,23 @@
     }
   }
 </style>
+<style id="portfolio-project-title-hard-override">
+  /* All seven project templates have one document-level H1: the project title. */
+  html body h1,
+  html body h1.reveal,
+  html body .reveal h1{
+    font-size:clamp(2.15rem,3vw,2.75rem)!important;
+    line-height:1.08!important;
+    letter-spacing:-.055em!important;
+  }
+  @media(max-width:700px){
+    html body h1,
+    html body h1.reveal,
+    html body .reveal h1{
+      font-size:clamp(2rem,8.5vw,2.4rem)!important;
+      line-height:1.1!important;
+    }
+  }
+</style>
 </body></html>
 
