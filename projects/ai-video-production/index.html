@@ -170,13 +170,14 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
+  line-height: normal !important;
   padding: 0;
   background: transparent;
   color: #fff;
 }
 .video-meta-desktop > div { display: flex; flex-direction: column; gap: 0; }
-.video-meta-desktop .meta-label { color: rgba(23,23,32,.68) !important; }
-.video-meta-desktop .meta-value { color: #171720 !important; }
+.video-meta-desktop .meta-label { display:block !important; margin-bottom:7px !important; line-height:1.2 !important; color: rgba(23,23,32,.68) !important; }
+.video-meta-desktop .meta-value { display:block !important; line-height:1.25 !important; color: #171720 !important; }
 /* Desktop follows the shared case-study hero construction: a fixed-height
    image panel, with metadata anchored inside it. Mobile keeps the full image. */
 @media (min-width: 761px) {
