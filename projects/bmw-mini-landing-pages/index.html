@@ -380,5 +380,38 @@
     background-color:var(--paper)!important;
   }
 </style>
+
+<style id="portfolio-project-title-scale">
+  .project-intro h1,
+  main .project-intro h1{
+    font-size:clamp(2.85rem,5.4vw,4.6rem)!important;
+    line-height:1.04!important;
+    letter-spacing:-.06em!important;
+  }
+  main .content h2,
+  main .visual-section h2,
+  main .design-system h2,
+  main .final-design h2,
+  main h2.section-title{
+    font-size:clamp(1.65rem,2.3vw,2.35rem)!important;
+    line-height:1.16!important;
+    letter-spacing:-.045em!important;
+  }
+  @media(max-width:700px){
+    .project-intro h1,
+    main .project-intro h1{
+      font-size:clamp(2.45rem,11vw,3.25rem)!important;
+      line-height:1.06!important;
+    }
+    main .content h2,
+    main .visual-section h2,
+    main .design-system h2,
+    main .final-design h2,
+    main h2.section-title{
+      font-size:1.65rem!important;
+      line-height:1.18!important;
+    }
+  }
+</style>
 </body>
 </html>
