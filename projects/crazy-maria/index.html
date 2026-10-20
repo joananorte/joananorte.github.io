@@ -425,6 +425,36 @@
   }
 }
 </style>
+<style id="crazy-maria-cta-arrow">
+  .crazy-landing-cta .button-arrow{
+    display:inline-block;
+    position:relative;
+    width:.78em;
+    height:.78em;
+    margin-left:.5em;
+    vertical-align:-.06em;
+  }
+  .crazy-landing-cta .button-arrow::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    width:.68em;
+    border-top:1.5px solid currentColor;
+    transform:translateY(-50%);
+  }
+  .crazy-landing-cta .button-arrow::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    width:.36em;
+    height:.36em;
+    border-top:1.5px solid currentColor;
+    border-right:1.5px solid currentColor;
+    transform:translateY(-50%) rotate(45deg);
+  }
+</style>
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a href="../../#work">Projects</a></div></nav>
@@ -512,7 +542,7 @@
 
     <section class="crazy-landing-cta">
       <p>Want to try the experience?</p>
-      <a class="project-cta" href="https://www.impacting.digital/en/crazy-maria/" target="_blank" rel="noopener noreferrer">Visit landing page ↗</a>
+      <a class="project-cta" href="https://www.impacting.digital/en/crazy-maria/" target="_blank" rel="noopener noreferrer">Visit landing page<span class="button-arrow" aria-hidden="true"></span></a>
     </section>
   </main>
 
