@@ -175,6 +175,32 @@
 .video-meta-desktop > div { display: flex; flex-direction: column; gap: 7px; }
 .video-meta-desktop .meta-label { color: rgba(23,23,32,.68) !important; }
 .video-meta-desktop .meta-value { color: #171720 !important; }
+/* Desktop follows the shared case-study hero construction: a fixed-height
+   image panel, with metadata anchored inside it. Mobile keeps the full image. */
+@media (min-width: 761px) {
+  .video-hero-static {
+    min-height: 635px !important;
+    height: 635px !important;
+    background: #eeecff !important;
+  }
+  .video-hero-static picture {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .video-hero-static img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transition: transform .8s cubic-bezier(.2,.7,.2,1) !important;
+  }
+  .video-hero-static:hover img { transform: scale(1.025) !important; }
+}
 @media (max-width: 760px) {
   .video-meta-desktop { display: none !important; }
   .meta-mobile {
