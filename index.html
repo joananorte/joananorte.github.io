@@ -765,6 +765,56 @@
     .project-layered .project-visual{display:none!important}
   }
 </style>
+<style id="project-desktop-depth-motion">
+  /* A contained image layer gives each desktop card a quiet sense of movement. */
+  @media(min-width:701px){
+    .project.project-layered{
+      background-image:none!important;
+      overflow:hidden!important;
+    }
+    .project-layered .project-visual{
+      display:block!important;
+      position:absolute!important;
+      inset:-2.5% 0!important;
+      z-index:0!important;
+      background-attachment:scroll!important;
+      background-repeat:no-repeat!important;
+      background-size:cover!important;
+      transform:translate3d(0,var(--project-parallax-y,0px),0) scale(1.035)!important;
+      will-change:transform;
+    }
+    .project-layered .project-copy{
+      position:relative!important;
+      z-index:1!important;
+    }
+  }
+</style>
+<script id="project-desktop-depth-motion-script">
+  (() => {
+    if (!matchMedia('(min-width:701px)').matches) return;
+    const projects = [...document.querySelectorAll('.project.project-layered')];
+    let ticking = false;
+    const update = () => {
+      const viewport = innerHeight;
+      projects.forEach(project => {
+        const rect = project.getBoundingClientRect();
+        const progress = (viewport - rect.top) / (viewport + rect.height);
+        const offset = Math.max(-7, Math.min(7, (progress - .5) * 14));
+        project.style.setProperty('--project-parallax-y', offset.toFixed(2) + 'px');
+      });
+      ticking = false;
+    };
+    const requestUpdate = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    addEventListener('scroll', requestUpdate, {passive:true});
+    addEventListener('resize', requestUpdate, {passive:true});
+    requestUpdate();
+  })();
+</script>
 <footer class="footer-standard footer-home"><div class="footer-identity"><span>© Joana Norte</span><a href="https://www.linkedin.com/in/joana-norte" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></footer>
 <style id="site-footer-standard">
   .footer-standard{
