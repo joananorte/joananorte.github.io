@@ -455,6 +455,55 @@
     transform:translateY(-50%) rotate(45deg);
   }
 </style>
+<style id="video-mobile-navigation-parity">
+  @media(max-width:760px){
+    .site-nav{
+      display:flex!important;
+      align-items:center!important;
+      justify-content:space-between!important;
+      padding:28px 24px 0!important;
+      font-size:.73rem!important;
+      font-weight:700!important;
+      letter-spacing:normal!important;
+      text-transform:uppercase!important;
+    }
+    .site-nav .brand{
+      display:flex!important;
+      align-items:center!important;
+      font-family:"Fraunces Display","Fraunces",serif!important;
+      font-size:18px!important;
+      font-weight:700!important;
+      letter-spacing:3px!important;
+      line-height:1!important;
+    }
+    .site-nav .nav-toggle{display:none!important}
+    .site-nav .nav-links{
+      display:flex!important;
+      position:static!important;
+      align-items:center!important;
+      visibility:visible!important;
+      opacity:1!important;
+      transform:none!important;
+      pointer-events:auto!important;
+      width:auto!important;
+      height:auto!important;
+      max-height:none!important;
+      margin:0!important;
+      padding:0!important;
+      background:transparent!important;
+      border:0!important;
+      box-shadow:none!important;
+    }
+    .site-nav .nav-links a{
+      display:flex!important;
+      align-items:center!important;
+      padding:0!important;
+      font-size:.72rem!important;
+      line-height:1!important;
+      letter-spacing:.04em!important;
+    }
+  }
+</style>
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary navigation"><a class="brand" href="../../">Joana Norte</a><div class="nav-links"><a href="../../#work">Projects</a></div></nav>
