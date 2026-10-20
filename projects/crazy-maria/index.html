@@ -810,6 +810,32 @@
     main .section-title{font-size:1.42rem!important}
   }
 </style>
+
+<style id="portfolio-project-compact-title-scale">
+  main h1,
+  main .hero-title,
+  main .project-title{
+    font-size:clamp(2.3rem,3.8vw,3rem)!important;
+    line-height:1.1!important;
+  }
+  main h2,
+  main .section-title{
+    font-size:clamp(1.3rem,1.7vw,1.625rem)!important;
+    line-height:1.25!important;
+  }
+  main h3{
+    font-size:1.05rem!important;
+    line-height:1.35!important;
+  }
+  @media(max-width:700px){
+    main h1,
+    main .hero-title,
+    main .project-title{font-size:clamp(2rem,8.5vw,2.4rem)!important}
+    main h2,
+    main .section-title{font-size:1.28rem!important}
+    main h3{font-size:1rem!important}
+  }
+</style>
 </body>
 </html>
 
