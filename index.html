@@ -539,7 +539,7 @@
         <p class="project-number">01</p>
         <h2>Bridgewhat<br>Matching</h2>
         <p>Helping companies find the right growth Advisors through tailored matching.</p>
-        <a class="project-link" href="./projects/bridgewhat-matching/">view project</a>
+        <a class="project-link" href="./projects/bridgewhat-matching/"><span>View project</span><i aria-hidden="true">→</i></a>
       </div>
     </section>
 
@@ -548,7 +548,7 @@
         <p class="project-number">02</p>
         <h2>Crazy marIA</h2>
         <p>A virtual escape training to help teams learn more about Artificial Intelligence.</p>
-        <a class="project-link" href="./projects/crazy-maria/">view project</a>
+        <a class="project-link" href="./projects/crazy-maria/"><span>View project</span><i aria-hidden="true">→</i></a>
       </div>
     </section>
 
@@ -557,7 +557,7 @@
         <p class="project-number">03</p>
         <h2>Chubb<br>Website</h2>
         <p>A complete website redesign for a global insurance company.</p>
-        <a class="project-link" href="./projects/chubb-website/">view project</a>
+        <a class="project-link" href="./projects/chubb-website/"><span>View project</span><i aria-hidden="true">→</i></a>
       </div>
     </section>
 
@@ -566,7 +566,7 @@
         <p class="project-number">04</p>
         <h2>BMW &amp; MINI<br>Landing Pages</h2>
         <p>Landing-page concepts for BMW and MINI, shaped for future web experiences.</p>
-        <a class="project-link" href="./projects/bmw-mini-landing-pages/">view project</a>
+        <a class="project-link" href="./projects/bmw-mini-landing-pages/"><span>View project</span><i aria-hidden="true">→</i></a>
       </div>
     </section>
 
@@ -575,7 +575,7 @@
         <p class="project-number">05</p>
         <h2>Carglass<br>QIV Online</h2>
         <p>A digital platform for insurance intermediaries to manage and book vehicle-glass claims.</p>
-        <a class="project-link" href="./projects/carglass-qiv-online/">view project</a>
+        <a class="project-link" href="./projects/carglass-qiv-online/"><span>View project</span><i aria-hidden="true">→</i></a>
       </div>
     </section>
 
@@ -584,7 +584,7 @@
         <p class="project-number">06</p>
         <h2>Manheim<br>Email Kits</h2>
         <p>Responsive email templates for auction, customer and commercial communications.</p>
-        <a class="project-link" href="./projects/manheim-email-kits/">view project</a>
+        <a class="project-link" href="./projects/manheim-email-kits/"><span>View project</span><i aria-hidden="true">→</i></a>
       </div>
     </section>
 
@@ -593,7 +593,7 @@
         <p class="project-number">07</p>
         <h2>AI Video<br>Production</h2>
         <p>Explanatory videos that combine AI avatars, editorial pacing and distinctive motion graphics.</p>
-        <a class="project-link" href="./projects/ai-video-production/">view project</a>
+        <a class="project-link" href="./projects/ai-video-production/"><span>View project</span><i aria-hidden="true">→</i></a>
       </div>
     </section>
   </main>
@@ -864,7 +864,75 @@
     }
   }
 </style>
-<footer class="footer-standard footer-home"><div class="footer-identity"><span>© Joana Norte</span><a href="https://www.linkedin.com/in/joana-norte" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></footer>
+<style id="home-project-polish">
+  .project{
+    transition:background-size .7s cubic-bezier(.22,.7,.2,1),box-shadow .45s ease;
+  }
+  .project .project-number{
+    display:inline-block;
+    transition:transform .38s cubic-bezier(.22,.7,.2,1),opacity .3s ease;
+  }
+  .project .project-link{
+    display:inline-flex!important;
+    align-items:center;
+    gap:.55rem;
+    margin-top:2.35rem!important;
+    padding:0 0 .42rem!important;
+    border-bottom:1px solid currentColor!important;
+    color:inherit!important;
+    font-size:.69rem!important;
+    font-weight:700!important;
+    letter-spacing:.115em!important;
+    line-height:1!important;
+    text-decoration:none!important;
+    text-transform:uppercase!important;
+    transition:opacity .25s ease,border-color .25s ease;
+  }
+  .project .project-link i{
+    display:inline-block;
+    font-family:Arial,sans-serif;
+    font-size:1rem;
+    font-style:normal;
+    font-weight:400;
+    letter-spacing:0;
+    line-height:.7;
+    transition:transform .3s cubic-bezier(.22,.7,.2,1);
+  }
+  .project .project-copy > p:not(.project-number){
+    max-width:325px!important;
+    font-size:.92rem!important;
+    line-height:1.6!important;
+  }
+  @media(hover:hover) and (min-width:701px){
+    .project:hover{
+      background-size:103% auto!important;
+    }
+    .project:hover .project-number{transform:translateX(9px)}
+    .project:hover .project-link i{transform:translateX(6px)}
+    .project:hover .project-link{opacity:.78}
+  }
+  .footer-home{
+    min-height:145px;
+  }
+  .footer-home .footer-signoff{
+    margin:0;
+    font-family:"Fraunces",serif;
+    font-size:clamp(1.15rem,1.7vw,1.55rem);
+    font-weight:500;
+    letter-spacing:-.035em;
+    line-height:1.12;
+    color:var(--ink,#2f2e2e);
+  }
+  @media(max-width:700px){
+    .project .project-link{margin-top:1.8rem!important}
+    .project .project-copy > p:not(.project-number){max-width:285px!important;font-size:.9rem!important}
+    .footer-home .footer-signoff{font-size:1.3rem}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .project,.project .project-number,.project .project-link,.project .project-link i{transition:none!important}
+  }
+</style>
+<footer class="footer-standard footer-home"><div class="footer-identity"><span>© Joana Norte</span><a href="https://www.linkedin.com/in/joana-norte" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><p class="footer-signoff">Let’s build something clear.</p></footer>
 <style id="site-footer-standard">
   .footer-standard{
     display:flex!important;align-items:center!important;justify-content:space-between!important;gap:24px!important;
