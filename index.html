@@ -450,6 +450,79 @@
     .home-hero nav .nav-toggle{display:none!important}
   }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style id="home-editorial-refinement">
+  .home-hero,
+  .project,
+  .footer-home{font-family:"Manrope",sans-serif}
+  .home-hero .brand{
+    font-family:"Instrument Serif",Georgia,serif!important;
+    font-size:1.45rem!important;
+    font-weight:400!important;
+    letter-spacing:.01em!important;
+    text-transform:none!important;
+  }
+  .home-hero h1,
+  .project .project-copy h2{
+    font-family:"Instrument Serif",Georgia,serif!important;
+    font-weight:400!important;
+    letter-spacing:-.035em!important;
+  }
+  .home-hero .intro{max-width:660px!important}
+  .home-hero h1{
+    max-width:620px!important;
+    margin-bottom:34px!important;
+    font-size:clamp(4.75rem,7.45vw,7.85rem)!important;
+    line-height:.88!important;
+  }
+  .home-hero .intro p:not(.role){
+    max-width:520px!important;
+    font-size:clamp(1rem,1.35vw,1.18rem)!important;
+    line-height:1.55!important;
+  }
+  .home-hero .role{
+    margin-top:28px!important;
+    color:var(--terracotta)!important;
+    font-size:.72rem!important;
+    font-weight:700!important;
+    letter-spacing:.11em!important;
+    line-height:1.2!important;
+    text-transform:uppercase!important;
+  }
+  .project .project-copy h2{
+    font-size:clamp(3.2rem,5.3vw,5.6rem)!important;
+    line-height:.9!important;
+  }
+  .project .project-number{
+    margin-bottom:18px!important;
+    color:inherit!important;
+    font-size:.72rem!important;
+    font-weight:700!important;
+    letter-spacing:.12em!important;
+  }
+  .project .project-copy > p:not(.project-number){
+    max-width:360px!important;
+    font-size:.98rem!important;
+    line-height:1.55!important;
+  }
+  @media(max-width:700px){
+    .home-hero h1{
+      max-width:340px!important;
+      margin-bottom:26px!important;
+      font-size:clamp(3.25rem,15vw,4.7rem)!important;
+      line-height:.9!important;
+    }
+    .home-hero .intro p:not(.role){
+      max-width:310px!important;
+      font-size:1rem!important;
+      line-height:1.5!important;
+    }
+    .home-hero .role{margin-top:23px!important}
+    .project .project-copy h2{font-size:clamp(2.85rem,13vw,4.3rem)!important}
+  }
+</style>
 </head>
 <body>
   <main>
