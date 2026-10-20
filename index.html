@@ -815,6 +815,34 @@
     requestUpdate();
   })();
 </script>
+<style id="project-fixed-image-restore">
+  /* Keep the image still in the viewport while the project panel travels over it. */
+  @media(min-width:701px){
+    .project.project-layered{
+      background-attachment:fixed!important;
+      background-position:right center!important;
+      background-repeat:no-repeat!important;
+      background-size:cover!important;
+    }
+    .project-layered .project-visual{display:none!important}
+    .project.project-bridgewhat{background-image:linear-gradient(110deg,rgba(17,48,67,.32),rgba(17,48,67,.04) 72%),url("./assets/bridgewhat/bridgewhat-wide.jpg")!important}
+    .project.project-crazy{background-image:linear-gradient(110deg,rgba(26,8,48,.34),rgba(26,8,48,.05) 72%),url("./assets/crazy-maria/crazy-maria-wide.jpg")!important}
+    .project.project-chubb{background-image:linear-gradient(110deg,rgba(56,35,30,.30),rgba(56,35,30,.04) 72%),url("./assets/chubb/chubb-wide.jpg")!important}
+    .project.project-bmw-mini{background-image:linear-gradient(110deg,rgba(15,35,55,.30),rgba(15,35,55,.04) 72%),url("./assets/bmw-mini/bmw-mini-wide.jpg")!important}
+    .project.project-carglass{background-image:linear-gradient(110deg,rgba(112,48,43,.24),rgba(112,48,43,.035) 72%),url("./assets/carglass/carglass-wide.jpg")!important}
+    .project.project-manheim{background-image:linear-gradient(110deg,rgba(11,54,84,.28),rgba(11,54,84,.035) 72%),url("./assets/manheim/manheim-wide.jpg")!important}
+    .project.project-ai-video{background-image:linear-gradient(110deg,rgba(38,36,82,.28),rgba(38,36,82,.035) 72%),url("./assets/ai-video/videos-wide.jpg")!important}
+  }
+  @media(min-width:1900px){
+    .project.project-bridgewhat{background-image:linear-gradient(110deg,rgba(17,48,67,.32),rgba(17,48,67,.04) 72%),url("./assets/bridgewhat/bridgewhat-superwide.jpg")!important}
+    .project.project-crazy{background-image:linear-gradient(110deg,rgba(26,8,48,.34),rgba(26,8,48,.05) 72%),url("./assets/crazy-maria/crazy-maria-superwide.jpg")!important}
+    .project.project-chubb{background-image:linear-gradient(110deg,rgba(56,35,30,.30),rgba(56,35,30,.04) 72%),url("./assets/chubb/chubb-superwide.jpg")!important}
+    .project.project-bmw-mini{background-image:linear-gradient(110deg,rgba(15,35,55,.30),rgba(15,35,55,.04) 72%),url("./assets/bmw-mini/bmw-mini-superwide.jpg")!important}
+    .project.project-carglass{background-image:linear-gradient(110deg,rgba(112,48,43,.24),rgba(112,48,43,.035) 72%),url("./assets/carglass/carglass-superwide.jpg")!important}
+    .project.project-manheim{background-image:linear-gradient(110deg,rgba(11,54,84,.28),rgba(11,54,84,.035) 72%),url("./assets/manheim/manheim-superwide.jpg")!important}
+    .project.project-ai-video{background-image:linear-gradient(110deg,rgba(38,36,82,.28),rgba(38,36,82,.035) 72%),url("./assets/ai-video/videos-superwide.jpg")!important}
+  }
+</style>
 <footer class="footer-standard footer-home"><div class="footer-identity"><span>© Joana Norte</span><a href="https://www.linkedin.com/in/joana-norte" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></footer>
 <style id="site-footer-standard">
   .footer-standard{
