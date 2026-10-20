@@ -836,6 +836,51 @@
     main h3{font-size:1rem!important}
   }
 </style>
+
+<style id="portfolio-project-direct-heading-scale">
+  /* Direct selectors: these sections sit outside the shared <main> wrapper. */
+  .project-intro h1,
+  header.project-intro h1,
+  .project-title,
+  h1.project-title,
+  .hero-title{
+    font-size:clamp(2.15rem,3vw,2.75rem)!important;
+    line-height:1.08!important;
+    letter-spacing:-.055em!important;
+  }
+
+  /* Editorial/display headings only — the short content headings stay unchanged. */
+  .process h2,
+  .final h2,
+  .hero-copy h2,
+  .section-intro h2,
+  .content > h2,
+  .approach h2{
+    font-size:clamp(1.38rem,1.85vw,1.68rem)!important;
+    line-height:1.2!important;
+    letter-spacing:-.04em!important;
+  }
+
+  @media(max-width:700px){
+    .project-intro h1,
+    header.project-intro h1,
+    .project-title,
+    h1.project-title,
+    .hero-title{
+      font-size:clamp(2rem,8.5vw,2.4rem)!important;
+      line-height:1.1!important;
+    }
+    .process h2,
+    .final h2,
+    .hero-copy h2,
+    .section-intro h2,
+    .content > h2,
+    .approach h2{
+      font-size:1.38rem!important;
+      line-height:1.22!important;
+    }
+  }
+</style>
 </body>
 </html>
 
