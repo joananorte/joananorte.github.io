@@ -564,7 +564,7 @@
     <section class="project-intro"><a class="back-link" href="../../#work">← Back to work</a>
       <p class="eyebrow">Insurance website</p>
       <h1>Chubb Website</h1>
-      <p class="lede">A complete website redesign for a global insurance company, designed to make information clearer and services easier to explore.</p>
+      <p class="lede">A complete website redesign for a global insurance company.</p>
     </section>
 
     <section class="hero-panel chubb-hero" aria-label="Chubb website redesign overview">
@@ -582,11 +582,11 @@
     <section class="content">
       <div class="two-col">
         <div>
-          <h2>The problem</h2>
+          <h2 class="project-section-heading">The problem</h2>
           <p>Insurance websites often bring together complex information, products and support journeys. The challenge was to make the experience feel clear, reassuring and simple to navigate for every visitor.</p>
         </div>
         <div>
-          <h2>Project vision</h2>
+          <h2 class="project-section-heading">Project vision</h2>
           <p>Chubb Website is a responsive redesign that makes insurance products, coverages and supporting information easier to explore. It brings clear hierarchy, reassuring visual cues and straightforward paths to the right solution.</p>
         </div>
       </div>
@@ -607,14 +607,14 @@
 
     <section class="process">
       <div class="process-grid">
-        <h2>Design approach</h2>
+        <h2 class="project-section-heading">Design approach</h2>
         <p>I mapped the website structure and key customer journeys before developing the visual direction. The redesigned system balances clarity, accessibility and an approachable insurance experience.</p>
       </div>
     </section>
 
     <section class="style-guide">
       <div class="style-guide-inner">
-        <h2 class="section-heading">Design system</h2>
+        <h2 class="section-heading project-section-heading">Design system</h2>
         <div class="guide-grid">
           <div>
             <span class="guide-label">Typography</span>
@@ -632,7 +632,7 @@
             <div class="colour-grid" aria-label="Chubb colour palette"><div class="colour-token"><span class="colour-dot" style="background:#171A92"></span><div><strong>Dark Blue</strong><small>#171A92</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#08B6C9"></span><div><strong>Turquoise</strong><small>#08B6C9</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#7023B5"></span><div><strong>Purple</strong><small>#7023B5</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#EB008B"></span><div><strong>Magenta</strong><small>#EB008B</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#E31B23"></span><div><strong>Red</strong><small>#E31B23</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#FF6500"></span><div><strong>Orange</strong><small>#FF6500</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#FFB819"></span><div><strong>Yellow</strong><small>#FFB819</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#73C900"></span><div><strong>Green</strong><small>#73C900</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#000000"></span><div><strong>Black</strong><small>#000000</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#4C4F54"></span><div><strong>Dark Gray</strong><small>#4C4F54</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#B7B7B7"></span><div><strong>Light Gray</strong><small>#B7B7B7</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#D6D6D6"></span><div><strong>Sky Gray</strong><small>#D6D6D6</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#F4F4F4"></span><div><strong>Pale Gray</strong><small>#F4F4F4</small></div></div><div class="colour-token"><span class="colour-dot" style="background:#FFFFFF"></span><div><strong>White</strong><small>#FFFFFF</small></div></div></div></div></div></div></section>
 
     <section class="final chubb-final">
-      <h2>Final design</h2>
+      <h2 class="project-section-heading">Final design</h2>
       <div class="chubb-responsive-grid">
         <figure class="chubb-design-pair">
           <div class="chubb-desktop-device"><img src="../assets/chubb-products-desktop.jpg" alt="Chubb products page on desktop" loading="lazy"></div>
@@ -910,6 +910,22 @@
     html body .reveal h1{
       font-size:clamp(2rem,8.5vw,2.4rem)!important;
       line-height:1.1!important;
+    }
+  }
+</style>
+<style id="portfolio-project-section-heading-scale">
+  .project-section-heading{
+    font-size:1.5rem!important;
+    line-height:1.2!important;
+    letter-spacing:-.04em!important;
+  }
+  @media(min-width:701px){
+    html body .project-intro h1{white-space:nowrap!important}
+  }
+  @media(max-width:700px){
+    .project-section-heading{
+      font-size:1.38rem!important;
+      line-height:1.22!important;
     }
   }
 </style>

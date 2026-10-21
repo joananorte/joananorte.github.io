@@ -486,11 +486,11 @@ html, body { overflow-x: hidden !important; }
     <section class="content">
       <div class="two-col">
         <div>
-          <h2>The problem</h2>
+          <h2 class="project-section-heading">The problem</h2>
           <p>The matching process considers multiple dimensions—from geography and sector to functional expertise, use cases and growth themes. The experience needed to make this breadth feel clear and manageable, while helping users understand why an Advisor was being recommended.</p>
         </div>
         <div>
-          <h2>Project vision</h2>
+          <h2 class="project-section-heading">Project vision</h2>
           <p>Bridgewhat Matching is a mobile experience designed to help companies identify and connect with experienced Advisors aligned with their growth needs. It brings search, filtering and a dedicated matching dashboard into one focused journey.</p>
         </div>
       </div>
@@ -507,14 +507,14 @@ html, body { overflow-x: hidden !important; }
 
     <section class="process">
       <div class="process-grid">
-        <h2>Design approach</h2>
+        <h2 class="project-section-heading">Design approach</h2>
         <p>I began with wireframes to establish the app’s structure, navigation and core flows. From there, I developed high-fidelity mockups for browsing matches, reviewing Advisor profiles and refining preferences.</p>
       </div>
     </section>
 
     <section class="style-guide">
       <div class="style-guide-inner">
-        <h2 class="section-heading">Design system</h2>
+        <h2 class="section-heading project-section-heading">Design system</h2>
         <div class="guide-grid">
           <div>
             <span class="guide-label">Typography</span>
@@ -536,7 +536,7 @@ html, body { overflow-x: hidden !important; }
     </section>
 
     <section class="final">
-      <h2>Final design</h2>
+      <h2 class="project-section-heading">Final design</h2>
       <div class="screens">
         <div class="screen-wrap"><div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img class="screen" src="../../assets/bridgewhat/login.jpg" alt="Bridgewhat login screen" loading="lazy"></div><p class="screen-caption">Login</p></div>
         <div class="screen-wrap"><div class="final-phone"><span class="phone-notch" aria-hidden="true"></span><img class="screen" src="../../assets/bridgewhat/advisor-matches.jpg" alt="Bridgewhat advisor matches screen" loading="lazy"></div><p class="screen-caption">Advisor matches</p></div>
@@ -805,6 +805,22 @@ html, body { overflow-x: hidden !important; }
     html body .reveal h1{
       font-size:clamp(2rem,8.5vw,2.4rem)!important;
       line-height:1.1!important;
+    }
+  }
+</style>
+<style id="portfolio-project-section-heading-scale">
+  .project-section-heading{
+    font-size:1.5rem!important;
+    line-height:1.2!important;
+    letter-spacing:-.04em!important;
+  }
+  @media(min-width:701px){
+    html body .project-intro h1{white-space:nowrap!important}
+  }
+  @media(max-width:700px){
+    .project-section-heading{
+      font-size:1.38rem!important;
+      line-height:1.22!important;
     }
   }
 </style>
