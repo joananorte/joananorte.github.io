@@ -653,7 +653,8 @@
     </section>
   </main>
 
-  <footer class="footer-standard"><div class="footer-identity"><span>© Joana Norte</span><a href="https://www.linkedin.com/in/joana-norte" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><a class="footer-back" href="../../#work">Back to projects →</a></footer>
+  <section class="portfolio-next-project" aria-label="Next project"><div class="portfolio-next-project__inner"><span class="portfolio-next-project__label">Next project</span><a class="portfolio-next-project__link" href="../bmw-mini-landing-pages/"><span>BMW & MINI Landing Pages</span><span class="portfolio-next-project__arrow" aria-hidden="true">→</span></a></div></section>
+<footer class="footer-standard"><div class="footer-identity"><span>© Joana Norte</span><a href="https://www.linkedin.com/in/joana-norte" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><a class="footer-back" href="../../#work">Back to projects →</a></footer>
 
   <script>
     const revealTargets = [
@@ -1060,6 +1061,34 @@
     .project-final{
       padding-top:3rem!important;
     }
+  }
+</style>
+<style id="portfolio-next-project">
+  .portfolio-next-project{
+    padding:clamp(4.5rem,8vw,7.5rem) 4.2vw!important;
+    border-top:1px solid var(--line,#d9d6d1)!important;
+    background:var(--paper,#f7f5f1)!important;
+  }
+  .portfolio-next-project__inner{width:min(100%,1120px);margin:0 auto}
+  .portfolio-next-project__label{
+    display:block;margin-bottom:1rem;color:var(--accent,#8D6A91)!important;
+    font-family:"Sora",sans-serif!important;font-size:.75rem!important;
+    font-weight:700!important;letter-spacing:.06em!important;text-transform:uppercase;
+  }
+  .portfolio-next-project__link{
+    display:inline-flex!important;align-items:center!important;gap:.55em!important;
+    color:var(--ink,#20212b)!important;text-decoration:none!important;
+    font-family:"Sora",sans-serif!important;font-size:clamp(2rem,4vw,4rem)!important;
+    font-weight:600!important;line-height:1.05!important;letter-spacing:-.06em!important;
+    transition:color .25s ease,transform .25s ease;
+  }
+  .portfolio-next-project__arrow{font-size:.8em;transition:transform .25s ease}
+  .portfolio-next-project__link:hover{color:var(--accent,#8D6A91)!important;transform:translateX(.12em)}
+  .portfolio-next-project__link:hover .portfolio-next-project__arrow{transform:translateX(.2em)}
+  @media(max-width:700px){
+    .portfolio-next-project{padding:3.5rem 24px!important}
+    .portfolio-next-project__label{margin-bottom:.75rem}
+    .portfolio-next-project__link{font-size:clamp(1.8rem,9vw,2.5rem)!important}
   }
 </style>
 </body>
