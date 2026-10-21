@@ -1215,6 +1215,29 @@ html, body { overflow-x: hidden !important; }
     line-height:1.2!important;
   }
 </style>
+<style id="portfolio-hex-spacing-normalized">
+  /* Normalise the two palette markup patterns: direct text and text wrapped in a div. */
+  .style-guide .colour-token,
+  .design-system .colour-token,
+  .project-system .colour-token{
+    gap:0!important;
+  }
+  .style-guide .colour-dot,
+  .design-system .colour-dot,
+  .project-system .colour-dot{
+    margin-bottom:.58rem!important;
+  }
+  .style-guide .colour-token > div,
+  .design-system .colour-token > div,
+  .project-system .colour-token > div{
+    gap:0!important;
+  }
+  .style-guide .colour-token small,
+  .design-system .colour-token small,
+  .project-system .colour-token small{
+    margin:.12rem 0 0!important;
+  }
+</style>
 </body>
 </html>
 
