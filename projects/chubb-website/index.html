@@ -1244,6 +1244,66 @@
     text-align:center!important;
   }
 </style>
+<style id="portfolio-design-system-rhythm">
+  /* A shared vertical rhythm for palettes and typography specimens. */
+  .style-guide .colour-token,
+  .design-system .colour-token,
+  .project-system .colour-token{
+    gap:.65rem!important;
+  }
+  .style-guide .colour-token > div,
+  .design-system .colour-token > div,
+  .project-system .colour-token > div{
+    gap:.22rem!important;
+  }
+  .style-guide .colour-token strong,
+  .design-system .colour-token strong,
+  .project-system .colour-token strong{
+    line-height:1.18!important;
+  }
+  .style-guide .colour-token small,
+  .design-system .colour-token small,
+  .project-system .colour-token small{
+    line-height:1.25!important;
+  }
+  .style-guide .type-scale,
+  .design-system .type-scale,
+  .project-system .type-scale{
+    display:grid!important;
+    gap:.15rem!important;
+  }
+  .style-guide .type-row,
+  .design-system .type-row,
+  .project-system .type-row{
+    display:flex!important;
+    align-items:baseline!important;
+    justify-content:space-between!important;
+    gap:1rem!important;
+    padding:.78rem 0!important;
+  }
+  .style-guide .type-row + .type-row,
+  .design-system .type-row + .type-row,
+  .project-system .type-row + .type-row{
+    border-top:1px solid rgba(32,33,43,.10)!important;
+  }
+  .style-guide .type-row small,
+  .design-system .type-row small,
+  .project-system .type-row small{
+    line-height:1.35!important;
+    text-align:right!important;
+  }
+  @media(max-width:700px){
+    .style-guide .colour-token,
+    .design-system .colour-token,
+    .project-system .colour-token{gap:.55rem!important}
+    .style-guide .type-row,
+    .design-system .type-row,
+    .project-system .type-row{
+      gap:.75rem!important;
+      padding:.7rem 0!important;
+    }
+  }
+</style>
 </body>
 </html>
 
