@@ -851,5 +851,47 @@
     }
   }
 </style>
+<style id="portfolio-project-rhythm">
+  :root{
+    --project-section-space:clamp(5rem,8vw,7rem);
+    --project-final-space:clamp(6rem,9vw,8rem);
+  }
+
+  /* One measured pause between each content block. */
+  .content{
+    padding-block:var(--project-section-space)!important;
+  }
+  .visual-section,
+  .project-visual,
+  .case-visual{
+    padding-top:0!important;
+    padding-bottom:var(--project-section-space)!important;
+  }
+  .process,
+  .project-process,
+  .design-process{
+    padding-top:0!important;
+    padding-bottom:var(--project-section-space)!important;
+  }
+  .style-guide,
+  .design-system,
+  .project-system{
+    padding-top:0!important;
+    padding-bottom:var(--project-section-space)!important;
+  }
+  .final,
+  .final-design,
+  .project-final{
+    padding-top:0!important;
+    padding-bottom:var(--project-final-space)!important;
+  }
+
+  @media(max-width:700px){
+    :root{
+      --project-section-space:4.5rem;
+      --project-final-space:5.25rem;
+    }
+  }
+</style>
 </body></html>
 
