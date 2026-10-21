@@ -1227,5 +1227,26 @@
 <style id="portfolio-project-base-white">
   body{background:#fff!important}
 </style>
+<style id="portfolio-design-system-desktop-layout">
+  /* Keep the original single dividers in typography specimens. */
+  .style-guide .type-row + .type-row,
+  .design-system .type-row + .type-row,
+  .project-system .type-row + .type-row{
+    border-top:0!important;
+  }
+
+  @media(min-width:701px){
+    .style-guide .guide-grid,
+    .design-system .guide-grid,
+    .project-system .guide-grid{
+      width:min(100%,1320px)!important;
+      margin-left:auto!important;
+      margin-right:auto!important;
+      grid-template-columns:repeat(2,minmax(0,1fr))!important;
+      column-gap:clamp(5.5rem,10vw,10rem)!important;
+      align-items:start!important;
+    }
+  }
+</style>
 </body></html>
 
