@@ -1332,6 +1332,15 @@ html, body { overflow-x: hidden !important; }
     .video-hero-static .video-meta-desktop{z-index:3!important;}
   }
 </style>
+
+<style id="project-hero-mobile-depth">
+  @media (max-width:760px){
+    .hero-panel picture,.video-hero-static picture{position:relative!important;isolation:isolate!important;overflow:hidden!important;}
+    .hero-panel picture::after,.video-hero-static picture::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(116deg,rgba(28,19,43,.12),transparent 58%),linear-gradient(0deg,rgba(28,19,43,.08),transparent 36%);}
+    .hero-panel .landing-art{isolation:isolate!important;}
+    .hero-panel .landing-art::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(116deg,rgba(28,19,43,.12),transparent 58%),linear-gradient(0deg,rgba(28,19,43,.08),transparent 36%);}
+  }
+</style>
 </body>
 </html>
 
